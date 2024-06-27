@@ -1,0 +1,43 @@
+[GRAPHIC] HIT
+[GRAPHIC] 1 aircraft downed
+[GRAPHIC] 2 MiG-21 fighters
+[GRAPHIC] SAM supply indicator [hundreds, tens, and ones]
+
+SEQUENCE OF PLAY
+1. First SAM fire phase
+2. Air-to-Air combat phase:
+   A. Interception segment
+   B. B-52 defensive fire segment
+   C. Air superiority segment
+3. Bombing phase:
+   A. Low-level flak attack segment
+   B. Bombing phase
+4. Movement phase:
+   A. First player movement segment
+   B. Second player movement segment
+5. Second SAM fire phase
+6. Record the passage of one GAME TURN
+
+Each game turn is divided into 
+several phases. Follow the above 
+sequence every game turn performing 
+actions as per the rules given for each 
+phase.
+
+SAM FIRE
+All SAM fire takes place during the 
+two SAM FIRE PHASES. The NV 
+player may fire SAMs at all, any or 
+none of the US echo counters in a map 
+box (except the US HOLDING AREA 
+Box). He decides the number of SAMs 
+fired in each salvo and resolves 
+combat on the proper column of the 
+FLAK CRT, subtracting the number 
+of fired SAMs on the SAM SUPPLY 
+TABLE.
+An echo counter may only be fired 
+at once in every SAM Fire Phase.
+
+PAGE 9
+
