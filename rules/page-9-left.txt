@@ -1,0 +1,41 @@
+Linebacker 2
+
+DESIGNER: Claes Henrikson
+Graphics: Fredrik P. Malmberg
+Copyight ©1979
+Swedish Game Production
+
+INTRODUCTION
+LINEBACKER 2 is a strategic game 
+of the bombing of North Viet Nam in 
+late 1972.
+
+SETTING UP THE GAME
+First, see scenario instructions for 
+information on the forces available 
+to each player. The North Vietnamese 
+(NV) player divides his fighter unit 
+counters between his air bases on his 
+air status display. Two units (four 
+planes) may begin the game in the 
+air, represented on the game map by 
+its proper echo marker (see move- 
+ment). He then proceeds to indicate 
+the number of available Anti-Aircraft 
+missiles on his SAM SUPPLY TABLE. 
+The United States (US) player 
+divides his available air units between 
+the target boxes on his air status 
+display and places the corresponding 
+echo counters face-down in the US 
+holding area on the game map.
+
+UNITS
+[GRAPHIC] Radar Echo # - confirms to MISSION DISPLAY #indicator
+[GRAPHIC] 3 B-52 bombers
+[GRAPHIC] 4 F-111 strike aircraft
+[GRAPHIC] 8 F-4 strike fighters/escort fighters
+[GRAPHIC] 1 A-6 EMC aircraft
+
+COMBAT
+
