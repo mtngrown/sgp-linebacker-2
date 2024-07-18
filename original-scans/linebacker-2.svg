@@ -90,8 +90,8 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="0.73377665"
-     inkscape:cx="622.12391"
-     inkscape:cy="470.85172"
+     inkscape:cx="845.62516"
+     inkscape:cy="544.4436"
      inkscape:window-width="1647"
      inkscape:window-height="1065"
      inkscape:window-x="174"
@@ -231,5 +231,33 @@
        height="35.433125"
        x="70.910477"
        y="190.83797" />
+    <rect
+       style="fill:#d52122;fill-opacity:1;stroke:#d52122;stroke-width:8;stroke-dasharray:none;stroke-dashoffset:17.9906;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect11550-9-9"
+       width="34.070312"
+       height="35.433125"
+       x="570.64514"
+       y="92.15657" />
+    <rect
+       style="fill:#d52122;fill-opacity:1;stroke:#d52122;stroke-width:8;stroke-dasharray:none;stroke-dashoffset:17.9906;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect11550-9-9-2"
+       width="34.070312"
+       height="35.433125"
+       x="574.42548"
+       y="393.6622" />
+    <rect
+       style="fill:#d52122;fill-opacity:1;stroke:#d52122;stroke-width:8;stroke-dasharray:none;stroke-dashoffset:17.9906;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect11550-9-9-2-3"
+       width="34.070312"
+       height="35.433125"
+       x="758.42548"
+       y="705.66223" />
+    <rect
+       style="fill:#d52122;fill-opacity:1;stroke:#d52122;stroke-width:8;stroke-dasharray:none;stroke-dashoffset:17.9906;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect11550-9-9-2-3-9"
+       width="34.070312"
+       height="35.433125"
+       x="1033.5027"
+       y="996.5741" />
   </g>
 </svg>
