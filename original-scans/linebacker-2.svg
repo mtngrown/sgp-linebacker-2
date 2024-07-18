@@ -89,9 +89,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.87299637"
-     inkscape:cx="1064.7238"
-     inkscape:cy="442.72807"
+     inkscape:zoom="0.73377665"
+     inkscape:cx="622.12391"
+     inkscape:cy="470.85172"
      inkscape:window-width="1647"
      inkscape:window-height="1065"
      inkscape:window-x="174"
@@ -217,5 +217,12 @@
        d="m 1331.9372,748.8019 -1.6006,-89.34737"
        id="path10249-6-5"
        sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#d52122;stroke:#d52122;stroke-width:8;stroke-dasharray:none;stroke-dashoffset:17.9906;stroke-opacity:1;paint-order:markers stroke fill;fill-opacity:1"
+       id="rect11550"
+       width="47.698437"
+       height="44.972813"
+       x="276.65094"
+       y="331.16345" />
   </g>
 </svg>
