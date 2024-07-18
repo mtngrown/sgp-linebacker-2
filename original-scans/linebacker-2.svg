@@ -34,7 +34,7 @@
      showgrid="false"
      inkscape:zoom="0.87299637"
      inkscape:cx="581.33117"
-     inkscape:cy="406.07271"
+     inkscape:cy="726.80715"
      inkscape:window-width="1647"
      inkscape:window-height="1065"
      inkscape:window-x="225"
@@ -88,8 +88,15 @@
        id="rect290-6-24"
        width="351.66238"
        height="295.53387"
-       x="39.173031"
+       x="41.173031"
        y="276.82059" />
+    <rect
+       style="fill:none;stroke:#f6b999;stroke-width:8;stroke-dasharray:none;stroke-dashoffset:17.9906;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect290-6-24-7"
+       width="341.35306"
+       height="295.53387"
+       x="393.81287"
+       y="277.2641" />
     <rect
        style="fill:none;stroke:#f6b999;stroke-width:8;stroke-dasharray:none;stroke-dashoffset:17.9906;stroke-opacity:1;paint-order:markers stroke fill"
        id="rect290-6-2"
