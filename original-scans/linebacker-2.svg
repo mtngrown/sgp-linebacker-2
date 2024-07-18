@@ -33,12 +33,12 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="0.87299637"
-     inkscape:cx="687.86082"
-     inkscape:cy="831.04584"
+     inkscape:cx="375.14474"
+     inkscape:cy="781.79019"
      inkscape:window-width="1647"
      inkscape:window-height="1065"
      inkscape:window-x="225"
-     inkscape:window-y="115"
+     inkscape:window-y="87"
      inkscape:window-maximized="0"
      inkscape:current-layer="g8" />
   <g
@@ -69,5 +69,19 @@
        d="m 36.655364,12.600281 969.076236,-2.29096 0.8421,795.165199 530.1074,2.08265 -1.2988,249.68563 c -381.2018,-3.9033 -762.41314,-3.4011 -1143.62809,-3.4011 l 4.58192,-479.95615 -352.807885,1.14548 z"
        id="mapborder"
        sodipodi:nodetypes="ccccccccc" />
+    <rect
+       style="fill:none;stroke:#f6b999;stroke-width:8;stroke-dasharray:none;stroke-dashoffset:17.9906;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect290"
+       width="331.04376"
+       height="231.38699"
+       x="402.06354"
+       y="572.74011" />
+    <rect
+       style="fill:none;stroke:#f6b999;stroke-width:8;stroke-dasharray:none;stroke-dashoffset:17.9906;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect290-0"
+       width="331.04376"
+       height="247.42371"
+       x="403.11719"
+       y="805.92511" />
   </g>
 </svg>
