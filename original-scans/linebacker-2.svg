@@ -37,8 +37,8 @@
      inkscape:cy="605.38625"
      inkscape:window-width="1647"
      inkscape:window-height="1065"
-     inkscape:window-x="225"
-     inkscape:window-y="87"
+     inkscape:window-x="200"
+     inkscape:window-y="81"
      inkscape:window-maximized="0"
      inkscape:current-layer="g8" />
   <g
@@ -72,9 +72,9 @@
     <rect
        style="fill:none;stroke:#f6b999;stroke-width:8;stroke-dasharray:none;stroke-dashoffset:17.9906;stroke-opacity:1;paint-order:markers stroke fill"
        id="rect290"
-       width="331.04376"
+       width="339.06213"
        height="231.38699"
-       x="402.06354"
+       x="394.0452"
        y="572.74011" />
     <rect
        style="fill:none;stroke:#f6b999;stroke-width:8;stroke-dasharray:none;stroke-dashoffset:17.9906;stroke-opacity:1;paint-order:markers stroke fill"
@@ -121,9 +121,9 @@
     <rect
        style="fill:none;stroke:#f6b999;stroke-width:8;stroke-dasharray:none;stroke-dashoffset:17.9906;stroke-opacity:1;paint-order:markers stroke fill"
        id="rect290-0"
-       width="331.04376"
+       width="339.06213"
        height="247.42371"
-       x="403.11719"
+       x="395.09885"
        y="805.92511" />
   </g>
 </svg>
