@@ -33,12 +33,12 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="0.87299637"
-     inkscape:cx="723.37071"
-     inkscape:cy="605.38625"
+     inkscape:cx="695.87918"
+     inkscape:cy="532.07552"
      inkscape:window-width="1647"
      inkscape:window-height="1065"
-     inkscape:window-x="200"
-     inkscape:window-y="81"
+     inkscape:window-x="156"
+     inkscape:window-y="76"
      inkscape:window-maximized="0"
      inkscape:current-layer="g8" />
   <g
@@ -125,5 +125,19 @@
        height="247.42371"
        x="395.09885"
        y="805.92511" />
+    <rect
+       style="fill:none;stroke:#f6b999;stroke-width:8;stroke-dasharray:none;stroke-dashoffset:17.9906;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect290-0-9"
+       width="271.47879"
+       height="247.42371"
+       x="734.67505"
+       y="806.90814" />
+    <rect
+       style="fill:none;stroke:#f6b999;stroke-width:8.00001;stroke-dasharray:none;stroke-dashoffset:17.9906;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect290-0-9-8"
+       width="530.35724"
+       height="247.42371"
+       x="1006.8467"
+       y="806.21887" />
   </g>
 </svg>
