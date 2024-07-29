@@ -27,7 +27,7 @@ every flight of B-52’s taking losses
 equals one flight), and raises one
 level for every 250 SAMs fired or
 seven continuous nights without B-52
-missions. PM _ only affects B-52
+missions. PM only affects B-52
 missions results.
 PM effects:
 6o0r.5 No effect
