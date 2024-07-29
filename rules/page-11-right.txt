@@ -1,0 +1,53 @@
+No airfield may have more than one
+echo counter on the game map at
+the same time.
+
+No NV units may enter the US
+Holding Area Box.
+
+US echo counter have unlimited
+staying power (=9 GTs) on the map,
+but must return to US holding area
+after they have bombed or entered
+air-to-air combat (except 8-52 which
+only returns after they have bombed).
+
+Units left on the map after the end
+of the ninth GT are removed and
+placed in the air status display for
+the next night (exception: NV units in
+South China Sea box as above).
+
+US PILOT MORALE
+Pilot Morale (PM) is measured on a
+6-0 scale where ‘’6’’ is good and
+“0’’ is lousy. PM drops one level tor
+every flight of B-52’s taking losses
+(for this purpose, one echo counter
+equals one flight), and raises one
+level for every 250 SAMs fired or
+seven continuous nights without B-52
+missions. PM _ only affects B-52
+missions results.
+PM effects:
+6o0r.5 No effect
+4 or 3 Subtract ‘/1’’ from bombing
+dice rolls
+2 or 1 Subtract ‘’2’’ from bombing
+dice rolls
+0 No B-52 missions allowed
+
+THE GAME-TURN TRACK
+LINEBACKER II is played in game
+turns, each GT consisting of the six
+phases making up the Sequence of
+Play. Nine GTs make up one night of
+real time. No DAYLIGHT GTs are
+played. After the ninth GT is com-
+pleted, the playing pieces are re-
+moved from the game map and set up
+on the air status display anew (see
+Movement Rules).
+
+PAGE 11
+
