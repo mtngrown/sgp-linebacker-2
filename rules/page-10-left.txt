@@ -5,7 +5,7 @@ left of the Flak CRT represents six of
 the twenty-one possible outcomes of
 two simultaneously rolled six-sided
 dice. (The other fifteen outcomes are
-considered ‘‘no effect’’ and are
+considered ``no effect'' and are
 deleted for practical purposes.)
 
 The numbers on the top line
@@ -15,7 +15,7 @@ sections between the lines and
 columns are the numbers of aircraft
 hit and downed by the salvo. If tar-
 get is B-52 or ECM aircraft only the
-four ‘‘boxed-in’’ results on the CRT
+four ``boxed-in'' results on the CRT
 are valid.
 
 The Low-Level Flak CRT is only
@@ -25,8 +25,8 @@ player rolls two dice and consults the
 Low-Level Flak CRT for the result. If
 an ECM aircraft is present in the
 attacking echo counter. he uses the
-“ECM” column, in other cases the
-““Normal’’ column.
+``ECM'' column, in other cases the
+``Normal'' column.
 
 AIR-TO-AIR COMBAT
 
@@ -48,8 +48,8 @@ corresponding box on his Air Status
 Display. If the echo counter contains
 B-52’s the US player rolls two dice
 for each B-52 in the box before the
-attack and consults the ‘’B-52 Defen-
-sive Fire’’ column on the Air-to-Air
+attack and consults the ``B-52 Defen-
+sive Fire'' column on the Air-to-Air
 CRT, and the NV player places the
 resulting number of HIT markers in
 
