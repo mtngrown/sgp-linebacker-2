@@ -14,5 +14,7 @@ sed -i '' 's/#/\\#/g' temp.txt
 
 cp temp.txt temp.tex
 
+xelatex rules
+
 echo "All files have been concatenated into temp.txt."
 
