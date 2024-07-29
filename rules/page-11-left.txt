@@ -1,0 +1,54 @@
+table represent aircraft destroyed on
+the ground, and only apply to air-
+craft in Airfield Alert or Landing/Turn
+around boxes on NV player air status
+display of airfield attacked. “S”
+means airfield destroyed and may not
+be used for remainder of game.
+No “target of opportunity” bomb-
+ing is allowed; a unit must bomb the
+target it is targeted for on the US air
+status display.
+
+MOVEMENT
+Movement may only take place dur-
+ing the movement phase. All units
+have a uniform movement allowance
+of “one”, enabling them to move
+from one map box to another, crossing
+the dividing lines or moving along the
+lines connecting the map boxes and
+the US HOLDING AREA BOX. No
+diagonal movement is allowed.
+NV air units begin the game in the
+airfield alert boxes of the NV air
+status display (exception: see setting
+up the game). In his movement
+phase, the NV player may move all,
+any, or none of his aircraft counters
+into the “take-off” box, placing the
+appropriate echo counters on the
+game map, in the map box contain-
+ing the airfield of the unit. The echo
+counter may then move in the coming
+game turns according to the move-
+ment rules. The fighter unit/stack of
+units must move one step on the
+display boxes for each game turn
+(movement phase) in the air, and in
+the Movement Phase it enters the
+Landing/Turn-around box, must
+return to its home airfield. If the air
+unit cannot return, i.e., the echo
+counter is in another map box than
+the home airfield, the unit(s) is
+removed from play and may not
+return till the next day (night, really)
+first GT. If the unit ends up in the
+South China Sea map box with air-
+craft counter in “landing” box, the
+aircraft are permanently lost, ceding
+victory points to US player.
+
+COMBAT
+
