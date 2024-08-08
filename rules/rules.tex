@@ -3,7 +3,8 @@
 \usepackage{geometry}
 \usepackage{multicol}
 \usepackage{amsmath}
-\geometry{paperwidth=5in, paperheight=8in, margin=0.45in}
+\usepackage{titlesec}
+\geometry{paperwidth=5.5in, paperheight=8in, margin=0.45in}
 
 % \usepackage{typewriter}
 
@@ -20,6 +21,14 @@
 \setlength\parindent{0em}
 \setlength{\columnsep}{0.55cm}
 % \setitemize[1]{topsep=-3pt, partopsep=0pt, parsep=0pt, label=$\triangleright$}
+
+\titlespacing*{\section}
+  {0pt}
+  {2ex plus 1ex minus .2ex}
+  {-0.5em}
+\titleformat{\section}
+  {\normalfont\small\sffamily\bfseries}{\thesection}{1em}{}
+
 
 
 \title{VIET NAM}
