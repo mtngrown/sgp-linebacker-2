@@ -7,8 +7,8 @@ class SVGGenerator
     [11.7, 9.5],
     [18.1, 9.5],
     [18.1, 12.6],
-    [4.7, 12.6],
-    [4.7, 6.7],
+    [4.3, 12.6],
+    [4.3, 6.7],
     [0, 6.7]
   ]
 
@@ -62,7 +62,15 @@ class SVGGenerator
   end
 
   def zone1
-    "<rect x='0' y='0' width='4.8' height='3.2' fill='#{fill_color}' stroke='#{stroke_color}' stroke-width='#{stroke_width}cm'/>"
+    ll = [0, 0]
+    ur = [4.3, 3.1]
+    "<rect x='#{ll[0]}' y='#{ll[1]}' width='#{ur[0] - ll[0]}' height='#{ur[1] - ll[1]}' fill='#{fill_color}' stroke='#{stroke_color}' stroke-width='#{stroke_width}cm'/>"
+  end
+
+  def zone2
+    ll = [4.3, 0]
+    ur = [8.4, 3.1]
+    "<rect x='#{ll[0]}' y='#{ll[1]}' width='#{ur[0] - ll[0]}' height='#{ur[1] - ll[1]}' fill='#{fill_color}' stroke='#{stroke_color}' stroke-width='#{stroke_width}cm'/>"
   end
 
   def generate_svg
@@ -75,6 +83,7 @@ class SVGGenerator
           <g transform="translate(1.0, 1.0)">
             <path d="M #{path_data} Z" fill="#{fill_color}" stroke="#{stroke_color}" stroke-width="#{stroke_width}cm" />
             #{zone1}
+            #{zone2}
           </g>
         </svg>
       SVG
