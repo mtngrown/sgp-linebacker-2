@@ -29,10 +29,7 @@ File.open("border_shape.svg", "w") do |file|
     <svg xmlns="http://www.w3.org/2000/svg" width="#{canvas_width}cm" height="#{canvas_height}cm" viewBox="0 0 #{canvas_width} #{canvas_height}">
 
       #{canvas_rect}
-
-      <!-- Viewport Background -->
-      <rect x="0" y="0" width="#{canvas_width}" height="#{canvas_height}" fill="lightcoral" />
-
+      #{viewport_rect}
       #{bounding_box_rect}
 
 
