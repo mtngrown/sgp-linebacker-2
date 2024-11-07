@@ -49,6 +49,22 @@ class SVGGenerator
     BORDER_POINTS.map { |x, y| "#{x},#{y}" }.join(" L ")
   end
 
+  def stroke_width
+    0.002
+  end
+
+  def stroke_color
+    "black"
+  end
+
+  def fill_color
+    "#E0FFE0"
+  end
+
+  def zone1
+    "<rect x='0' y='0' width='4.8' height='3.2' fill='#{fill_color}' stroke='#{stroke_color}' stroke-width='#{stroke_width}cm'/>"
+  end
+
   def generate_svg
     File.open("border_shape.svg", "w") do |file|
       file.puts <<~SVG
@@ -56,8 +72,9 @@ class SVGGenerator
           #{canvas_rect}
           #{viewport_rect}
           #{bounding_box_rect}
-          <g transform="translate(0.5, 0.5)">
-            <path d="M #{path_data} Z" fill="#E0FFE0" stroke="black" stroke-width="0.002cm" />
+          <g transform="translate(1.0, 1.0)">
+            <path d="M #{path_data} Z" fill="#{fill_color}" stroke="#{stroke_color}" stroke-width="#{stroke_width}cm" />
+            #{zone1}
           </g>
         </svg>
       SVG
