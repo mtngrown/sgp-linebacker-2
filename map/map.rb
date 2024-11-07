@@ -53,7 +53,14 @@ class SVGGenerator
     [
       Zone.new([0, 0], [4.3, 3.1], label: "Zone 1"),
       Zone.new([4.3, 0], [8.4, 3.1], label: "Zone 2"),
-      Zone.new([8.4, 0], [11.7, 6.7], label: "Zone 3")
+      Zone.new([8.4, 0], [11.7, 6.7], label: "Zone 3"),
+      Zone.new([0, 3.1], [4.3, 6.7], label: "Zone 4"),
+      Zone.new([4.3, 3.1], [8.4, 6.7], label: "Zone 5"),
+      Zone.new([8.4, 6.7], [11.7, 9.5], label: "Zone 6"),
+      Zone.new([4.3, 6.7], [8.4, 9.5], label: "Zone 7"),
+      Zone.new([11.7, 9.5], [18.1, 12.6], label: "Zone 8"),
+      Zone.new([8.4, 9.5], [11.7, 12.6], label: "Zone 9"),
+      Zone.new([4.3, 9.5], [8.4, 12.6], label: "Zone 10")
     ]
   end
 
