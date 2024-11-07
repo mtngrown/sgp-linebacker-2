@@ -52,7 +52,8 @@ class SVGGenerator
   def initialize_zones
     [
       Zone.new([0, 0], [4.3, 3.1], label: "Zone 1"),
-      Zone.new([4.3, 0], [8.4, 3.1], label: "Zone 2")
+      Zone.new([4.3, 0], [8.4, 3.1], label: "Zone 2"),
+      Zone.new([8.4, 0], [11.7, 6.7], label: "Zone 3")
     ]
   end
 
