@@ -56,7 +56,9 @@ class SVGGenerator
           #{canvas_rect}
           #{viewport_rect}
           #{bounding_box_rect}
-          <path d="M #{path_data} Z" fill="none" stroke="black" stroke-width="0.002cm" />
+          <g transform="translate(0.5, 0.5)">
+            <path d="M #{path_data} Z" fill="none" stroke="black" stroke-width="0.002cm" />
+          </g>
         </svg>
       SVG
     end
