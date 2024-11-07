@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require_relative "zone"
+
 class SVGGenerator
   BORDER_POINTS = [
     [0, 0],
@@ -12,20 +14,18 @@ class SVGGenerator
     [0, 6.7]
   ]
 
-  attr_reader :canvas_width, :canvas_height
+  attr_reader :canvas_width, :canvas_height, :zones
 
   def initialize(canvas_width = 20.0, canvas_height = 16.0)
     @canvas_width = canvas_width
     @canvas_height = canvas_height
+    @zones = initialize_zones
   end
 
   def bounding_box
-    x_values = BORDER_POINTS.map { |point| point[0] }
-    y_values = BORDER_POINTS.map { |point| point[1] }
-    x_min, x_max = x_values.min, x_values.max
-    y_min, y_max = y_values.min, y_values.max
-
-    [[x_min, y_min], [x_max, y_max]]
+    x_values = BORDER_POINTS.map(&:first)
+    y_values = BORDER_POINTS.map(&:last)
+    [[x_values.min, y_values.min], [x_values.max, y_values.max]]
   end
 
   def bounding_box_rect
@@ -49,28 +49,11 @@ class SVGGenerator
     BORDER_POINTS.map { |x, y| "#{x},#{y}" }.join(" L ")
   end
 
-  def stroke_width
-    0.002
-  end
-
-  def stroke_color
-    "black"
-  end
-
-  def fill_color
-    "#E0FFE0"
-  end
-
-  def zone1
-    ll = [0, 0]
-    ur = [4.3, 3.1]
-    "<rect x='#{ll[0]}' y='#{ll[1]}' width='#{ur[0] - ll[0]}' height='#{ur[1] - ll[1]}' fill='#{fill_color}' stroke='#{stroke_color}' stroke-width='#{stroke_width}cm'/>"
-  end
-
-  def zone2
-    ll = [4.3, 0]
-    ur = [8.4, 3.1]
-    "<rect x='#{ll[0]}' y='#{ll[1]}' width='#{ur[0] - ll[0]}' height='#{ur[1] - ll[1]}' fill='#{fill_color}' stroke='#{stroke_color}' stroke-width='#{stroke_width}cm'/>"
+  def initialize_zones
+    [
+      Zone.new([0, 0], [4.3, 3.1], label: "Zone 1"),
+      Zone.new([4.3, 0], [8.4, 3.1], label: "Zone 2")
+    ]
   end
 
   def generate_svg
@@ -81,9 +64,8 @@ class SVGGenerator
           #{viewport_rect}
           #{bounding_box_rect}
           <g transform="translate(1.0, 1.0)">
-            <path d="M #{path_data} Z" fill="#{fill_color}" stroke="#{stroke_color}" stroke-width="#{stroke_width}cm" />
-            #{zone1}
-            #{zone2}
+            <path d="M #{path_data} Z" fill="#{Zone::DEFAULT_FILL_COLOR}" stroke="#{Zone::DEFAULT_STROKE_COLOR}" stroke-width="#{Zone::DEFAULT_STROKE_WIDTH}cm" />
+            #{zones.map(&:to_svg).join("\n")}
           </g>
         </svg>
       SVG
@@ -92,6 +74,4 @@ class SVGGenerator
   end
 end
 
-# Usage
-svg_generator = SVGGenerator.new
-svg_generator.generate_svg
+SVGGenerator.new.generate_svg
