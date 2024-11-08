@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative "zone"
+require_relative "star"
 
 class SVGGenerator
   BORDER_POINTS = [
@@ -14,12 +15,13 @@ class SVGGenerator
     [0, 6.7]
   ]
 
-  attr_reader :canvas_width, :canvas_height, :zones
+  attr_reader :canvas_width, :canvas_height, :zones, :stars
 
   def initialize(canvas_width = 20.0, canvas_height = 16.0)
     @canvas_width = canvas_width
     @canvas_height = canvas_height
     @zones = initialize_zones
+    @stars = initialize_stars
   end
 
   def bounding_box
@@ -64,6 +66,12 @@ class SVGGenerator
     ]
   end
 
+  def initialize_stars
+    [
+      Star.new([3, 3], 0.1)
+    ]
+  end
+
   def generate_svg
     File.open("border_shape.svg", "w") do |file|
       file.puts <<~SVG
@@ -74,6 +82,7 @@ class SVGGenerator
           <g transform="translate(1.0, 1.0)">
             <path d="M #{path_data} Z" fill="#{Zone::DEFAULT_FILL_COLOR}" stroke="#{Zone::DEFAULT_STROKE_COLOR}" stroke-width="#{Zone::DEFAULT_STROKE_WIDTH}cm" />
             #{zones.map(&:to_svg).join("\n")}
+            #{stars.map(&:to_svg).join("\n")}
           </g>
         </svg>
       SVG

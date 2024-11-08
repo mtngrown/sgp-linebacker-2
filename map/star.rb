@@ -56,7 +56,7 @@ class Star
     "<polygon points='#{points_str}' fill='#{fill}' stroke='#{stroke}' stroke-width='#{stroke_width}' />"
   end
   
-  def star_path(cx, cy, outer_radius, inner_radius, fill: "gold", stroke: "black", stroke_width: 1)
+  def star_path(cx, cy, outer_radius, inner_radius, fill: "gold", stroke: "black", stroke_width: 0.2)
     points = star_points(cx, cy, outer_radius, inner_radius)
     path_data = "M #{points[0][0]},#{points[0][1]} " + points[1..].map { |x, y| "L #{x},#{y}" }.join(" ") + " Z"
     "<path d='#{path_data}' fill='#{fill}' stroke='#{stroke}' stroke-width='#{stroke_width}' />"
