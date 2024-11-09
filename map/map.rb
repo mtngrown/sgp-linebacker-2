@@ -77,7 +77,7 @@ class SVGGenerator
       Star.new([5.3, 2.2], sr, label: "7", label_offset: lr),
       Star.new([7.6, 6.0], sr, label: "8", label_offset: ur),
       Star.new([7.4, 8.8], sr, label: "9", label_offset: ur),
-      Star.new([9.2, 12.2], sr, label: "10", label_offset: ur)
+      Star.new([13.2, 12.2], sr, label: "10", label_offset: ur)
     ]
   end
 
