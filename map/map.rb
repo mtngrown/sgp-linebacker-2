@@ -66,11 +66,22 @@ class SVGGenerator
     ]
   end
 
+  def sr # star radius
+    0.1
+  end
+
   def initialize_stars
     [
-      Star.new([3, 3], 0.1, label: "1", label_offset: [0.2, 0.4]),
-      Star.new([10, 10], 0.1, label: "2", label_offset: [0.2, 0.4]),
-      Star.new([7, 8], 0.1, label: "3", label_offset: [0.2, 0.4])
+      Star.new([0.5, 1.6], sr, label: "1", label_offset: [0.4, 0.0]),
+      Star.new([3.1, 1.6], sr, label: "2", label_offset: [0.4, 0.0]),
+      Star.new([3.5, 2.2], sr, label: "3", label_offset: [0.4, 0.0]),
+      Star.new([1.8, 3.7], sr, label: "4", label_offset: [0.4, 0.0]),
+      Star.new([3.9, 3.6], sr, label: "5", label_offset: [-0.4, 0.0]),
+      Star.new([3.9, 5.2], sr, label: "6", label_offset: [-0.4, 0.0]),
+      Star.new([5.3, 2.2], sr, label: "7", label_offset: [0.4, 0.0]),
+      Star.new([7.6, 6.0], sr, label: "8", label_offset: [0.4, 0.0]),
+      Star.new([7.4, 8.8], sr, label: "9", label_offset: [0.4, 0.0]),
+      Star.new([9.2, 12.2], sr, label: "10", label_offset: [0.4, 0.0])
     ]
   end
 
