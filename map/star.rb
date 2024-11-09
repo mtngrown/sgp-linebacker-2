@@ -1,21 +1,24 @@
 # Five pointed star representing targets
 class Star
-  attr_reader :center, :radius
-  def initialize(center, radius)
+  DEFAULT_INNER_RADIUS_RATIO = 0.5
+  DEFAULT_FILL = "gold"
+  DEFAULT_STROKE = "black"
+  DEFAULT_STROKE_WIDTH = 1
+  DEFAULT_FONT_SIZE = 1
+  DEFAULT_LABEL_COLOR = "black"
+  attr_reader :center, :outer_radius, :inner_radius, :label, :label_offset, :fill, :stroke, :stroke_width, :font_size, :label_color
+  
+  def initialize(center, radius, options = {})
     @center = center
-    @radius = radius
-  end
-
-  def fill
-    "white"
-  end
-
-  def stroke
-    "black"
-  end
-
-  def stroke_width
-    0.05
+    @outer_radius = radius
+    @inner_radius = options[:inner_radius] || radius * DEFAULT_INNER_RADIUS_RATIO
+    @label = options[:label]
+    @label_offset = options[:label_offset] || [0, 0]
+    @fill = options[:fill] || DEFAULT_FILL
+    @stroke = options[:stroke] || DEFAULT_STROKE
+    @stroke_width = options[:stroke_width] || DEFAULT_STROKE_WIDTH
+    @font_size = options[:font_size] || DEFAULT_FONT_SIZE
+    @label_color = options[:label_color] || DEFAULT_LABEL_COLOR
   end
 
   def points
@@ -63,6 +66,6 @@ class Star
   end
 
   def to_svg
-    star_path(center[0], center[1], radius, radius * 0.5)
+    star_path(center[0], center[1], outer_radius, inner_radius)
   end
 end
