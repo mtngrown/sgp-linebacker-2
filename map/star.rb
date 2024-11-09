@@ -4,7 +4,7 @@ class Star
   DEFAULT_FILL = "gold"
   DEFAULT_STROKE = "black"
   DEFAULT_STROKE_WIDTH = 1
-  DEFAULT_FONT_SIZE = 1
+  DEFAULT_FONT_SIZE = 0.5
   DEFAULT_LABEL_COLOR = "black"
   attr_reader :center, :outer_radius, :inner_radius, :label, :label_offset, :fill, :stroke, :stroke_width, :font_size, :label_color
   
@@ -65,7 +65,21 @@ class Star
     "<path d='#{path_data}' fill='#{fill}' stroke='#{stroke}' stroke-width='#{stroke_width}' />"
   end
 
+  def label_svg
+    lx, ly = label_position
+    "<text x='#{lx}' y='#{ly}' font-size='#{font_size}' fill='#{label_color}' text-anchor='middle'>#{label}</text>" if label
+  end
+
+  def label_position
+    cx, cy = center
+    offset_x, offset_y = label_offset
+    [cx + offset_x, cy + offset_y]
+  end
+
   def to_svg
-    star_path(center[0], center[1], outer_radius, inner_radius)
+    <<~SVG
+      #{star_path(center[0], center[1], outer_radius, inner_radius)}
+      #{label_svg}
+    SVG
   end
 end

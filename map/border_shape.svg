@@ -35,7 +35,13 @@
 <text x='6.35' y='11.05' fill='black' font-size='0.5' text-anchor='middle' dy='.3em'>Zone 10</text>
 
     <path d='M 3.0,2.9 L 3.03,2.96 L 3.1,2.97 L 3.05,3.02 L 3.06,3.08 L 3.0,3.05 L 2.94,3.08 L 2.95,3.02 L 2.9,2.97 L 2.97,2.96 Z' fill='gold' stroke='black' stroke-width='0.2' />
+<text x='3.2' y='3.4' font-size='0.5' fill='black' text-anchor='middle'>1</text>
+
 <path d='M 10.0,9.9 L 10.03,9.96 L 10.1,9.97 L 10.05,10.02 L 10.06,10.08 L 10.0,10.05 L 9.94,10.08 L 9.95,10.02 L 9.9,9.97 L 9.97,9.96 Z' fill='gold' stroke='black' stroke-width='0.2' />
+<text x='10.2' y='10.4' font-size='0.5' fill='black' text-anchor='middle'>2</text>
+
 <path d='M 7.0,7.9 L 7.03,7.96 L 7.1,7.97 L 7.05,8.02 L 7.06,8.08 L 7.0,8.05 L 6.94,8.08 L 6.95,8.02 L 6.9,7.97 L 6.97,7.96 Z' fill='gold' stroke='black' stroke-width='0.2' />
+<text x='7.2' y='8.4' font-size='0.5' fill='black' text-anchor='middle'>3</text>
+
   </g>
 </svg>

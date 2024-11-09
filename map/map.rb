@@ -68,9 +68,9 @@ class SVGGenerator
 
   def initialize_stars
     [
-      Star.new([3, 3], 0.1, label: "1", label_offset: [0, 0.1]),
-      Star.new([10, 10], 0.1, label: "2", label_offset: [0, 0.1]),
-      Star.new([7, 8], 0.1, label: "3", label_offset: [0, 0.1])
+      Star.new([3, 3], 0.1, label: "1", label_offset: [0.2, 0.4]),
+      Star.new([10, 10], 0.1, label: "2", label_offset: [0.2, 0.4]),
+      Star.new([7, 8], 0.1, label: "3", label_offset: [0.2, 0.4])
     ]
   end
 
