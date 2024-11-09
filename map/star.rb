@@ -1,9 +1,9 @@
 # Five pointed star representing targets
 class Star
-  DEFAULT_INNER_RADIUS_RATIO = 0.5
+  DEFAULT_INNER_RADIUS_RATIO = 0.45
   DEFAULT_FILL = "gold"
-  DEFAULT_STROKE = "black"
-  DEFAULT_STROKE_WIDTH = 1
+  DEFAULT_STROKE = "green"
+  DEFAULT_STROKE_WIDTH = 0.02
   DEFAULT_FONT_SIZE = 0.5
   DEFAULT_LABEL_COLOR = "black"
   attr_reader :center, :outer_radius, :inner_radius, :label, :label_offset, :fill, :stroke, :stroke_width, :font_size, :label_color
@@ -59,7 +59,7 @@ class Star
     "<polygon points='#{points_str}' fill='#{fill}' stroke='#{stroke}' stroke-width='#{stroke_width}' />"
   end
   
-  def star_path(cx, cy, outer_radius, inner_radius, fill: "gold", stroke: "black", stroke_width: 0.2)
+  def star_path(cx, cy, outer_radius, inner_radius, fill: "gold", stroke: "black", stroke_width: @stroke_width)
     points = star_points(cx, cy, outer_radius, inner_radius)
     path_data = "M #{points[0][0]},#{points[0][1]} " + points[1..].map { |x, y| "L #{x},#{y}" }.join(" ") + " Z"
     "<path d='#{path_data}' fill='#{fill}' stroke='#{stroke}' stroke-width='#{stroke_width}' />"

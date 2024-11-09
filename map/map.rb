@@ -55,33 +55,29 @@ class SVGGenerator
     [
       Zone.new([0, 0], [4.3, 3.1], label: "Zone 1"),
       Zone.new([4.3, 0], [8.4, 3.1], label: "Zone 2"),
-      Zone.new([8.4, 0], [11.7, 6.7], label: "Zone 3"),
-      Zone.new([0, 3.1], [4.3, 6.7], label: "Zone 4"),
-      Zone.new([4.3, 3.1], [8.4, 6.7], label: "Zone 5"),
+      Zone.new([8.4, 0], [11.7, 6.7], label: "South China Sea"),
+      Zone.new([0, 3.1], [4.3, 6.7], label: "Zone 3"),
+      Zone.new([4.3, 3.1], [8.4, 6.7], label: "Zone 4"),
       Zone.new([8.4, 6.7], [11.7, 9.5], label: "Zone 6"),
-      Zone.new([4.3, 6.7], [8.4, 9.5], label: "Zone 7"),
-      Zone.new([11.7, 9.5], [18.1, 12.6], label: "Zone 8"),
-      Zone.new([8.4, 9.5], [11.7, 12.6], label: "Zone 9"),
-      Zone.new([4.3, 9.5], [8.4, 12.6], label: "Zone 10")
+      Zone.new([4.3, 6.7], [8.4, 9.5], label: "Zone 5"),
+      Zone.new([11.7, 9.5], [18.1, 12.6], label: "Zone 7"),
+      Zone.new([8.4, 9.5], [11.7, 12.6], label: "Zone 8"),
+      Zone.new([4.3, 9.5], [8.4, 12.6], label: "Zone 9")
     ]
-  end
-
-  def sr # star radius
-    0.1
   end
 
   def initialize_stars
     [
-      Star.new([0.5, 1.6], sr, label: "1", label_offset: [0.4, 0.0]),
-      Star.new([3.1, 1.6], sr, label: "2", label_offset: [0.4, 0.0]),
-      Star.new([3.5, 2.2], sr, label: "3", label_offset: [0.4, 0.0]),
-      Star.new([1.8, 3.7], sr, label: "4", label_offset: [0.4, 0.0]),
-      Star.new([3.9, 3.6], sr, label: "5", label_offset: [-0.4, 0.0]),
-      Star.new([3.9, 5.2], sr, label: "6", label_offset: [-0.4, 0.0]),
-      Star.new([5.3, 2.2], sr, label: "7", label_offset: [0.4, 0.0]),
-      Star.new([7.6, 6.0], sr, label: "8", label_offset: [0.4, 0.0]),
-      Star.new([7.4, 8.8], sr, label: "9", label_offset: [0.4, 0.0]),
-      Star.new([9.2, 12.2], sr, label: "10", label_offset: [0.4, 0.0])
+      Star.new([0.5, 1.6], sr, label: "1", label_offset: ur),
+      Star.new([3.1, 1.6], sr, label: "2", label_offset: ur),
+      Star.new([3.5, 2.2], sr, label: "3", label_offset: ur),
+      Star.new([1.8, 3.7], sr, label: "4", label_offset: lr),
+      Star.new([3.9, 3.6], sr, label: "5", label_offset: ll),
+      Star.new([3.9, 5.2], sr, label: "6", label_offset: ll),
+      Star.new([5.3, 2.2], sr, label: "7", label_offset: lr),
+      Star.new([7.6, 6.0], sr, label: "8", label_offset: ur),
+      Star.new([7.4, 8.8], sr, label: "9", label_offset: ur),
+      Star.new([9.2, 12.2], sr, label: "10", label_offset: ur)
     ]
   end
 
@@ -101,6 +97,28 @@ class SVGGenerator
       SVG
     end
     puts "SVG file 'border_shape.svg' created successfully!"
+  end
+
+  private
+
+  def sr # star radius
+    0.2
+  end
+
+  def ur # upper right
+    [0.37, -0.2]
+  end
+
+  def lr # lower right
+    [0.4, 0.3]
+  end
+
+  def ul # upper left
+    [-0.4, 0.0]
+  end
+
+  def ll # lower left
+    [-0.45, 0.4]
   end
 end
 

@@ -46,7 +46,7 @@ class Zone
 
   def to_svg
     rect_svg = "<rect x='#{ll[0]}' y='#{ll[1]}' width='#{width}' height='#{height}' fill='#{fill}' stroke='#{stroke}' stroke-width='#{stroke_width}cm' />"
-    label_svg = label ? "<text x='#{center[0]}' y='#{center[1]}' fill='black' font-size='#{font_size}' text-anchor='middle' dy='.3em'>#{label}</text>" : ""
+    label_svg = label ? "<text x='#{center[0]}' y='#{center[1]}' fill='#d3d3d3' font-size='#{font_size}' text-anchor='middle' dy='.3em'>#{label}</text>" : ""
     
     <<~SVG
       #{rect_svg}
