@@ -4,7 +4,7 @@ class Star
   DEFAULT_FILL = "gold"
   DEFAULT_STROKE = "green"
   DEFAULT_STROKE_WIDTH = 0.02
-  DEFAULT_FONT_SIZE = 0.5
+  DEFAULT_FONT_SIZE = 0.3
   DEFAULT_LABEL_COLOR = "black"
   attr_reader :center, :outer_radius, :inner_radius, :label, :label_offset, :fill, :stroke, :stroke_width, :font_size, :label_color
   

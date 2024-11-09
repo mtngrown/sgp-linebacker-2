@@ -60,9 +60,9 @@ class SVGGenerator
       Zone.new([4.3, 3.1], [8.4, 6.7], label: "Zone 4"),
       Zone.new([8.4, 6.7], [11.7, 9.5], label: "Zone 6"),
       Zone.new([4.3, 6.7], [8.4, 9.5], label: "Zone 5"),
-      Zone.new([11.7, 9.5], [18.1, 12.6], label: "Zone 7"),
+      Zone.new([11.7, 9.5], [18.1, 12.6], label: "Zone 9"),
       Zone.new([8.4, 9.5], [11.7, 12.6], label: "Zone 8"),
-      Zone.new([4.3, 9.5], [8.4, 12.6], label: "Zone 9")
+      Zone.new([4.3, 9.5], [8.4, 12.6], label: "Zone 7")
     ]
   end
 
@@ -106,11 +106,11 @@ class SVGGenerator
   end
 
   def ur # upper right
-    [0.37, -0.2]
+    [0.20, -0.15]
   end
 
   def lr # lower right
-    [0.4, 0.3]
+    [0.25, 0.3]
   end
 
   def ul # upper left
@@ -118,7 +118,7 @@ class SVGGenerator
   end
 
   def ll # lower left
-    [-0.45, 0.4]
+    [-0.25, 0.3]
   end
 end
 

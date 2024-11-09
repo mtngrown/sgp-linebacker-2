@@ -26,43 +26,43 @@
 <text x='6.35' y='8.1' fill='#d3d3d3' font-size='0.5' text-anchor='middle' dy='.3em'>Zone 5</text>
 
 <rect x='11.7' y='9.5' width='6.400000000000002' height='3.0999999999999996' fill='#E0FFE0' stroke='black' stroke-width='0.002cm' />
-<text x='14.9' y='11.05' fill='#d3d3d3' font-size='0.5' text-anchor='middle' dy='.3em'>Zone 7</text>
+<text x='14.9' y='11.05' fill='#d3d3d3' font-size='0.5' text-anchor='middle' dy='.3em'>Zone 9</text>
 
 <rect x='8.4' y='9.5' width='3.299999999999999' height='3.0999999999999996' fill='#E0FFE0' stroke='black' stroke-width='0.002cm' />
 <text x='10.05' y='11.05' fill='#d3d3d3' font-size='0.5' text-anchor='middle' dy='.3em'>Zone 8</text>
 
 <rect x='4.3' y='9.5' width='4.1000000000000005' height='3.0999999999999996' fill='#E0FFE0' stroke='black' stroke-width='0.002cm' />
-<text x='6.35' y='11.05' fill='#d3d3d3' font-size='0.5' text-anchor='middle' dy='.3em'>Zone 9</text>
+<text x='6.35' y='11.05' fill='#d3d3d3' font-size='0.5' text-anchor='middle' dy='.3em'>Zone 7</text>
 
     <path d='M 0.5,1.4 L 0.55,1.53 L 0.69,1.54 L 0.59,1.63 L 0.62,1.76 L 0.5,1.69 L 0.38,1.76 L 0.41,1.63 L 0.31,1.54 L 0.45,1.53 Z' fill='gold' stroke='black' stroke-width='0.02' />
-<text x='0.87' y='1.4000000000000001' font-size='0.5' fill='black' text-anchor='middle'>1</text>
+<text x='0.7' y='1.4500000000000002' font-size='0.3' fill='black' text-anchor='middle'>1</text>
 
 <path d='M 3.1,1.4 L 3.15,1.53 L 3.29,1.54 L 3.19,1.63 L 3.22,1.76 L 3.1,1.69 L 2.98,1.76 L 3.01,1.63 L 2.91,1.54 L 3.05,1.53 Z' fill='gold' stroke='black' stroke-width='0.02' />
-<text x='3.47' y='1.4000000000000001' font-size='0.5' fill='black' text-anchor='middle'>2</text>
+<text x='3.3000000000000003' y='1.4500000000000002' font-size='0.3' fill='black' text-anchor='middle'>2</text>
 
 <path d='M 3.5,2.0 L 3.55,2.13 L 3.69,2.14 L 3.59,2.23 L 3.62,2.36 L 3.5,2.29 L 3.38,2.36 L 3.41,2.23 L 3.31,2.14 L 3.45,2.13 Z' fill='gold' stroke='black' stroke-width='0.02' />
-<text x='3.87' y='2.0' font-size='0.5' fill='black' text-anchor='middle'>3</text>
+<text x='3.7' y='2.0500000000000003' font-size='0.3' fill='black' text-anchor='middle'>3</text>
 
 <path d='M 1.8,3.5 L 1.85,3.63 L 1.99,3.64 L 1.89,3.73 L 1.92,3.86 L 1.8,3.79 L 1.68,3.86 L 1.71,3.73 L 1.61,3.64 L 1.75,3.63 Z' fill='gold' stroke='black' stroke-width='0.02' />
-<text x='2.2' y='4.0' font-size='0.5' fill='black' text-anchor='middle'>4</text>
+<text x='2.05' y='4.0' font-size='0.3' fill='black' text-anchor='middle'>4</text>
 
 <path d='M 3.9,3.4 L 3.95,3.53 L 4.09,3.54 L 3.99,3.63 L 4.02,3.76 L 3.9,3.69 L 3.78,3.76 L 3.81,3.63 L 3.71,3.54 L 3.85,3.53 Z' fill='gold' stroke='black' stroke-width='0.02' />
-<text x='3.4499999999999997' y='4.0' font-size='0.5' fill='black' text-anchor='middle'>5</text>
+<text x='3.65' y='3.9' font-size='0.3' fill='black' text-anchor='middle'>5</text>
 
 <path d='M 3.9,5.0 L 3.95,5.13 L 4.09,5.14 L 3.99,5.23 L 4.02,5.36 L 3.9,5.29 L 3.78,5.36 L 3.81,5.23 L 3.71,5.14 L 3.85,5.13 Z' fill='gold' stroke='black' stroke-width='0.02' />
-<text x='3.4499999999999997' y='5.6000000000000005' font-size='0.5' fill='black' text-anchor='middle'>6</text>
+<text x='3.65' y='5.5' font-size='0.3' fill='black' text-anchor='middle'>6</text>
 
 <path d='M 5.3,2.0 L 5.35,2.13 L 5.49,2.14 L 5.39,2.23 L 5.42,2.36 L 5.3,2.29 L 5.18,2.36 L 5.21,2.23 L 5.11,2.14 L 5.25,2.13 Z' fill='gold' stroke='black' stroke-width='0.02' />
-<text x='5.7' y='2.5' font-size='0.5' fill='black' text-anchor='middle'>7</text>
+<text x='5.55' y='2.5' font-size='0.3' fill='black' text-anchor='middle'>7</text>
 
 <path d='M 7.6,5.8 L 7.65,5.93 L 7.79,5.94 L 7.69,6.03 L 7.72,6.16 L 7.6,6.09 L 7.48,6.16 L 7.51,6.03 L 7.41,5.94 L 7.55,5.93 Z' fill='gold' stroke='black' stroke-width='0.02' />
-<text x='7.97' y='5.8' font-size='0.5' fill='black' text-anchor='middle'>8</text>
+<text x='7.8' y='5.85' font-size='0.3' fill='black' text-anchor='middle'>8</text>
 
 <path d='M 7.4,8.6 L 7.45,8.73 L 7.59,8.74 L 7.49,8.83 L 7.52,8.96 L 7.4,8.89 L 7.28,8.96 L 7.31,8.83 L 7.21,8.74 L 7.35,8.73 Z' fill='gold' stroke='black' stroke-width='0.02' />
-<text x='7.7700000000000005' y='8.600000000000001' font-size='0.5' fill='black' text-anchor='middle'>9</text>
+<text x='7.6000000000000005' y='8.65' font-size='0.3' fill='black' text-anchor='middle'>9</text>
 
 <path d='M 9.2,12.0 L 9.25,12.13 L 9.39,12.14 L 9.29,12.23 L 9.32,12.36 L 9.2,12.29 L 9.08,12.36 L 9.11,12.23 L 9.01,12.14 L 9.15,12.13 Z' fill='gold' stroke='black' stroke-width='0.02' />
-<text x='9.569999999999999' y='12.0' font-size='0.5' fill='black' text-anchor='middle'>10</text>
+<text x='9.399999999999999' y='12.049999999999999' font-size='0.3' fill='black' text-anchor='middle'>10</text>
 
   </g>
 </svg>
