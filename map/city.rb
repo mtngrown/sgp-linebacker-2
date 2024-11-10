@@ -10,13 +10,13 @@ class City
   DEFAULT_FONT_SIZE = 0.25
   DEFAULT_LABEL_COLOR = 'black'
 
-  attr_reader :center, :width, :name, :label_position, :fill, :stroke, :stroke_width, :font_size, :label_color
+  attr_reader :center, :width, :name, :label_alignment, :fill, :stroke, :stroke_width, :font_size, :label_color
 
-  def initialize(center, width, name, label_position, options = {})
+  def initialize(center, width, name, label_alignment, options = {})
     @center = center
     @width = width
     @name = name
-    @label_position = label_position
+    @label_alignment = label_alignment
     @fill = options[:fill] || DEFAULT_FILL
     @stroke = options[:stroke] || DEFAULT_STROKE
     @stroke_width = options[:stroke_width] || DEFAULT_STROKE_WIDTH
@@ -30,7 +30,7 @@ class City
   def to_svg
     <<~SVG
       <polygon points='#{points}' fill='#{fill}' stroke='#{stroke}' stroke-width='#{stroke_width}' />
-      <text x='#{label_x_position}' y='#{center[1] + label_y_offset}' font-size='#{font_size}' fill='#{label_color}'>#{name}</text>
+      <text x='#{label_x_position}' y='#{center[1] + label_y_offset}' font-family='sans-serif' font-size='#{font_size}' fill='#{label_color}'>#{name}</text>
     SVG
   end
 
