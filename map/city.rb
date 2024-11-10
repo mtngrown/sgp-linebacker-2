@@ -7,7 +7,7 @@ class City
   DEFAULT_FILL = "lightblue"
   DEFAULT_STROKE = "blue"
   DEFAULT_STROKE_WIDTH = 0.02
-  DEFAULT_FONT_SIZE = 0.3
+  DEFAULT_FONT_SIZE = 0.2
   DEFAULT_LABEL_COLOR = "black"
 
   attr_reader :center, :width, :name, :label_position, :fill, :stroke, :stroke_width, :font_size, :label_color
@@ -28,10 +28,25 @@ class City
   # the coordinates of the city defined by the center
   # attribute. The width is the length of the side of the square.
   def to_svg
-    "<polygon points='#{points}' fill='#{fill}' stroke='#{stroke}' stroke-width='#{stroke_width}' />"
+    <<~SVG
+      <polygon points='#{points}' fill='#{fill}' stroke='#{stroke}' stroke-width='#{stroke_width}' />
+      <text x='#{label_x_position}' y='#{center[1] + label_y_offset}' font-size='#{font_size}' fill='#{label_color}'>#{name}</text>
+    SVG
   end
 
   private
+
+  def label_x_position
+    center[0] - label_x_offset
+  end
+
+  def label_x_offset
+    (font_size / 2) + 0.3
+  end
+
+  def label_y_offset
+    width / 2 + font_size + 0.1
+  end
 
   def points
     [
