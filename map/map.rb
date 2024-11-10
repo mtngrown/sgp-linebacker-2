@@ -2,6 +2,7 @@
 
 require_relative "zone"
 require_relative "star"
+require_relative "city"
 
 class SVGGenerator
   BORDER_POINTS = [
@@ -15,13 +16,14 @@ class SVGGenerator
     [0, 6.7]
   ]
 
-  attr_reader :canvas_width, :canvas_height, :zones, :stars
+  attr_reader :canvas_width, :canvas_height, :zones, :stars, :cities
 
   def initialize(canvas_width = 20.0, canvas_height = 16.0)
     @canvas_width = canvas_width
     @canvas_height = canvas_height
     @zones = initialize_zones
     @stars = initialize_stars
+    @cities = initialize_cities
   end
 
   def bounding_box
@@ -81,6 +83,17 @@ class SVGGenerator
     ]
   end
 
+  def initialize_cities
+    [
+      City.new([0.6, 2.4], 0.45, "THAI NGUYEN", "ur"),
+      City.new([6.6, 1.1], 0.45,"HAPHONG", "ur"),
+      City.new([3.2, 4.1], 0.7,"HANOI", "ur"),
+      City.new([6.5, 4.5], 0.45,"? DINH", "ur"),
+      City.new([8.9, 8.6], 0.45,"THAN HOA", "ur"),
+      City.new([12.2, 11.8], 0.45,"VINH", "ur")
+    ]
+  end
+
   def generate_svg
     File.open("border_shape.svg", "w") do |file|
       file.puts <<~SVG
@@ -92,6 +105,7 @@ class SVGGenerator
             <path d="M #{path_data} Z" fill="#{Zone::DEFAULT_FILL_COLOR}" stroke="#{Zone::DEFAULT_STROKE_COLOR}" stroke-width="#{Zone::DEFAULT_STROKE_WIDTH}cm" />
             #{zones.map(&:to_svg).join("\n")}
             #{stars.map(&:to_svg).join("\n")}
+            #{cities.map(&:to_svg).join("\n")}
           </g>
         </svg>
       SVG

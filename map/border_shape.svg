@@ -64,5 +64,11 @@
 <path d='M 13.2,12.0 L 13.25,12.13 L 13.39,12.14 L 13.29,12.23 L 13.32,12.36 L 13.2,12.29 L 13.08,12.36 L 13.11,12.23 L 13.01,12.14 L 13.15,12.13 Z' fill='gold' stroke='black' stroke-width='0.02' />
 <text x='13.399999999999999' y='12.049999999999999' font-size='0.3' fill='black' text-anchor='middle'>10</text>
 
+    <polygon points='0.375,2.175,0.825,2.175,0.825,2.625,0.375,2.625' fill='lightblue' stroke='blue' stroke-width='0.02' />
+<polygon points='6.375,0.8750000000000001,6.824999999999999,0.8750000000000001,6.824999999999999,1.3250000000000002,6.375,1.3250000000000002' fill='lightblue' stroke='blue' stroke-width='0.02' />
+<polygon points='2.85,3.7499999999999996,3.5500000000000003,3.7499999999999996,3.5500000000000003,4.449999999999999,2.85,4.449999999999999' fill='lightblue' stroke='blue' stroke-width='0.02' />
+<polygon points='6.275,4.275,6.725,4.275,6.725,4.725,6.275,4.725' fill='lightblue' stroke='blue' stroke-width='0.02' />
+<polygon points='8.675,8.375,9.125,8.375,9.125,8.825,8.675,8.825' fill='lightblue' stroke='blue' stroke-width='0.02' />
+<polygon points='11.975,11.575000000000001,12.424999999999999,11.575000000000001,12.424999999999999,12.025,11.975,12.025' fill='lightblue' stroke='blue' stroke-width='0.02' />
   </g>
 </svg>
