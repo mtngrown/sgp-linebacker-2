@@ -82,7 +82,5 @@
 <polygon points='11.975,11.575000000000001,12.424999999999999,11.575000000000001,12.424999999999999,12.025,11.975,12.025' fill='lightblue' stroke='blue' stroke-width='0.02' />
 <text x='12.2' text-anchor='middle' y='12.375' font-family='sans-serif' font-size='0.25' fill='black'>VINH</text>
 
-    <path d='M 7.6,0 7.4,0.6 6.5,0.4 8.4,2.9' fill='none' stroke='black' stroke-width='0.02' />
-
   </g>
 </svg>

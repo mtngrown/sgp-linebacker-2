@@ -23,5 +23,6 @@
     <text x="10.05" y="11.05" fill="#E8E8E8" font-size="0.5" text-anchor="middle" dy=".3em">Zone 8</text>
     <rect x="4.3" y="9.5" width="4.1000000000000005" height="3.0999999999999996" fill="#E0FFE0" stroke="black" stroke-width="0.002cm"/>
     <text x="6.35" y="11.05" fill="#E8E8E8" font-size="0.5" text-anchor="middle" dy=".3em">Zone 7</text>
+    <path d="M 7.6,0 7.4,0.6 6.5,0.4 8.4,2.9" fill="none" stroke="black" stroke-width="0.02"/>
   </g>
 </svg>

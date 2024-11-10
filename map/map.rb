@@ -113,7 +113,6 @@ class SVGGenerator
             #{zones.map(&:to_svg).join("\n")}
             #{stars.map(&:to_svg).join("\n")}
             #{cities.map(&:to_svg).join("\n")}
-            #{Coastline.new.to_line_svg}
           </g>
         </svg>
       SVG
@@ -129,6 +128,7 @@ class SVGGenerator
         xml.g(transform: 'translate(1.0, 1.0)') do
           Border.new(xml).add_to_svg
           Zone.add_zones_to_svg(xml)
+          Coastline.new(xml).add_line_path
         end
       end
     end

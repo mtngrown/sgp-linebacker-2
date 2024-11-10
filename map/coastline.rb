@@ -1,42 +1,34 @@
 # frozen_string_literal: true
 
+require 'nokogiri'
+
 # A coastline is a series of points that define the coastline.
 # We'll be using various curve functions to generate the coastline.
 class Coastline
   attr_reader :xml
 
-  def initialize(xml = nil)
+  def initialize(xml)
     @xml = xml
   end
 
-  def to_line_svg
-    <<~SVG
-      <path d='M #{points_to_path}' fill='none' stroke='black' stroke-width='0.02' />
-    SVG
+  def add_line_path
+    xml.path(d: "M #{points_to_path}", fill: 'none', stroke: 'black', 'stroke-width': '0.02')
   end
 
-  def to_quadratic_svg
-    <<~SVG
-      <path d='M #{points[0][0]},#{points[0][1]} Q #{points[1][0] - 0.1},#{points[1][1] - 0.3} #{points[1][0]},#{points[1][1]} T #{points[2][0]},#{points[2][1]} T #{points[3][0]},#{points[3][1]}' fill='none' stroke='black' stroke-width='0.02' />
-    SVG
+  def add_quadratic_path
+    xml.path(d: "M #{points[0][0]},#{points[0][1]} Q #{points[1][0] - 0.1},#{points[1][1] - 0.3} #{points[1][0]},#{points[1][1]} T #{points[2][0]},#{points[2][1]} T #{points[3][0]},#{points[3][1]}", fill: 'none', stroke: 'black', 'stroke-width': '0.02')
   end
 
-  def to_cubic_svg
-    <<~SVG
-      <path d='M #{points[0][0]},#{points[0][1]} C #{points[0][0] + 0.1},#{points[0][1] + 0.2} #{points[1][0] - 0.1},#{points[1][1]} #{points[1][0]},#{points[1][1]} S #{points[2][0] + 0.1},#{points[2][1]} #{points[3][0]},#{points[3][1]}' fill='none' stroke='black' stroke-width='0.02' />
-    SVG
+  def add_cubic_path
+    xml.path(d: "M #{points[0][0]},#{points[0][1]} C #{points[0][0] + 0.1},#{points[0][1] + 0.2} #{points[1][0] - 0.1},#{points[1][1]} #{points[1][0]},#{points[1][1]} S #{points[2][0] + 0.1},#{points[2][1]} #{points[3][0]},#{points[3][1]}", fill: 'none', stroke: 'black', 'stroke-width': '0.02')
   end
 
-  def to_smooth_quadratic_svg
-    <<~SVG
-      <path d='M #{points[0][0]},#{points[0][1]} Q #{points[0][0] + 0.1},#{points[0][1] + 0.3} #{points[1][0]},#{points[1][1]} Q #{points[2][0] + 0.1},#{points[2][1]} #{points[3][0]},#{points[3][1]}' fill='none' stroke='black' stroke-width='0.02' />
-    SVG
+  def add_smooth_quadratic_path
+    xml.path(d: "M #{points[0][0]},#{points[0][1]} Q #{points[0][0] + 0.1},#{points[0][1] + 0.3} #{points[1][0]},#{points[1][1]} Q #{points[2][0] + 0.1},#{points[2][1]} #{points[3][0]},#{points[3][1]}", fill: 'none', stroke: 'black', 'stroke-width': '0.02')
   end
 
-  def to_arc_svg
-    <<~SVG
-      <path d='M #{points[0][0]},#{points[0][1]} A 1 1 0 0 1 #{points[1][0]},#{points[1][1]} A 1 1 0 0 1 #{points[2][0]},#{points[2][1]} A 2 2 0 0 1 #{points[3][0]},#{points[3][1]}' fill='none' stroke='black' stroke-width='0.02' />
-    SVG
+  def add_arc_path
+    xml.path(d: "M #{points[0][0]},#{points[0][1]} A 1 1 0 0 1 #{points[1][0]},#{points[1][1]} A 1 1 0 0 1 #{points[2][0]},#{points[2][1]} A 2 2 0 0 1 #{points[3][0]},#{points[3][1]}", fill: 'none', stroke: 'black', 'stroke-width': '0.02')
   end
 
   private
