@@ -86,12 +86,12 @@ class SVGGenerator
 
   def initialize_cities
     [
-      City.new([0.6, 2.4], 0.45, 'THAI NGUYEN', 'ur'),
-      City.new([6.6, 1.1], 0.45, 'HAIPHONG', 'ur'),
-      City.new([3.2, 4.1], 0.7, 'HANOI', 'ur'),
-      City.new([6.5, 4.5], 0.45, '??? DINH', 'ur'),
-      City.new([8.9, 8.6], 0.45, 'THAN HOA', 'ur'),
-      City.new([12.2, 11.8], 0.45, 'VINH', 'ur')
+      City.new([0.6, 2.4], 0.45, 'THAI NGUYEN', 'l'),
+      City.new([6.6, 1.1], 0.45, 'HAIPHONG', 'm'),
+      City.new([3.2, 4.1], 0.7, 'HANOI', 'm'),
+      City.new([6.5, 4.5], 0.45, '??? DINH', 'm'),
+      City.new([8.9, 8.6], 0.45, 'THAN HOA', 'l'),
+      City.new([12.2, 11.8], 0.45, 'VINH', 'm')
     ]
   end
 

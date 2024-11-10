@@ -30,14 +30,33 @@ class City
   def to_svg
     <<~SVG
       <polygon points='#{points}' fill='#{fill}' stroke='#{stroke}' stroke-width='#{stroke_width}' />
-      <text x='#{label_x_position}' y='#{center[1] + label_y_offset}' font-family='sans-serif' font-size='#{font_size}' fill='#{label_color}'>#{name}</text>
+      <text x='#{label_x_position}' text-anchor='#{anchor}' y='#{center[1] + label_y_offset}' font-family='sans-serif' font-size='#{font_size}' fill='#{label_color}'>#{name}</text>
     SVG
   end
 
   private
 
+  def anchor
+    case label_alignment
+    when 'm'
+      'middle'
+    when 'l'
+      # This needs to align on the left side of the city.
+      'start'
+    else
+      'middle'
+    end
+  end
+
   def label_x_position
-    center[0] - label_x_offset
+    case label_alignment
+    when 'm'
+      center[0]
+    when 'l'
+      center[0] - width / 2
+    else
+      center[0]
+    end
   end
 
   def label_x_offset
