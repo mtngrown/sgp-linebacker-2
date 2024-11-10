@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# There are 9 zones. We'll draw a border (rectable)
+# around each zone and label it.
 class Zone
   DEFAULT_FILL_COLOR = '#E0FFE0'
   DEFAULT_STROKE_COLOR = 'black'
@@ -8,7 +10,7 @@ class Zone
 
   attr_reader :ll, :ur, :options
 
-  def initialize(ll, ur, options = {})
+  def initialize(ll, ur, options = {}) # rubocop:disable Naming/MethodParameterName
     @ll = ll
     @ur = ur
     @options = options
@@ -46,10 +48,22 @@ class Zone
     [ll[0] + width / 2.0, ll[1] + height / 2.0]
   end
 
-  def to_svg
-    rect_svg = "<rect x='#{ll[0]}' y='#{ll[1]}' width='#{width}' height='#{height}' fill='#{fill}' stroke='#{stroke}' stroke-width='#{stroke_width}cm' />"
-    label_svg = label ? "<text x='#{center[0]}' y='#{center[1]}' fill='#{super_light_gray_fill}' font-size='#{font_size}' text-anchor='middle' dy='.3em'>#{label}</text>" : ''
+  def rect_svg
+    "<rect x='#{ll[0]}' y='#{ll[1]}' width='#{width}'\
+      height='#{height}' fill='#{fill}' stroke='#{stroke}' stroke-width='#{stroke_width}cm' />"
+  end
 
+  def label_svg
+    if label
+      "<text x='#{center[0]}' y='#{center[1]}'\
+        fill='#{super_light_gray_fill}' font-size='#{font_size}'\
+        text-anchor='middle' dy='.3em'>#{label}</text>"
+    else
+      ''
+    end
+  end
+
+  def to_svg
     <<~SVG
       #{rect_svg}
       #{label_svg}
