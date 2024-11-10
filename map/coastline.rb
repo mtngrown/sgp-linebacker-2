@@ -27,7 +27,7 @@ class Coastline
   end
 
   def add_line_path
-    xml.path(d: "M #{points_to_line_path}", fill: 'none', stroke: 'black', 'stroke-width': '0.02')
+    xml.path(d: "M #{points_to_line_path}", fill: 'none', stroke: 'black', 'stroke-width': '0.02', 'stroke-linejoin': 'round')
   end
 
   def add_quadratic_path
