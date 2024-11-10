@@ -1,9 +1,12 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require 'debug'
+
 require_relative 'zone'
 require_relative 'star'
 require_relative 'city'
+require_relative 'coastline'
 
 class SVGGenerator
   BORDER_POINTS = [
@@ -58,7 +61,7 @@ class SVGGenerator
     [
       Zone.new([0, 0], [4.3, 3.1], label: 'Zone 1'),
       Zone.new([4.3, 0], [8.4, 3.1], label: 'Zone 2'),
-      Zone.new([8.4, 0], [11.7, 6.7], label: 'South China Sea'),
+      Zone.new([8.4, 0], [11.7, 6.7], label: ''),
       Zone.new([0, 3.1], [4.3, 6.7], label: 'Zone 3'),
       Zone.new([4.3, 3.1], [8.4, 6.7], label: 'Zone 4'),
       Zone.new([8.4, 6.7], [11.7, 9.5], label: 'Zone 6'),
@@ -107,6 +110,7 @@ class SVGGenerator
             #{zones.map(&:to_svg).join("\n")}
             #{stars.map(&:to_svg).join("\n")}
             #{cities.map(&:to_svg).join("\n")}
+            #{Coastline.new.to_line_svg}
           </g>
         </svg>
       SVG
