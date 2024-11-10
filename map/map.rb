@@ -6,6 +6,7 @@ require 'nokogiri'
 
 require_relative 'border'
 require_relative 'zone_heredoc'
+require_relative 'zone'
 require_relative 'star'
 require_relative 'city'
 require_relative 'coastline'
@@ -127,6 +128,7 @@ class SVGGenerator
         xml.rect(width: '100%', height: '100%', fill: 'lightblue')
         xml.g(transform: 'translate(1.0, 1.0)') do
           Border.new(xml).add_to_svg
+          Zone.add_zones_to_svg(xml)
         end
       end
     end
