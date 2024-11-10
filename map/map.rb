@@ -5,7 +5,7 @@ require 'debug'
 require 'nokogiri'
 
 require_relative 'border'
-require_relative 'zone'
+require_relative 'zone_heredoc'
 require_relative 'star'
 require_relative 'city'
 require_relative 'coastline'
@@ -61,16 +61,16 @@ class SVGGenerator
 
   def initialize_zones
     [
-      Zone.new([0, 0], [4.3, 3.1], label: 'Zone 1'),
-      Zone.new([4.3, 0], [8.4, 3.1], label: 'Zone 2'),
-      Zone.new([8.4, 0], [11.7, 6.7], label: ''),
-      Zone.new([0, 3.1], [4.3, 6.7], label: 'Zone 3'),
-      Zone.new([4.3, 3.1], [8.4, 6.7], label: 'Zone 4'),
-      Zone.new([8.4, 6.7], [11.7, 9.5], label: 'Zone 6'),
-      Zone.new([4.3, 6.7], [8.4, 9.5], label: 'Zone 5'),
-      Zone.new([11.7, 9.5], [18.1, 12.6], label: 'Zone 9'),
-      Zone.new([8.4, 9.5], [11.7, 12.6], label: 'Zone 8'),
-      Zone.new([4.3, 9.5], [8.4, 12.6], label: 'Zone 7')
+      ZoneHeredoc.new([0, 0], [4.3, 3.1], label: 'Zone 1'),
+      ZoneHeredoc.new([4.3, 0], [8.4, 3.1], label: 'Zone 2'),
+      ZoneHeredoc.new([8.4, 0], [11.7, 6.7], label: ''),
+      ZoneHeredoc.new([0, 3.1], [4.3, 6.7], label: 'Zone 3'),
+      ZoneHeredoc.new([4.3, 3.1], [8.4, 6.7], label: 'Zone 4'),
+      ZoneHeredoc.new([8.4, 6.7], [11.7, 9.5], label: 'Zone 6'),
+      ZoneHeredoc.new([4.3, 6.7], [8.4, 9.5], label: 'Zone 5'),
+      ZoneHeredoc.new([11.7, 9.5], [18.1, 12.6], label: 'Zone 9'),
+      ZoneHeredoc.new([8.4, 9.5], [11.7, 12.6], label: 'Zone 8'),
+      ZoneHeredoc.new([4.3, 9.5], [8.4, 12.6], label: 'Zone 7')
     ]
   end
 
@@ -108,7 +108,7 @@ class SVGGenerator
           #{viewport_rect}
           #{bounding_box_rect}
           <g transform="translate(1.0, 1.0)">
-            <path d="M #{path_data} Z" fill="#{Zone::DEFAULT_FILL_COLOR}" stroke="#{Zone::DEFAULT_STROKE_COLOR}" stroke-width="#{Zone::DEFAULT_STROKE_WIDTH}cm" />
+            <path d="M #{path_data} Z" fill="#{ZoneHeredoc::DEFAULT_FILL_COLOR}" stroke="#{ZoneHeredoc::DEFAULT_STROKE_COLOR}" stroke-width="#{ZoneHeredoc::DEFAULT_STROKE_WIDTH}cm" />
             #{zones.map(&:to_svg).join("\n")}
             #{stars.map(&:to_svg).join("\n")}
             #{cities.map(&:to_svg).join("\n")}

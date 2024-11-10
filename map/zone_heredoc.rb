@@ -2,7 +2,7 @@
 
 # There are 9 zones. We'll draw a border (rectable)
 # around each zone and label it.
-class Zone
+class ZoneHeredoc
   DEFAULT_FILL_COLOR = '#E0FFE0'
   DEFAULT_STROKE_COLOR = 'black'
   DEFAULT_STROKE_WIDTH = 0.002
