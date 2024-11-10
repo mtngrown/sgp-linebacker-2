@@ -1,8 +1,9 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
-require_relative "zone"
-require_relative "star"
-require_relative "city"
+require_relative 'zone'
+require_relative 'star'
+require_relative 'city'
 
 class SVGGenerator
   BORDER_POINTS = [
@@ -14,7 +15,7 @@ class SVGGenerator
     [4.3, 12.6],
     [4.3, 6.7],
     [0, 6.7]
-  ]
+  ].freeze
 
   attr_reader :canvas_width, :canvas_height, :zones, :stars, :cities
 
@@ -50,52 +51,52 @@ class SVGGenerator
   end
 
   def path_data
-    BORDER_POINTS.map { |x, y| "#{x},#{y}" }.join(" L ")
+    BORDER_POINTS.map { |x, y| "#{x},#{y}" }.join(' L ')
   end
 
   def initialize_zones
     [
-      Zone.new([0, 0], [4.3, 3.1], label: "Zone 1"),
-      Zone.new([4.3, 0], [8.4, 3.1], label: "Zone 2"),
-      Zone.new([8.4, 0], [11.7, 6.7], label: "South China Sea"),
-      Zone.new([0, 3.1], [4.3, 6.7], label: "Zone 3"),
-      Zone.new([4.3, 3.1], [8.4, 6.7], label: "Zone 4"),
-      Zone.new([8.4, 6.7], [11.7, 9.5], label: "Zone 6"),
-      Zone.new([4.3, 6.7], [8.4, 9.5], label: "Zone 5"),
-      Zone.new([11.7, 9.5], [18.1, 12.6], label: "Zone 9"),
-      Zone.new([8.4, 9.5], [11.7, 12.6], label: "Zone 8"),
-      Zone.new([4.3, 9.5], [8.4, 12.6], label: "Zone 7")
+      Zone.new([0, 0], [4.3, 3.1], label: 'Zone 1'),
+      Zone.new([4.3, 0], [8.4, 3.1], label: 'Zone 2'),
+      Zone.new([8.4, 0], [11.7, 6.7], label: 'South China Sea'),
+      Zone.new([0, 3.1], [4.3, 6.7], label: 'Zone 3'),
+      Zone.new([4.3, 3.1], [8.4, 6.7], label: 'Zone 4'),
+      Zone.new([8.4, 6.7], [11.7, 9.5], label: 'Zone 6'),
+      Zone.new([4.3, 6.7], [8.4, 9.5], label: 'Zone 5'),
+      Zone.new([11.7, 9.5], [18.1, 12.6], label: 'Zone 9'),
+      Zone.new([8.4, 9.5], [11.7, 12.6], label: 'Zone 8'),
+      Zone.new([4.3, 9.5], [8.4, 12.6], label: 'Zone 7')
     ]
   end
 
   def initialize_stars
     [
-      Star.new([0.5, 1.6], sr, label: "1", label_offset: ur),
-      Star.new([3.1, 1.6], sr, label: "2", label_offset: ur),
-      Star.new([3.5, 2.2], sr, label: "3", label_offset: ur),
-      Star.new([1.8, 3.7], sr, label: "4", label_offset: lr),
-      Star.new([3.9, 3.6], sr, label: "5", label_offset: ll),
-      Star.new([3.9, 5.2], sr, label: "6", label_offset: ll),
-      Star.new([5.3, 2.2], sr, label: "7", label_offset: lr),
-      Star.new([7.6, 6.0], sr, label: "8", label_offset: ur),
-      Star.new([7.4, 8.8], sr, label: "9", label_offset: ur),
-      Star.new([13.2, 12.2], sr, label: "10", label_offset: ur)
+      Star.new([0.5, 1.6], sr, label: '1', label_offset: ur),
+      Star.new([3.1, 1.6], sr, label: '2', label_offset: ur),
+      Star.new([3.5, 2.2], sr, label: '3', label_offset: ur),
+      Star.new([1.8, 3.7], sr, label: '4', label_offset: lr),
+      Star.new([3.9, 3.6], sr, label: '5', label_offset: ll),
+      Star.new([3.9, 5.2], sr, label: '6', label_offset: ll),
+      Star.new([5.3, 2.2], sr, label: '7', label_offset: lr),
+      Star.new([7.6, 6.0], sr, label: '8', label_offset: ur),
+      Star.new([7.4, 8.8], sr, label: '9', label_offset: ur),
+      Star.new([13.2, 12.2], sr, label: '10', label_offset: ur)
     ]
   end
 
   def initialize_cities
     [
-      City.new([0.6, 2.4], 0.45, "THAI NGUYEN", "ur"),
-      City.new([6.6, 1.1], 0.45,"HAIPHONG", "ur"),
-      City.new([3.2, 4.1], 0.7,"HANOI", "ur"),
-      City.new([6.5, 4.5], 0.45,"??? DINH", "ur"),
-      City.new([8.9, 8.6], 0.45,"THAN HOA", "ur"),
-      City.new([12.2, 11.8], 0.45,"VINH", "ur")
+      City.new([0.6, 2.4], 0.45, 'THAI NGUYEN', 'ur'),
+      City.new([6.6, 1.1], 0.45, 'HAIPHONG', 'ur'),
+      City.new([3.2, 4.1], 0.7, 'HANOI', 'ur'),
+      City.new([6.5, 4.5], 0.45, '??? DINH', 'ur'),
+      City.new([8.9, 8.6], 0.45, 'THAN HOA', 'ur'),
+      City.new([12.2, 11.8], 0.45, 'VINH', 'ur')
     ]
   end
 
   def generate_svg
-    File.open("border_shape.svg", "w") do |file|
+    File.open('border_shape.svg', 'w') do |file|
       file.puts <<~SVG
         <svg xmlns="http://www.w3.org/2000/svg" width="#{canvas_width}cm" height="#{canvas_height}cm" viewBox="0 0 #{canvas_width} #{canvas_height}">
           #{canvas_rect}
@@ -115,23 +116,28 @@ class SVGGenerator
 
   private
 
-  def sr # star radius
+  # star radius
+  def sr
     0.2
   end
 
-  def ur # upper right
+  # upper right
+  def ur
     [0.20, -0.15]
   end
 
-  def lr # lower right
+  # lower right
+  def lr
     [0.25, 0.3]
   end
 
-  def ul # upper left
+  # upper left
+  def ul
     [-0.4, 0.0]
   end
 
-  def ll # lower left
+  # lower left
+  def ll
     [-0.25, 0.3]
   end
 end

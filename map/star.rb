@@ -1,13 +1,16 @@
+# frozen_string_literal: true
+
 # Five pointed star representing targets
 class Star
   DEFAULT_INNER_RADIUS_RATIO = 0.45
-  DEFAULT_FILL = "gold"
-  DEFAULT_STROKE = "green"
+  DEFAULT_FILL = 'gold'
+  DEFAULT_STROKE = 'green'
   DEFAULT_STROKE_WIDTH = 0.02
   DEFAULT_FONT_SIZE = 0.3
-  DEFAULT_LABEL_COLOR = "black"
-  attr_reader :center, :outer_radius, :inner_radius, :label, :label_offset, :fill, :stroke, :stroke_width, :font_size, :label_color
-  
+  DEFAULT_LABEL_COLOR = 'black'
+  attr_reader :center, :outer_radius, :inner_radius, :label, :label_offset, :fill, :stroke, :stroke_width, :font_size,
+              :label_color
+
   def initialize(center, radius, options = {})
     @center = center
     @outer_radius = radius
@@ -30,7 +33,7 @@ class Star
       [center[0] + radius * Math.cos(2 * Math::PI / 5), center[1] - radius * Math.sin(2 * Math::PI / 5)],
       [center[0] + radius * Math.cos(3 * Math::PI / 5), center[1] - radius * Math.sin(3 * Math::PI / 5)],
       [center[0] + radius * Math.cos(4 * Math::PI / 5), center[1] - radius * Math.sin(4 * Math::PI / 5)]
-    ].map { |point| point.join(",") }.join(" ")
+    ].map { |point| point.join(',') }.join(' ')
   end
 
   # def to_svg
@@ -42,32 +45,34 @@ class Star
   def star_points(cx, cy, outer_radius, inner_radius)
     points = []
     angle = Math::PI / 5 # 36 degrees in radians
-  
+
     (0...10).each do |i|
       radius = i.even? ? outer_radius : inner_radius
       x = cx + radius * Math.cos(i * angle - Math::PI / 2)
       y = cy + radius * Math.sin(i * angle - Math::PI / 2)
       points << [x.round(2), y.round(2)]
     end
-  
+
     points
   end
-  
-  def star_polygon(cx, cy, outer_radius, inner_radius, fill: "gold", stroke: "black", stroke_width: 1)
+
+  def star_polygon(cx, cy, outer_radius, inner_radius, fill: 'gold', stroke: 'black', stroke_width: 1)
     points = star_points(cx, cy, outer_radius, inner_radius)
-    points_str = points.map { |x, y| "#{x},#{y}" }.join(" ")
+    points_str = points.map { |x, y| "#{x},#{y}" }.join(' ')
     "<polygon points='#{points_str}' fill='#{fill}' stroke='#{stroke}' stroke-width='#{stroke_width}' />"
   end
-  
-  def star_path(cx, cy, outer_radius, inner_radius, fill: "gold", stroke: "black", stroke_width: @stroke_width)
+
+  def star_path(cx, cy, outer_radius, inner_radius, fill: 'gold', stroke: 'black', stroke_width: @stroke_width)
     points = star_points(cx, cy, outer_radius, inner_radius)
-    path_data = "M #{points[0][0]},#{points[0][1]} " + points[1..].map { |x, y| "L #{x},#{y}" }.join(" ") + " Z"
+    path_data = "M #{points[0][0]},#{points[0][1]} " + points[1..].map { |x, y| "L #{x},#{y}" }.join(' ') + ' Z'
     "<path d='#{path_data}' fill='#{fill}' stroke='#{stroke}' stroke-width='#{stroke_width}' />"
   end
 
   def label_svg
     lx, ly = label_position
-    "<text x='#{lx}' y='#{ly}' font-size='#{font_size}' fill='#{label_color}' text-anchor='middle'>#{label}</text>" if label
+    return unless label
+
+    "<text x='#{lx}' y='#{ly}' font-size='#{font_size}' fill='#{label_color}' text-anchor='middle'>#{label}</text>"
   end
 
   def label_position

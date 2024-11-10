@@ -4,11 +4,11 @@
 # The city is centered on the square.
 # The label position will be passed in as a parameter.
 class City
-  DEFAULT_FILL = "lightblue"
-  DEFAULT_STROKE = "blue"
+  DEFAULT_FILL = 'lightblue'
+  DEFAULT_STROKE = 'blue'
   DEFAULT_STROKE_WIDTH = 0.02
   DEFAULT_FONT_SIZE = 0.25
-  DEFAULT_LABEL_COLOR = "black"
+  DEFAULT_LABEL_COLOR = 'black'
 
   attr_reader :center, :width, :name, :label_position, :fill, :stroke, :stroke_width, :font_size, :label_color
 
@@ -58,6 +58,6 @@ class City
       center[1] + width / 2,
       center[0] - width / 2,
       center[1] + width / 2
-    ].join(",")
+    ].join(',')
   end
 end
