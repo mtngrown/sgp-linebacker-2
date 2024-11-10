@@ -52,6 +52,3 @@ attack and consults the ``B-52 Defen-
 sive Fire'' column on the Air-to-Air
 CRT, and the NV player places the
 resulting number of HIT markers in
-
-COMBAT
-

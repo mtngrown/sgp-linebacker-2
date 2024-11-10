@@ -48,6 +48,3 @@ pleted, the playing pieces are re-
 moved from the game map and set up
 on the air status display anew (see
 Movement Rules).
-
-PAGE 11
-

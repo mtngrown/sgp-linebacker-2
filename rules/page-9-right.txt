@@ -38,6 +38,3 @@ of fired SAMs on the SAM SUPPLY
 TABLE.
 An echo counter may only be fired 
 at once in every SAM Fire Phase.
-
-PAGE 9
-

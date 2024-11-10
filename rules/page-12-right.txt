@@ -14,12 +14,13 @@ US PM: 4
 Victory conditions: as campaign game
 
 TAU CETI 2015AD
-“We designed TAU CETI because we were fed up 
+``We designed TAU CETI because we were fed up 
 with all the hypercomplex Science Fiction games 
 out today. With the present ‘state of the art’ 
 surely it must be possible to design a game 
 simple in play yet with a complex game system? 
-We think we have succeeded.”
+We think we have succeeded.''
+
 Tau Ceti is a challenging SF game simulating tactical ground 
 combat on an alien planet in the year 2015. The two different 
 races, Kra (red lizard-type and vicious, but with two legs) and 
@@ -28,6 +29,7 @@ and two legs) fight for control of the planet and employ two
 different tactics: Kra employing strong Plasma Launchers 
 and Heavy Assault Vehicles—and H’ren using hordes of Light 
 Assault Vehicles and Hovercarriers.
+
 Three terrain levels and three altitude levels enable the play-
 ers to fight a semi-three dimensional battle and without paper-
 work—a simple marker tells you on which altitude a unit is on. 
@@ -37,6 +39,7 @@ bombs/mines) all play important roles to make this game a fun
 and fast-playing “simulation”. And don’t forget the ten 
 scenarios. These will keep you playing till the first astronaut 
 steps on Mars!
+
 A high level of physical quality is maintained. The three-color 
 map is printed in tints of black, green, and brown. The 130 
 back-printed die-cut counters are three-colored and bear 
@@ -52,6 +55,4 @@ or directly from us:
 SWEDISH GAME PRODUCTION
 Box 18
 S-590 40 Kisa, Sweden
-
-PAGE 12
 

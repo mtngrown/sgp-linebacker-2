@@ -49,6 +49,3 @@ South China Sea map box with air-
 craft counter in “landing” box, the
 aircraft are permanently lost, ceding
 victory points to US player.
-
-COMBAT
-

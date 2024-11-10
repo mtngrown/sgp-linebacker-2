@@ -36,6 +36,3 @@ UNITS
 [GRAPHIC] 4 F-111 strike aircraft
 [GRAPHIC] 8 F-4 strike fighters/escort fighters
 [GRAPHIC] 1 A-6 EMC aircraft
-
-COMBAT
-

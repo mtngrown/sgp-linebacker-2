@@ -46,6 +46,3 @@ Forces: as campaign
 Victory conditions: as campaign
 Special rule: 20 VP to US player if 
 SAM supply falls below 300
-
-COMBAT
-
