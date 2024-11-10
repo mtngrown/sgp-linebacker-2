@@ -129,6 +129,7 @@ class SVGGenerator
           Border.new(xml).add_to_svg
           Zone.add_zones_to_svg(xml)
           Coastline.new(xml).add_line_path
+          Coastline.new(xml).add_circles
         end
       end
     end
