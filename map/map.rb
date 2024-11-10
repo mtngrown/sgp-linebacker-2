@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 require 'debug'
+require 'nokogiri'
 
 require_relative 'zone'
 require_relative 'star'
@@ -98,7 +99,7 @@ class SVGGenerator
     ]
   end
 
-  def generate_svg
+  def generate_svg_original
     File.open('border_shape.svg', 'w') do |file|
       file.puts <<~SVG
         <svg xmlns="http://www.w3.org/2000/svg" width="#{canvas_width}cm" height="#{canvas_height}cm" viewBox="0 0 #{canvas_width} #{canvas_height}">
@@ -116,6 +117,24 @@ class SVGGenerator
       SVG
     end
     puts "SVG file 'border_shape.svg' created successfully!"
+  end
+
+  def generate_border_svg
+    builder = Nokogiri::XML::Builder.new do |xml|
+      xml.svg(xmlns: "http://www.w3.org/2000/svg", width: "#{canvas_width}cm", height: "#{canvas_height}cm", viewBox: "0 0 #{canvas_width} #{canvas_height}") do
+        xml.rect(width: '100%', height: '100%', fill: 'lightgreen')
+        
+        xml.path(
+          d: "M #{BORDER_POINTS.map { |x, y| "#{x},#{y}" }.join(' L ')} Z",
+          fill: "none",
+          stroke: "black",
+          'stroke-width': "0.1cm"
+        )
+      end
+    end
+
+    File.write("new.svg", builder.to_xml)
+    puts "SVG border file 'new.svg' created successfully!"
   end
 
   private
@@ -146,4 +165,5 @@ class SVGGenerator
   end
 end
 
-SVGGenerator.new.generate_svg
+SVGGenerator.new.generate_svg_original
+SVGGenerator.new.generate_border_svg
