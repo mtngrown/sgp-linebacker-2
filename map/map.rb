@@ -4,6 +4,7 @@
 require 'debug'
 require 'nokogiri'
 
+require_relative 'border'
 require_relative 'zone'
 require_relative 'star'
 require_relative 'city'
@@ -125,12 +126,7 @@ class SVGGenerator
               viewBox: "0 0 #{canvas_width} #{canvas_height}") do
         xml.rect(width: '100%', height: '100%', fill: 'lightblue')
         xml.g(transform: 'translate(1.0, 1.0)') do
-          xml.path(
-            d: "M #{BORDER_POINTS.map { |x, y| "#{x},#{y}" }.join(' L ')} Z",
-            fill: 'none',
-            stroke: 'black',
-            'stroke-width': '0.1'
-          )
+          Border.new(xml).add_to_svg
         end
       end
     end

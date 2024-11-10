@@ -3,6 +3,12 @@
 # A coastline is a series of points that define the coastline.
 # We'll be using various curve functions to generate the coastline.
 class Coastline
+  attr_reader :xml
+
+  def initialize(xml = nil)
+    @xml = xml
+  end
+
   def to_line_svg
     <<~SVG
       <path d='M #{points_to_path}' fill='none' stroke='black' stroke-width='0.02' />
