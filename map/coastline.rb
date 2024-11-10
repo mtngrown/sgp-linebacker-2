@@ -7,12 +7,27 @@ require 'nokogiri'
 class Coastline
   attr_reader :xml
 
+  def points
+    [
+      [7.6, 0], # Top border
+      [7.4, 0.3],
+      [7.4, 0.6],
+      [7.0, 0.6],
+      [6.5, 0.4], # Furthest point inland
+      [6.9, 0.7],
+      [7.0, 0.9],
+      [7.3, 1.0],
+      [7.4, 1.0],
+      [8.4, 2.9] # Eastern border
+    ]
+  end
+
   def initialize(xml)
     @xml = xml
   end
 
   def add_line_path
-    xml.path(d: "M #{points_to_path}", fill: 'none', stroke: 'black', 'stroke-width': '0.02')
+    xml.path(d: "M #{points_to_line_path}", fill: 'none', stroke: 'black', 'stroke-width': '0.02')
   end
 
   def add_quadratic_path
@@ -33,16 +48,7 @@ class Coastline
 
   private
 
-  def points
-    [
-      [7.6, 0],
-      [7.4, 0.6],
-      [6.5, 0.4],
-      [8.4, 2.9]
-    ]
-  end
-
-  def points_to_path
+  def points_to_line_path
     points.map { |point| "#{point[0]},#{point[1]}" }.join(' ')
   end
 end
