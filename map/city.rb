@@ -7,7 +7,7 @@ class City
   DEFAULT_FILL = "lightblue"
   DEFAULT_STROKE = "blue"
   DEFAULT_STROKE_WIDTH = 0.02
-  DEFAULT_FONT_SIZE = 0.2
+  DEFAULT_FONT_SIZE = 0.25
   DEFAULT_LABEL_COLOR = "black"
 
   attr_reader :center, :width, :name, :label_position, :fill, :stroke, :stroke_width, :font_size, :label_color
