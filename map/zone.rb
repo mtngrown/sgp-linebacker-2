@@ -46,7 +46,7 @@ class Zone
 
   def to_svg
     rect_svg = "<rect x='#{ll[0]}' y='#{ll[1]}' width='#{width}' height='#{height}' fill='#{fill}' stroke='#{stroke}' stroke-width='#{stroke_width}cm' />"
-    label_svg = label ? "<text x='#{center[0]}' y='#{center[1]}' fill='#{light_gray_fill}' font-size='#{font_size}' text-anchor='middle' dy='.3em'>#{label}</text>" : ""
+    label_svg = label ? "<text x='#{center[0]}' y='#{center[1]}' fill='#{super_light_gray_fill}' font-size='#{font_size}' text-anchor='middle' dy='.3em'>#{label}</text>" : ""
     
     <<~SVG
       #{rect_svg}
@@ -56,6 +56,19 @@ class Zone
 
   def light_gray_fill
     "#d3d3d3"
+  end
+
+  # Here are three increasingly lighter gray shades than #D3D3D3:
+  def very_light_gray_fill
+    "#E0E0E0"
+  end
+
+  def super_light_gray_fill 
+    "#E8E8E8"
+  end
+
+  def almost_white_fill
+    "#f0f0f0"
   end
 end
 
