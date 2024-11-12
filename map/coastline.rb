@@ -27,7 +27,20 @@ class Coastline
       [7.5, 2.3],
       [7.8, 2.5],
       [7.9, 2.7],
-      [8.4, 2.9] # Eastern border
+      [8.4, 2.9], # Eastern border
+      [8.6, 3.0], # first point in Sourh China Sea
+      [8.65, 3.25],
+      [8.75, 3.35],
+      [8.85, 3.6],
+      [8.9, 3.9],
+      [8.7, 4.2],
+      [8.8, 4.15],
+      [8.9, 5.2],
+      [8.95, 5.5],
+      [8.85, 5.85],
+      [8.65, 6.2],
+      [8.65, 6.5],
+      [8.7, 6.7] # Last point in South China Sea, southern border
     ]
   end
 

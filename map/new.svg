@@ -23,7 +23,7 @@
     <text x="10.05" y="11.05" fill="#E8E8E8" font-size="0.5" text-anchor="middle" dy=".3em">Zone 8</text>
     <rect x="4.3" y="9.5" width="4.1000000000000005" height="3.0999999999999996" fill="#E0FFE0" stroke="black" stroke-width="0.002cm"/>
     <text x="6.35" y="11.05" fill="#E8E8E8" font-size="0.5" text-anchor="middle" dy=".3em">Zone 7</text>
-    <path d="M 7.6,0 7.4,0.3 7.4,0.6 7.0,0.6 6.5,0.4 6.9,0.7 7.0,0.9 7.3,1.0 7.4,1.0 7.35,1.4 7.5,1.45 7.5,1.5 7.5,1.8 7.4,2.0 7.6,2.2 7.5,2.3 7.8,2.5 7.9,2.7 8.4,2.9" fill="none" stroke="gray" stroke-width="0.2" stroke-linejoin="round"/>
+    <path d="M 7.6,0 7.4,0.3 7.4,0.6 7.0,0.6 6.5,0.4 6.9,0.7 7.0,0.9 7.3,1.0 7.4,1.0 7.35,1.4 7.5,1.45 7.5,1.5 7.5,1.8 7.4,2.0 7.6,2.2 7.5,2.3 7.8,2.5 7.9,2.7 8.4,2.9 8.6,3.0 8.65,3.25 8.75,3.35 8.85,3.6 8.9,3.9 8.7,4.2 8.8,4.15 8.9,5.2 8.95,5.5 8.85,5.85 8.65,6.2 8.65,6.5 8.7,6.7" fill="none" stroke="gray" stroke-width="0.2" stroke-linejoin="round"/>
     <circle cx="7.6" cy="0" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
     <circle cx="7.4" cy="0.3" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
     <circle cx="7.4" cy="0.6" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
@@ -43,5 +43,18 @@
     <circle cx="7.8" cy="2.5" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
     <circle cx="7.9" cy="2.7" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
     <circle cx="8.4" cy="2.9" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
+    <circle cx="8.6" cy="3.0" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
+    <circle cx="8.65" cy="3.25" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
+    <circle cx="8.75" cy="3.35" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
+    <circle cx="8.85" cy="3.6" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
+    <circle cx="8.9" cy="3.9" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
+    <circle cx="8.7" cy="4.2" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
+    <circle cx="8.8" cy="4.15" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
+    <circle cx="8.9" cy="5.2" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
+    <circle cx="8.95" cy="5.5" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
+    <circle cx="8.85" cy="5.85" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
+    <circle cx="8.65" cy="6.2" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
+    <circle cx="8.65" cy="6.5" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
+    <circle cx="8.7" cy="6.7" r="0.05" fill="blue" stroke="blue" stroke-width="0.01"/>
   </g>
 </svg>
