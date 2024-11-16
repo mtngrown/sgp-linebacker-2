@@ -14,7 +14,7 @@ class City
     { center: [6.6, 1.1], width: 0.45, name: 'HAIPHONG', label_alignment: 'm' },
     { center: [3.2, 4.1], width: 0.7, name: 'HANOI', label_alignment: 'm' },
     { center: [6.5, 4.5], width: 0.45, name: '??? DINH', label_alignment: 'm' },
-    { center: [8.9, 8.6], width: 0.45, name: 'THAN HOA', label_alignment: 'l' },
+    { center: [8.9, 8.75], width: 0.45, name: 'THAN HOA', label_alignment: 'l' },
     { center: [12.2, 11.8], width: 0.45, name: 'VINH', label_alignment: 'm' }
   ].freeze
 
