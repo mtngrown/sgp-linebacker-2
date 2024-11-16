@@ -29,7 +29,7 @@ class SVGGenerator
     @canvas_width = canvas_width
     @canvas_height = canvas_height
     @zones = initialize_zones
-    @stars = initialize_stars
+    # @stars = initialize_stars
     @cities = initialize_cities
   end
 
@@ -75,20 +75,20 @@ class SVGGenerator
     ]
   end
 
-  def initialize_stars
-    [
-      Star.new([0.5, 1.6], sr, label: '1', label_offset: ur),
-      Star.new([3.1, 1.6], sr, label: '2', label_offset: ur),
-      Star.new([3.5, 2.2], sr, label: '3', label_offset: ur),
-      Star.new([1.8, 3.7], sr, label: '4', label_offset: lr),
-      Star.new([3.9, 3.6], sr, label: '5', label_offset: ll),
-      Star.new([3.9, 5.2], sr, label: '6', label_offset: ll),
-      Star.new([5.3, 2.2], sr, label: '7', label_offset: lr),
-      Star.new([7.6, 6.0], sr, label: '8', label_offset: ur),
-      Star.new([7.4, 8.8], sr, label: '9', label_offset: ur),
-      Star.new([13.2, 12.2], sr, label: '10', label_offset: ur)
-    ]
-  end
+  # def initialize_stars
+  #   [
+  #     Star.new([0.5, 1.6], sr, label: '1', label_offset: ur),
+  #     Star.new([3.1, 1.6], sr, label: '2', label_offset: ur),
+  #     Star.new([3.5, 2.2], sr, label: '3', label_offset: ur),
+  #     Star.new([1.8, 3.7], sr, label: '4', label_offset: lr),
+  #     Star.new([3.9, 3.6], sr, label: '5', label_offset: ll),
+  #     Star.new([3.9, 5.2], sr, label: '6', label_offset: ll),
+  #     Star.new([5.3, 2.2], sr, label: '7', label_offset: lr),
+  #     Star.new([7.6, 6.0], sr, label: '8', label_offset: ur),
+  #     Star.new([7.4, 8.8], sr, label: '9', label_offset: ur),
+  #     Star.new([13.2, 12.2], sr, label: '10', label_offset: ur)
+  #   ]
+  # end
 
   def initialize_cities
     [
@@ -111,7 +111,6 @@ class SVGGenerator
           <g transform="translate(1.0, 1.0)">
             <path d="M #{path_data} Z" fill="#{ZoneHeredoc::DEFAULT_FILL_COLOR}" stroke="#{ZoneHeredoc::DEFAULT_STROKE_COLOR}" stroke-width="#{ZoneHeredoc::DEFAULT_STROKE_WIDTH}cm" />
             #{zones.map(&:to_svg).join("\n")}
-            #{stars.map(&:to_svg).join("\n")}
             #{cities.map(&:to_svg).join("\n")}
           </g>
         </svg>
@@ -130,6 +129,7 @@ class SVGGenerator
           Zone.add_zones_to_svg(xml)
           Coastline.new(xml).add_line_path
           Coastline.new(xml).add_circles
+          Star.add_stars_to_svg(xml)
         end
       end
     end
@@ -166,5 +166,5 @@ class SVGGenerator
   end
 end
 
-SVGGenerator.new.generate_svg_original
+# SVGGenerator.new.generate_svg_original
 SVGGenerator.new.generate_border_svg
