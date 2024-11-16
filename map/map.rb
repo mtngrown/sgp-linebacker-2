@@ -8,6 +8,7 @@ require_relative 'border'
 require_relative 'zone_heredoc'
 require_relative 'zone'
 require_relative 'star'
+require_relative 'city'
 require_relative 'city_heredoc'
 require_relative 'coastline'
 
@@ -130,6 +131,7 @@ class SVGGenerator
           Coastline.new(xml).add_line_path
           Coastline.new(xml).add_circles
           Star.add_stars_to_svg(xml)
+          City.add_all_to_svg(xml)
         end
       end
     end
