@@ -8,7 +8,7 @@ require_relative 'border'
 require_relative 'zone_heredoc'
 require_relative 'zone'
 require_relative 'star'
-require_relative 'city'
+require_relative 'city_heredoc'
 require_relative 'coastline'
 
 class SVGGenerator
@@ -92,12 +92,12 @@ class SVGGenerator
 
   def initialize_cities
     [
-      City.new([0.6, 2.4], 0.45, 'THAI NGUYEN', 'l'),
-      City.new([6.6, 1.1], 0.45, 'HAIPHONG', 'm'),
-      City.new([3.2, 4.1], 0.7, 'HANOI', 'm'),
-      City.new([6.5, 4.5], 0.45, '??? DINH', 'm'),
-      City.new([8.9, 8.6], 0.45, 'THAN HOA', 'l'),
-      City.new([12.2, 11.8], 0.45, 'VINH', 'm')
+      CityHeredoc.new([0.6, 2.4], 0.45, 'THAI NGUYEN', 'l'),
+      CityHeredoc.new([6.6, 1.1], 0.45, 'HAIPHONG', 'm'),
+      CityHeredoc.new([3.2, 4.1], 0.7, 'HANOI', 'm'),
+      CityHeredoc.new([6.5, 4.5], 0.45, '??? DINH', 'm'),
+      CityHeredoc.new([8.9, 8.6], 0.45, 'THAN HOA', 'l'),
+      CityHeredoc.new([12.2, 11.8], 0.45, 'VINH', 'm')
     ]
   end
 
@@ -166,5 +166,5 @@ class SVGGenerator
   end
 end
 
-# SVGGenerator.new.generate_svg_original
+SVGGenerator.new.generate_svg_original
 SVGGenerator.new.generate_border_svg

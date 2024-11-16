@@ -3,7 +3,7 @@
 # A city is a square with an associated name.
 # The city is centered on the square.
 # The label position will be passed in as a parameter.
-class City
+class CityHeredoc
   DEFAULT_FILL = 'lightblue'
   DEFAULT_STROKE = 'blue'
   DEFAULT_STROKE_WIDTH = 0.02
