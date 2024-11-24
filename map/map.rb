@@ -12,6 +12,39 @@ require_relative 'city'
 require_relative 'city_heredoc'
 require_relative 'coastline'
 
+class AirfieldLegend
+  attr_reader :airfields
+
+  def initialize(airfields)
+    @airfields = airfields
+  end
+
+  def position
+    airfields['position']
+  end
+
+  def label
+    airfields['label']
+  end
+
+  def name
+    airfields['name']
+  end
+end
+
+AIRFIELDS = [
+  { position: [0.6, 2.4], label: 1, name: 'Dong ???' },
+  { position: [6.6, 1.1], label: 2, name: 'Sep' },
+  { position: [3.2, 4.1], label: 3, name: 'Bao Giang' },
+  { position: [6.5, 4.5], label: 4, name: 'Kim Anh' },
+  { position: [8.9, 8.6], label: 5, name: 'Gia Lam' },
+  { position: [12.2, 11.8], label: 6, name: 'Bac Mai' },
+  { position: [15.5, 10.5], label: 7, name: 'Kien Anh' },
+  { position: [18.8, 13.9], label: 8, name: 'Ninh Binh' },
+  { position: [15.5, 17.2], label: 9, name: 'Yen Dai' },
+  { position: [15.5, 20.5], label: 10, name: 'Thanh Hoa' }
+].freeze
+
 class SVGGenerator
   BORDER_POINTS = [
     [0, 0],
