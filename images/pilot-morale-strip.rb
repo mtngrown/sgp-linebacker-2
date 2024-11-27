@@ -1,3 +1,6 @@
+#! /usr/bin/env ruby
+
+
 # Save SVG content to a file
 # Here is the prompt:
 #
@@ -10,6 +13,8 @@
 # the same size and perfectly aligned. It's fine to draw each box
 # individually, and have adjacent borders overlap. Here's the
 # image, and good luck!
+
+require 'nokogiri'
 
 svg_content = <<~SVG
 <?xml version="1.0" ?>
@@ -33,3 +38,44 @@ SVG
 
 File.write('us_pilot_morale.svg', svg_content)
 
+def stroke_width
+  2
+end
+
+def height
+  100
+end
+
+def width
+  200
+end
+
+def stroke
+  'black'
+end
+
+def morale_box(xml, number)
+  xml.g(transform: "translate(#{(number-1) * 100}, 0)") do
+    xml.rect(x: 0, y: '0', width: '100', height: '100', fill: 'white', stroke:, 'stroke-width': stroke_width)
+    x = 100
+    y = '60'
+    xml.text_(number.to_s, x: (x / 2).to_s, y:, fill: 'black', style: 'font: bold 48px sans-serif', 'text-anchor': 'middle', alignment_baseline: 'central', 'font-size': '48px', 'font-weight': 'bold')
+end
+end
+
+def to_svg
+  builder = Nokogiri::XML::Builder.new do |xml|
+    xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: '1400', height: '100') do
+      morale_box(xml, 1)
+      morale_box(xml, 2)
+      morale_box(xml, 3)
+      morale_box(xml, 4)
+      morale_box(xml, 5)
+      morale_box(xml, 6)
+    #   morale_box(xml, 0)
+    end
+  end
+  builder.to_xml
+end
+
+File.write('us-pilot-morale.svg', to_svg)
