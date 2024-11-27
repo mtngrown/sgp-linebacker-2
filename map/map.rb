@@ -13,37 +13,34 @@ require_relative 'city_heredoc'
 require_relative 'coastline'
 
 class AirfieldLegend
-  attr_reader :airfields
+  xoffset = 0.6
 
-  def initialize(airfields)
-    @airfields = airfields
+  AIRFIELDS = [
+    { position: [xoffset, 7.3], label: 1, name: 'Dong ???' },
+    { position: [xoffset, 7.8], label: 2, name: 'Sep' },
+    { position: [xoffset, 8.3], label: 3, name: 'Bao Giang' },
+    { position: [xoffset, 8.8], label: 4, name: 'Kim Anh' },
+    { position: [xoffset, 9.3], label: 5, name: 'Gia Lam' },
+    { position: [xoffset, 9.8], label: 6, name: 'Bac Mai' },
+    { position: [xoffset, 10.3], label: 7, name: 'Kien Anh' },
+    { position: [xoffset, 10.8], label: 8, name: 'Ninh Binh' },
+    { position: [xoffset, 11.3], label: 9, name: 'Yen Dai' },
+    { position: [xoffset, 11.8], label: 10, name: 'Thanh Hoa' }
+  ].freeze
+
+  attr_reader :xml
+
+  def initialize(xml)
+    @xml = xml
   end
 
-  def position
-    airfields['position']
-  end
-
-  def label
-    airfields['label']
-  end
-
-  def name
-    airfields['name']
+  def to_svg
+    AIRFIELDS.each do |af|
+      xml.text_("#{af[:label]}. #{af[:name]}", x: af[:position][0], y: af[:position][1], 'font-size': '0.4',
+                                               fill: 'black')
+    end
   end
 end
-
-AIRFIELDS = [
-  { position: [0.6, 2.4], label: 1, name: 'Dong ???' },
-  { position: [6.6, 1.1], label: 2, name: 'Sep' },
-  { position: [3.2, 4.1], label: 3, name: 'Bao Giang' },
-  { position: [6.5, 4.5], label: 4, name: 'Kim Anh' },
-  { position: [8.9, 8.6], label: 5, name: 'Gia Lam' },
-  { position: [12.2, 11.8], label: 6, name: 'Bac Mai' },
-  { position: [15.5, 10.5], label: 7, name: 'Kien Anh' },
-  { position: [18.8, 13.9], label: 8, name: 'Ninh Binh' },
-  { position: [15.5, 17.2], label: 9, name: 'Yen Dai' },
-  { position: [15.5, 20.5], label: 10, name: 'Thanh Hoa' }
-].freeze
 
 class SVGGenerator
   BORDER_POINTS = [
@@ -165,6 +162,7 @@ class SVGGenerator
           Coastline.new(xml).add_circles
           Star.add_stars_to_svg(xml)
           City.add_all_to_svg(xml)
+          AirfieldLegend.new(xml).to_svg
         end
       end
     end

@@ -21,7 +21,8 @@ class Star
     { center: [13.2, 12.2], label: '10', label_offset: :ur }
   ].freeze
 
-  attr_reader :xml, :center, :outer_radius, :inner_radius, :label, :label_offset, :fill, :stroke, :stroke_width, :font_size, :label_color
+  attr_reader :xml, :center, :outer_radius, :inner_radius, :label, :label_offset, :fill, :stroke, :stroke_width,
+              :font_size, :label_color
 
   def initialize(xml, center, radius, options = {})
     @xml = xml
@@ -62,7 +63,7 @@ class Star
 
   def add_star
     points_str = star_points(center[0], center[1], outer_radius, inner_radius).map { |x, y| "#{x},#{y}" }.join(' ')
-    xml.polygon(points: points_str, fill: fill, stroke: stroke, 'stroke-width': "#{stroke_width}")
+    xml.polygon(points: points_str, fill: fill, stroke: stroke, 'stroke-width': stroke_width.to_s)
   end
 
   def add_label

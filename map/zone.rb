@@ -54,7 +54,8 @@ class Zone
 
   def add_label
     cx, cy = center
-    xml.text_(label, x: cx, y: cy, fill: super_light_gray_fill, 'font-size': font_size, 'text-anchor': 'middle', dy: '.3em')
+    xml.text_(label, x: cx, y: cy, fill: super_light_gray_fill, 'font-size': font_size, 'text-anchor': 'middle',
+                     dy: '.3em')
   end
 
   def fill
@@ -105,4 +106,3 @@ class Zone
     '#f0f0f0'
   end
 end
-

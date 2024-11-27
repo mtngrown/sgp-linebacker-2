@@ -58,12 +58,12 @@ class City
 
   def add_label
     xml.text_(name,
-             x: label_x_position,
-             y: center[1] + label_y_offset,
-             'text-anchor': anchor,
-             'font-family': 'sans-serif',
-             'font-size': font_size,
-             fill: label_color)
+              x: label_x_position,
+              y: center[1] + label_y_offset,
+              'text-anchor': anchor,
+              'font-family': 'sans-serif',
+              'font-size': font_size,
+              fill: label_color)
   end
 
   def anchor
