@@ -1,5 +1,33 @@
 
-\newcommand{\toprow}{\makecell{Dice\\Roll} & \makecell{AIM} & \makecell{B52 Def.\\Fire}}
+% \cline{2-8}
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}\hline
+  \multirow{2}{*}{\makecell{Dice\\Roll}} & \multicolumn{7}{c}{Number of attacking fighters} & \multirow{2}{*}{\makecell{B52 Def.\\Fire}} \\
+  \cline{2-8}
+    & 1 & 2 & 3 & 4 & 5 & 6 & 7+ &  \\\hline
+  7 & - & - & - & - & - & - & 1 & - \\
+  8 & - & - & - & - & - & 1 & 1 & - \\
+  9 & - & - & - & - & 1 & 1 & 1 & - \\
+  10 & - & - & - & 1 & 1 & 1 & 2 & - \\
+  11 & - & 1 & 1 & 1 & 1 & 2 & 2 & 1 \\
+  12 & 1 & 1 & 1 & 1 & 1 & 2 & 2 & 1 \\\hline
+\end{tabular} 
+
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\newcommand{\attackers}{%
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+    \multicolumn{7}{c}{Number of attacking fighters} \\\hline
+    1 & 2 & 3 & 4 & 5 & 6 & 7+
+  \end{tabular}
+}
+
+\newcommand{\toprow}{%
+  \makecell{Dice\\Roll} & \attackers & \makecell{B52 Def.\\Fire}
+}
 
 \newcommand{\diceroll}{%
   \begin{tabular}{c}
@@ -13,7 +41,7 @@
 }
 
 \newcommand{\rollresults}{%
-\begin{tabular}{c|c|c|c|c|c|c}
+\begin{tabular}{|c|c|c|c|c|c|c|}
   - & - & - & - & - & - & 1 \\
   - & - & - & - & - & 1 & 1 \\
   - & - & - & - & 1 & 1 & 1 \\
@@ -33,7 +61,6 @@
     1 \\
   \end{tabular}
 }
-
 
 \begin{tabular}{|c|c|c|}\hline
   \toprow\\\hline
