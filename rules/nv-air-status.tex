@@ -1,7 +1,9 @@
-\begin{tabular}{@{}c|c|c|c|c@{}}
-\backslashbox{\tabular{@{}l@{}}Turn\\Around\endtabular}{Landing}
-  & 1& 2& 3& \\\hline
-Airfield\\Alert &  &  &  &   \\ \hline
-Take\\Off &  &  &  &   \\ \hline
-May\\Attack &  &  &  &   \\\hline
+
+\newcommand{\diagcell}{\diagbox{\phantom{a}}{\phantom{a}}}
+
+\begin{tabular}{|l|c|c|c|c|}\hline
+\makecell{Airfield\\Alert} & 1 & 2 & 3 & 4 \\ \hline
+\makecell{Take\\Off} &  &  &  &  \\ \hline
+\makecell{May\\Attack} &  &  &  &  \\ \hline
+\backslashbox{\tabular{@{}l@{}}Turn\\Around\endtabular}{Landing} & \diagcell & \diagcell & \diagcell & \diagcell \\ \hline
 \end{tabular}
