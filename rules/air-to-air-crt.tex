@@ -1,0 +1,41 @@
+
+\newcommand{\toprow}{\makecell{Dice\\Roll} & \makecell{AIM} & \makecell{B52 Def.\\Fire}}
+
+\newcommand{\diceroll}{%
+  \begin{tabular}{c}
+    7 \\
+    8 \\
+    9 \\
+    10 \\
+    11 \\
+    12 \\
+  \end{tabular}
+}
+
+\newcommand{\rollresults}{%
+\begin{tabular}{c|c|c|c|c|c|c}
+  - & - & - & - & - & - & 1 \\
+  - & - & - & - & - & 1 & 1 \\
+  - & - & - & - & 1 & 1 & 1 \\
+  - & - & - & 1 & 1 & 1 & 2 \\
+  - & 1 & 1 & 1 & 1 & 2 & 2 \\
+  1 & 1 & 1 & 1 & 1 & 2 & 2 \\
+\end{tabular}
+}
+
+\newcommand{\bfiftytwo}{%
+  \begin{tabular}{c}
+    - \\
+    - \\
+    - \\
+    - \\
+    1 \\
+    1 \\
+  \end{tabular}
+}
+
+
+\begin{tabular}{|c|c|c|}\hline
+  \toprow\\\hline
+  \diceroll & \rollresults & \bfiftytwo \\ \hline
+\end{tabular}
