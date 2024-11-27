@@ -107,19 +107,19 @@
     <polygon points="3.5,2.0 3.55,2.13 3.69,2.14 3.59,2.23 3.62,2.36 3.5,2.29 3.38,2.36 3.41,2.23 3.31,2.14 3.45,2.13" fill="gold" stroke="green" stroke-width="0.02"/>
     <text x="3.7" y="2.0500000000000003" font-size="0.3" fill="black" text-anchor="middle">3</text>
     <polygon points="1.8,3.5 1.85,3.63 1.99,3.64 1.89,3.73 1.92,3.86 1.8,3.79 1.68,3.86 1.71,3.73 1.61,3.64 1.75,3.63" fill="gold" stroke="green" stroke-width="0.02"/>
-    <text x="2.05" y="4.0" font-size="0.3" fill="black" text-anchor="middle">4</text>
+    <text x="2.08" y="4.0" font-size="0.3" fill="black" text-anchor="middle">4</text>
     <polygon points="3.9,3.4 3.95,3.53 4.09,3.54 3.99,3.63 4.02,3.76 3.9,3.69 3.78,3.76 3.81,3.63 3.71,3.54 3.85,3.53" fill="gold" stroke="green" stroke-width="0.02"/>
     <text x="3.65" y="3.9" font-size="0.3" fill="black" text-anchor="middle">5</text>
     <polygon points="3.9,5.0 3.95,5.13 4.09,5.14 3.99,5.23 4.02,5.36 3.9,5.29 3.78,5.36 3.81,5.23 3.71,5.14 3.85,5.13" fill="gold" stroke="green" stroke-width="0.02"/>
     <text x="3.65" y="5.5" font-size="0.3" fill="black" text-anchor="middle">6</text>
     <polygon points="5.3,2.0 5.35,2.13 5.49,2.14 5.39,2.23 5.42,2.36 5.3,2.29 5.18,2.36 5.21,2.23 5.11,2.14 5.25,2.13" fill="gold" stroke="green" stroke-width="0.02"/>
-    <text x="5.55" y="2.5" font-size="0.3" fill="black" text-anchor="middle">7</text>
+    <text x="5.58" y="2.5" font-size="0.3" fill="black" text-anchor="middle">7</text>
     <polygon points="7.6,5.8 7.65,5.93 7.79,5.94 7.69,6.03 7.72,6.16 7.6,6.09 7.48,6.16 7.51,6.03 7.41,5.94 7.55,5.93" fill="gold" stroke="green" stroke-width="0.02"/>
     <text x="7.8" y="5.85" font-size="0.3" fill="black" text-anchor="middle">8</text>
     <polygon points="7.4,8.6 7.45,8.73 7.59,8.74 7.49,8.83 7.52,8.96 7.4,8.89 7.28,8.96 7.31,8.83 7.21,8.74 7.35,8.73" fill="gold" stroke="green" stroke-width="0.02"/>
     <text x="7.6000000000000005" y="8.65" font-size="0.3" fill="black" text-anchor="middle">9</text>
     <polygon points="13.2,12.0 13.25,12.13 13.39,12.14 13.29,12.23 13.32,12.36 13.2,12.29 13.08,12.36 13.11,12.23 13.01,12.14 13.15,12.13" fill="gold" stroke="green" stroke-width="0.02"/>
-    <text x="13.399999999999999" y="12.049999999999999" font-size="0.3" fill="black" text-anchor="middle">10</text>
+    <text x="13.479999999999999" y="12.5" font-size="0.3" fill="black" text-anchor="middle">10</text>
     <polygon points="0.375,2.175 0.825,2.175 0.825,2.625 0.375,2.625" fill="lightblue" stroke="blue" stroke-width="0.02"/>
     <text x="0.375" y="2.9749999999999996" text-anchor="start" font-family="sans-serif" font-size="0.25" fill="black">THAI NGUYEN</text>
     <polygon points="6.375,0.8750000000000001 6.824999999999999,0.8750000000000001 6.824999999999999,1.3250000000000002 6.375,1.3250000000000002" fill="lightblue" stroke="blue" stroke-width="0.02"/>

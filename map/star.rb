@@ -18,7 +18,7 @@ class Star
     { center: [5.3, 2.2], label: '7', label_offset: :lr },
     { center: [7.6, 6.0], label: '8', label_offset: :ur },
     { center: [7.4, 8.8], label: '9', label_offset: :ur },
-    { center: [13.2, 12.2], label: '10', label_offset: :ur }
+    { center: [13.2, 12.2], label: '10', label_offset: :lr }
   ].freeze
 
   attr_reader :xml, :center, :outer_radius, :inner_radius, :label, :label_offset, :fill, :stroke, :stroke_width,
@@ -96,7 +96,7 @@ class Star
   end
 
   def self.lr
-    [0.25, 0.3]  # Lower right
+    [0.28, 0.3]  # Lower right
   end
 
   def self.ll
