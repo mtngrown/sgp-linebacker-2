@@ -36,10 +36,10 @@ svg_content = <<~SVG
 </svg>
 SVG
 
-File.write('us_pilot_morale.svg', svg_content)
+# File.write('us_pilot_morale.svg', svg_content)
 
 def stroke_width
-  2
+  3
 end
 
 def height
@@ -55,24 +55,27 @@ def stroke
 end
 
 def morale_box(xml, number)
-  xml.g(transform: "translate(#{(number-1) * 100}, 0)") do
+  dx = number.zero? ? 600 : (number - 1) * 100
+  xml.g(transform: "translate(#{dx}, 0)") do
     xml.rect(x: 0, y: '0', width: '100', height: '100', fill: 'white', stroke:, 'stroke-width': stroke_width)
     x = 100
-    y = '60'
+    y = '65'
     xml.text_(number.to_s, x: (x / 2).to_s, y:, fill: 'black', style: 'font: bold 48px sans-serif', 'text-anchor': 'middle', alignment_baseline: 'central', 'font-size': '48px', 'font-weight': 'bold')
 end
 end
 
 def to_svg
   builder = Nokogiri::XML::Builder.new do |xml|
-    xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: '1400', height: '100') do
+    xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: '725', height: '125') do
+      xml.g(transform: 'translate(20, 20)') do
       morale_box(xml, 1)
       morale_box(xml, 2)
       morale_box(xml, 3)
       morale_box(xml, 4)
       morale_box(xml, 5)
       morale_box(xml, 6)
-    #   morale_box(xml, 0)
+      morale_box(xml, 0)
+      end
     end
   end
   builder.to_xml
