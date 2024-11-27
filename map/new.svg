@@ -132,15 +132,15 @@
     <text x="8.675" y="9.325" text-anchor="start" font-family="sans-serif" font-size="0.25" fill="black">THAN HOA</text>
     <polygon points="11.975,11.575000000000001 12.424999999999999,11.575000000000001 12.424999999999999,12.025 11.975,12.025" fill="lightblue" stroke="blue" stroke-width="0.02"/>
     <text x="12.2" y="12.375" text-anchor="middle" font-family="sans-serif" font-size="0.25" fill="black">VINH</text>
-    <text x="0.6" y="7.3" font-size="0.4" fill="black">1. Dong ???</text>
-    <text x="0.6" y="7.8" font-size="0.4" fill="black">2. Sep</text>
-    <text x="0.6" y="8.3" font-size="0.4" fill="black">3. Bao Giang</text>
-    <text x="0.6" y="8.8" font-size="0.4" fill="black">4. Kim Anh</text>
-    <text x="0.6" y="9.3" font-size="0.4" fill="black">5. Gia Lam</text>
-    <text x="0.6" y="9.8" font-size="0.4" fill="black">6. Bac Mai</text>
-    <text x="0.6" y="10.3" font-size="0.4" fill="black">7. Kien Anh</text>
-    <text x="0.6" y="10.8" font-size="0.4" fill="black">8. Ninh Binh</text>
-    <text x="0.6" y="11.3" font-size="0.4" fill="black">9. Yen Dai</text>
-    <text x="0.6" y="11.8" font-size="0.4" fill="black">10. Thanh Hoa</text>
+    <text x="0.6" y="7.3" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">1. Dong ???</text>
+    <text x="0.6" y="7.8" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">2. Sep</text>
+    <text x="0.6" y="8.3" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">3. Bao Giang</text>
+    <text x="0.6" y="8.8" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">4. Kim Anh</text>
+    <text x="0.6" y="9.3" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">5. Gia Lam</text>
+    <text x="0.6" y="9.8" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">6. Bac Mai</text>
+    <text x="0.6" y="10.3" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">7. Kien Anh</text>
+    <text x="0.6" y="10.8" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">8. Ninh Binh</text>
+    <text x="0.6" y="11.3" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">9. Yen Dai</text>
+    <text x="0.6" y="11.8" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">10. Thanh Hoa</text>
   </g>
 </svg>

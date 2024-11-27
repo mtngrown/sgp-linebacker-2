@@ -12,6 +12,7 @@ require_relative 'city'
 require_relative 'city_heredoc'
 require_relative 'coastline'
 
+# Legend is to the left of the map area.
 class AirfieldLegend
   xoffset = 0.6
 
@@ -36,8 +37,12 @@ class AirfieldLegend
 
   def to_svg
     AIRFIELDS.each do |af|
-      xml.text_("#{af[:label]}. #{af[:name]}", x: af[:position][0], y: af[:position][1], 'font-size': '0.4',
-                                               fill: 'black')
+      xml.text_("#{af[:label]}. #{af[:name]}",
+                x: af[:position][0],
+                y: af[:position][1], 'font-size': '0.4',
+                fill: 'black',
+                'font-weight': "bold",
+                'font-family': "'Courier New', Courier, monospace")
     end
   end
 end
