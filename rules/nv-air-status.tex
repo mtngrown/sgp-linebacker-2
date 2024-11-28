@@ -1,9 +1,12 @@
 
-\newcommand{\diagcell}{\diagbox{\phantom{a}}{\phantom{a}}}
+%%% Diagonal cell
+\newcommand{\dgc}{\diagbox{\phantom{a}}{\phantom{a}}}
 
-\begin{tabular}{|l|c|c|c|c|}\hline
-\makecell{Airfield\\Alert} & 1 & 2 & 3 & 4 \\ \hline
-\makecell{Take\\Off} &  &  &  &  \\ \hline
-\makecell{May\\Attack} &  &  &  &  \\ \hline
-\backslashbox{\tabular{@{}l@{}}Turn\\Around\endtabular}{Landing} & \diagcell & \diagcell & \diagcell & \diagcell \\ \hline
+{\ttfamily
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}\hline
+\makecell{Airfield\\Alert} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
+\makecell{Take\\Off} &  &  &  &  &  &  &  &  &  &  \\ \hline
+\makecell{May\\Attack} &  &  &  &  &  &  &  &  &  &  \\ \hline
+\backslashbox{\tabular{@{}l@{}}Turn\\Around\endtabular}{Landing} & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc \\ \hline
 \end{tabular}
+}
