@@ -38,14 +38,29 @@ def morale_box(xml, number)
   end
 end
 
+def pilot_morale_text
+  'US Pilot Morale'
+end
+
+def title(xml)
+  xml.text_(pilot_morale_text, x: '10', y: '10', fill: 'black', style: 'font: 36px sans-serif',
+                         'text-anchor': 'middle', alignment_baseline: 'central', 'font-size': '36px',
+                         'font-weight': 'medium')
+end
+
 def to_svg
   builder = Nokogiri::XML::Builder.new do |xml|
-    xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: '725', height: '125') do
+    xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: '725', height: '160') do
       xml.g(transform: 'translate(20, 20)') do
-        (1..6).each do |number|
-          morale_box(xml, number)
+        xml.g(transform: 'translate(0, 35)') do
+          (1..6).each do |number|
+            morale_box(xml, number)
+          end
+          morale_box(xml, 0)
         end
-        morale_box(xml, 0)
+        xml.g(transform: "translate(#{725 / 2}, 20)") do
+          title(xml)
+        end
       end
     end
   end
