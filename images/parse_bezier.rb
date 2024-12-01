@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 require 'rspec/autorun'
 
 class ParseBezier
   attr_reader :path, :commands
+
   def initialize(path)
     @path = path
   end
@@ -13,7 +15,7 @@ class ParseBezier
   end
 
   def parse
-    commands = @path.scan(/([a-zA-Z])|([-+]?\d*\.?\d+)/).map { |c| c[0] || c[1] }
+    @path.scan(/([a-zA-Z])|([-+]?\d*\.?\d+)/).map { |c| c[0] || c[1] }
   end
 end
 

@@ -44,8 +44,8 @@ end
 
 def title(xml)
   xml.text_(pilot_morale_text, x: '10', y: '10', fill: 'black', style: 'font: 36px sans-serif',
-                         'text-anchor': 'middle', alignment_baseline: 'central', 'font-size': '36px',
-                         'font-weight': 'medium')
+                               'text-anchor': 'middle', alignment_baseline: 'central', 'font-size': '36px',
+                               'font-weight': 'medium')
 end
 
 def to_svg

@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 require 'rspec/autorun'
 
@@ -7,10 +8,10 @@ class BoundingBox
     # Initialize variables
     current_pos = [0, 0]
     bounding_box = { min_x: Float::INFINITY, min_y: Float::INFINITY, max_x: -Float::INFINITY, max_y: -Float::INFINITY }
-  
+
     # Parse the path into commands and coordinates
     commands = path.scan(/([a-zA-Z])|([-+]?\d*\.?\d+)/).map { |c| c[0] || c[1] }
-  
+
     # Process commands and their arguments
     commands.each_with_index do |command, index|
       case command
@@ -32,14 +33,14 @@ class BoundingBox
         next
       end
     end
-  
+
     # Return bounding box corners
     {
       upper_left: [bounding_box[:min_x], bounding_box[:max_y]],
       lower_right: [bounding_box[:max_x], bounding_box[:min_y]]
     }
   end
-  
+
   def update_bounding_box(bounding_box, point)
     x, y = point
     {
@@ -49,7 +50,7 @@ class BoundingBox
       max_y: [bounding_box[:max_y], y].max
     }
   end
-  
+
   # Example usage
   # path = "m 622.45845,159.08844 c 23.74432,18.62321 48.57869,40.29445 72.83369,57.83845 -0.964,-11.228 0.369,-22.228 4,-33 ..."
   # bounding_box = analyze_svg_path(path)
@@ -57,11 +58,11 @@ class BoundingBox
 end
 
 RSpec.describe BoundingBox do
-  it "analyzes the bounding box of an SVG path" do
-    path = "m 622.45845,159.08844 c 23.74432,18.62321 48.57869,40.29445 72.83369,57.83845 -0.964,-11.228 0.369,-22.228 4,-33 ..."
+  it 'analyzes the bounding box of an SVG path' do
+    path = 'm 622.45845,159.08844 c 23.74432,18.62321 48.57869,40.29445 72.83369,57.83845 -0.964,-11.228 0.369,-22.228 4,-33 ...'
     bounding_box = BoundingBox.new.analyze_svg_path(path)
     expect(bounding_box).to eq({ upper_left: [200, 0], lower_right: [800, 635] })
   end
 
-  it 
+  it
 end
