@@ -62,4 +62,6 @@ RSpec.describe BoundingBox do
     bounding_box = BoundingBox.new.analyze_svg_path(path)
     expect(bounding_box).to eq({ upper_left: [200, 0], lower_right: [800, 635] })
   end
+
+  it 
 end
