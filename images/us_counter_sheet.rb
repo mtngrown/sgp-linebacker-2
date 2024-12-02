@@ -98,7 +98,7 @@ def to_svg
         row_4(xml)
         row_5(xml)
         row_6(xml)
-      row_7(xml)
+        row_7(xml)
         row_8(xml)
       end
     end
