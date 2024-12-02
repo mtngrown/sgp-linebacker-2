@@ -91,14 +91,16 @@ end
 def to_svg
   builder = Nokogiri::XML::Builder.new do |xml|
     xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: '2000', height: '1600') do
-      row_1(xml)
-      row_2(xml)
-      row_3(xml)
-      row_4(xml)
-      row_5(xml)
-      row_6(xml)
+      xml.g(transform: 'scale(0.5)') do
+        row_1(xml)
+        row_2(xml)
+        row_3(xml)
+        row_4(xml)
+        row_5(xml)
+        row_6(xml)
       row_7(xml)
-      row_8(xml)
+        row_8(xml)
+      end
     end
   end
   builder.to_xml
