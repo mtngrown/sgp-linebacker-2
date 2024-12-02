@@ -52,20 +52,52 @@ class B52Counter
     (1024 - 628) / 2
   end
 
+  def top_left_value(xml)
+    xml.text_('?',
+      x: '200',
+      y: '200',
+      'text-anchor': 'middle',
+      'text-align': 'center',
+      'font-family': 'sans-serif',
+      'font-size': font_size
+    )
+  end
+
+  def top_right_value(xml)
+    xml.text_('?',
+      x: '800',
+      y: '200',
+      'text-anchor': 'middle',
+      'text-align': 'center',
+      'font-family': 'sans-serif',
+      'font-size': font_size
+    )
+  end
+
+  def build_counter(xml)
+    counter_background(xml)
+    xml.g(transform: "translate(#{offset_x},#{offset_y})") do
+      b52_outline(xml)
+      b52_bounding_box(xml)
+    end
+    top_left_value(xml)
+    top_right_value(xml)
+  end
+
   def to_svg
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: counter_width, height: counter_height) do
-        counter_background(xml)
-        xml.g(transform: "translate(#{offset_x},#{offset_y})") do
-          b52_outline(xml)
-          b52_bounding_box(xml)
-        end
+        build_counter(xml)
       end
     end
     builder.to_xml
   end
 
   private
+
+  def font_size
+    108
+  end
 
   def counter_width
     1024
