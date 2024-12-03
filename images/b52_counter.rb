@@ -54,24 +54,22 @@ class B52Counter
 
   def top_left_value(xml)
     xml.text_('?',
-      x: '200',
-      y: '200',
-      'text-anchor': 'middle',
-      'text-align': 'center',
-      'font-family': 'sans-serif',
-      'font-size': font_size
-    )
+              x: '200',
+              y: '200',
+              'text-anchor': 'middle',
+              'text-align': 'center',
+              'font-family': 'sans-serif',
+              'font-size': font_size)
   end
 
   def top_right_value(xml)
     xml.text_('?',
-      x: '800',
-      y: '200',
-      'text-anchor': 'middle',
-      'text-align': 'center',
-      'font-family': 'sans-serif',
-      'font-size': font_size
-    )
+              x: '800',
+              y: '200',
+              'text-anchor': 'middle',
+              'text-align': 'center',
+              'font-family': 'sans-serif',
+              'font-size': font_size)
   end
 
   def build_counter(xml)

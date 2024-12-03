@@ -1,4 +1,5 @@
 #! /usr/bin/env ruby
+# frozen_string_literal: true
 
 require 'nokogiri'
 
@@ -16,25 +17,25 @@ def placeholder(xml)
 end
 
 def row_1(xml)
-  (1..10).each do |column|
+  (1..10).each_with_index do |column, index|
     xml.g(transform: "translate(#{(column - 1) * 200},#{0 * 200}) scale(0.2)") do
-      placeholder(xml)
+      OvalCounter.new.build_counter(xml, index + 1)
     end
   end
 end
 
 def row_2(xml)
-  (1..10).each do |column|
+  (1..10).each_with_index do |column, index|
     xml.g(transform: "translate(#{(column - 1) * 200},#{1 * 200}) scale(0.2)") do
-      placeholder(xml)
+      OvalCounter.new.build_counter(xml, index + 11)
     end
   end
 end
 
 def row_3(xml)
-  (1..3).each do |column|
+  (1..3).each_with_index do |column, index|
     xml.g(transform: "translate(#{(column - 1) * 200},#{2 * 200}) scale(0.2)") do
-      placeholder(xml)
+      OvalCounter.new.build_counter(xml, index + 21)
     end
   end
   (4..10).each do |column|
