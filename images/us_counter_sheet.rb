@@ -3,6 +3,7 @@
 require 'nokogiri'
 
 require_relative 'b52_counter'
+require_relative 'oval_counter'
 
 # 8 rows, 10 columns.
 
