@@ -4,6 +4,8 @@
 AllCops:
     SuggestExtensions: true
     NewCops: enable
+    Exclude:
+      - images/bounding_box.rb
 
 Naming/VariableNumber:
   Exclude:

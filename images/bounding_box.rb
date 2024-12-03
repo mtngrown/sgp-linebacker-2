@@ -3,6 +3,10 @@
 
 require 'rspec/autorun'
 
+# This is an aborted attempt at computing a bounding box for a bezier path.
+# It can't be done by just examining the control points, it has to be drawn.
+# Given that linear paths with rounded joins and end caps will be perfectly
+# adequate, going deeper on this is not warranted at the time of writing.
 class BoundingBox
   def analyze_svg_path(path)
     # Initialize variables
