@@ -10,3 +10,4 @@ AllCops:
 Naming/VariableNumber:
   Exclude:
     - images/us_counter_sheet.rb
+    - images/nv_counter_sheet.rb
