@@ -39,9 +39,9 @@ class OvalCounter
       width: counter_width,
       height: counter_height,
       fill: 'coral',
-      "fill-opacity": '0.3',
+      'fill-opacity': '0.3',
       stroke: 'black',
-      "stroke-width": '1'
+      'stroke-width': '1'
     )
   end
 

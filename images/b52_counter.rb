@@ -17,9 +17,9 @@ class B52Counter
       width: counter_width,
       height: counter_height,
       fill: 'coral',
-      "fill-opacity": '0.3',
+      'fill-opacity': '0.3',
       stroke: 'black',
-      "stroke-width": '1'
+      'stroke-width': '1'
     )
   end
 
@@ -35,9 +35,9 @@ class B52Counter
       width: '728',
       height: '628',
       fill: 'palegreen',
-      "fill-opacity": '0.3',
+      'fill-opacity': '0.3',
       stroke: 'black',
-      "stroke-width": '1'
+      'stroke-width': '1'
     )
   end
 

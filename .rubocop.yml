@@ -1,0 +1,10 @@
+# require:
+#   - rubocop-rspec
+
+AllCops:
+    SuggestExtensions: true
+    NewCops: enable
+
+Naming/VariableNumber:
+  Exclude:
+    - images/us_counter_sheet.rb
