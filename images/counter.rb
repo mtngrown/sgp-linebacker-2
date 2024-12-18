@@ -20,4 +20,8 @@ class Counter
   def counter_height
     1024
   end
+
+  def font_size
+    108
+  end
 end
