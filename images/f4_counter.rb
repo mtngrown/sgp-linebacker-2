@@ -64,8 +64,10 @@ class F4Counter < Counter
   def build_counter(xml)
     counter_background(xml)
     xml.g(transform: "translate(#{offset_x},#{offset_y})") do
-      f4_outline(xml)
       f4_bounding_box(xml)
+    end
+    xml.g(transform: "translate(300,180) scale(2.0)") do
+      f4_outline(xml)
     end
     top_left_value(xml)
     top_right_value(xml)

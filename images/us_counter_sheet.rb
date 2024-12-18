@@ -4,6 +4,7 @@
 require 'nokogiri'
 
 require_relative 'b52_counter'
+require_relative 'f4_counter'
 require_relative 'oval_counter'
 
 # 8 rows, 10 columns.
@@ -61,7 +62,7 @@ def row_5(xml)
   end
   (8..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{4 * 200}) scale(0.2)") do
-      placeholder(xml)
+      F4Counter.new.build_counter(xml)
     end
   end
 end
@@ -69,7 +70,7 @@ end
 def row_6(xml)
   (1..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{5 * 200}) scale(0.2)") do
-      placeholder(xml)
+      F4Counter.new.build_counter(xml)
     end
   end
 end
