@@ -45,7 +45,6 @@ class F4Counter < Counter
               'font-size': font_size)
   end
 
-
   def f4_bounding_box(xml)
     xml.rect(
       x: '236',
@@ -59,14 +58,12 @@ class F4Counter < Counter
     )
   end
 
-
-
   def build_counter(xml)
     counter_background(xml)
     xml.g(transform: "translate(#{offset_x},#{offset_y})") do
       f4_bounding_box(xml)
     end
-    xml.g(transform: "translate(300,180) scale(2.0)") do
+    xml.g(transform: 'translate(300,180) scale(2.0)') do
       f4_outline(xml)
     end
     top_left_value(xml)
