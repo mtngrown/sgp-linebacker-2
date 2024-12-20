@@ -40,26 +40,6 @@ class B52Counter < Counter
     (1024 - 628) / 2
   end
 
-  def top_left_value(xml, value)
-    xml.text_(value,
-              x: '200',
-              y: '300',
-              'text-anchor': 'middle',
-              'text-align': 'center',
-              'font-family': 'sans-serif',
-              'font-size': font_size)
-  end
-
-  def top_right_value(xml, value)
-    xml.text_(value,
-              x: '800',
-              y: '300',
-              'text-anchor': 'middle',
-              'text-align': 'center',
-              'font-family': 'sans-serif',
-              'font-size': font_size)
-  end
-
   def build_counter(xml)
     counter_background(xml)
     xml.g(transform: "translate(#{offset_x},#{offset_y})") do

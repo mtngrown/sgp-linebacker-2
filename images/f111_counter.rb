@@ -19,26 +19,6 @@ class F111Counter < Counter
     (1024 - 628) / 2
   end
 
-  def top_left_value(xml, value)
-    xml.text_(value,
-              x: '200',
-              y: '200',
-              'text-anchor': 'middle',
-              'text-align': 'center',
-              'font-family': 'sans-serif',
-              'font-size': font_size)
-  end
-
-  def top_right_value(xml, value)
-    xml.text_(value,
-              x: '800',
-              y: '200',
-              'text-anchor': 'middle',
-              'text-align': 'center',
-              'font-family': 'sans-serif',
-              'font-size': font_size)
-  end
-
   def f111_outline(xml)
     xml.path(d: PATH, fill: '#343330', id: 'path998',
              style: 'fill:#302f2e;fill-opacity:1;stroke:#00d300;stroke-opacity:1')

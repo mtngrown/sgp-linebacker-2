@@ -25,26 +25,6 @@ class F4Counter < Counter
              style: 'fill:#302f2e;fill-opacity:1;stroke:#00d300;stroke-opacity:1')
   end
 
-  def top_left_value(xml)
-    xml.text_('?',
-              x: '200',
-              y: '200',
-              'text-anchor': 'middle',
-              'text-align': 'center',
-              'font-family': 'sans-serif',
-              'font-size': font_size)
-  end
-
-  def top_right_value(xml)
-    xml.text_('?',
-              x: '800',
-              y: '200',
-              'text-anchor': 'middle',
-              'text-align': 'center',
-              'font-family': 'sans-serif',
-              'font-size': font_size)
-  end
-
   def f4_bounding_box(xml)
     xml.rect(
       x: '236',
@@ -66,8 +46,8 @@ class F4Counter < Counter
     xml.g(transform: 'translate(300,180) scale(2.0)') do
       f4_outline(xml)
     end
-    top_left_value(xml)
-    top_right_value(xml)
+    top_left_value(xml, '?')
+    top_right_value(xml, '?')
   end
 
   def to_svg
