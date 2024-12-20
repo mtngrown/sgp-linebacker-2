@@ -62,7 +62,7 @@ class F111Counter < Counter
     xml.g(transform: "translate(#{offset_x},#{offset_y})") do
       f111_bounding_box(xml)
     end
-    xml.g(transform: 'translate(-100,-200) scale(0.75)') do
+    xml.g(transform: 'translate(153,120) scale(0.75)') do
       f111_outline(xml)
     end
     top_left_value(xml)
