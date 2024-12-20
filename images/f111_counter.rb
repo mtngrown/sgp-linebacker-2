@@ -19,8 +19,8 @@ class F111Counter < Counter
     (1024 - 628) / 2
   end
 
-  def top_left_value(xml)
-    xml.text_('?',
+  def top_left_value(xml, value)
+    xml.text_(value,
               x: '200',
               y: '200',
               'text-anchor': 'middle',
@@ -29,8 +29,8 @@ class F111Counter < Counter
               'font-size': font_size)
   end
 
-  def top_right_value(xml)
-    xml.text_('?',
+  def top_right_value(xml, value)
+    xml.text_(value,
               x: '800',
               y: '200',
               'text-anchor': 'middle',
@@ -65,8 +65,8 @@ class F111Counter < Counter
     xml.g(transform: 'translate(153,120) scale(0.75)') do
       f111_outline(xml)
     end
-    top_left_value(xml)
-    top_right_value(xml)
+    top_left_value(xml, '?')
+    top_right_value(xml, '?')
   end
 
   def to_svg

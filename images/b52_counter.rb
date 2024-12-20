@@ -40,20 +40,20 @@ class B52Counter < Counter
     (1024 - 628) / 2
   end
 
-  def top_left_value(xml)
-    xml.text_('?',
+  def top_left_value(xml, value)
+    xml.text_(value,
               x: '200',
-              y: '200',
+              y: '300',
               'text-anchor': 'middle',
               'text-align': 'center',
               'font-family': 'sans-serif',
               'font-size': font_size)
   end
 
-  def top_right_value(xml)
-    xml.text_('?',
+  def top_right_value(xml, value)
+    xml.text_(value,
               x: '800',
-              y: '200',
+              y: '300',
               'text-anchor': 'middle',
               'text-align': 'center',
               'font-family': 'sans-serif',
@@ -66,8 +66,8 @@ class B52Counter < Counter
       b52_outline(xml)
       b52_bounding_box(xml)
     end
-    top_left_value(xml)
-    top_right_value(xml)
+    top_left_value(xml, '?')
+    top_right_value(xml, '?')
   end
 
   def to_svg

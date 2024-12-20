@@ -22,6 +22,6 @@ class Counter
   end
 
   def font_size
-    108
+    '300px'
   end
 end
