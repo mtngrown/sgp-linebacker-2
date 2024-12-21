@@ -15,6 +15,17 @@ class Counter
     )
   end
 
+  # No idea why -80 is the correct (or close enoug) offset.
+  # It needs to be calculated based on the counter width.
+  def offset_x
+    -80
+  end
+
+  # This needs to be calculated based on the counter height
+  def offset_y
+    (1024 - 628) / 2
+  end
+
   def top_left_value(xml, value)
     xml.text_(value,
               x: '200',
