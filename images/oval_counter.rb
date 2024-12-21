@@ -2,26 +2,13 @@
 # frozen_string_literal: true
 
 require 'nokogiri'
-
+require_relative 'counter'
 # The top 2 and half rows of the US counter sheet.
-class OvalCounter
+class OvalCounter < Counter
   # No idea why -100 is the correct (or close enoug) offset.
   # It needs to be calculated based on the counter width.
   def offset_x
     -80
-  end
-
-  def counter_background(xml)
-    xml.rect(
-      x: '0',
-      y: '0',
-      width: counter_width,
-      height: counter_height,
-      fill: 'coral',
-      'fill-opacity': '0.3',
-      stroke: 'black',
-      'stroke-width': '1'
-    )
   end
 
   # This needs to be calculated based on the counter height
