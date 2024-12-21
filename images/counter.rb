@@ -36,11 +36,11 @@ class Counter
   end
 
   def fill
-    'coral'
+    'white' # 'coral'
   end
 
   def fill_opacity
-    '0.3'
+    '1' # '0.3'
   end
 
   def stroke
