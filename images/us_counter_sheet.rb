@@ -63,13 +63,18 @@ def row_5(xml)
   end
   (8..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{4 * 200}) scale(0.2)") do
-      F4Counter.new.build_counter(xml)
+      F111Counter.new.build_counter(xml)
     end
   end
 end
 
 def row_6(xml)
-  (1..10).each do |column|
+  (1..7).each do |column|
+    xml.g(transform: "translate(#{(column - 1) * 200},#{5 * 200}) scale(0.2)") do
+      F111Counter.new.build_counter(xml)
+    end
+  end
+  (8..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{5 * 200}) scale(0.2)") do
       F4Counter.new.build_counter(xml)
     end
@@ -79,7 +84,7 @@ end
 def row_7(xml)
   (1..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{6 * 200}) scale(0.2)") do
-      F111Counter.new.build_counter(xml)
+      F4Counter.new.build_counter(xml)
     end
   end
 end
@@ -87,7 +92,7 @@ end
 def row_8(xml)
   (1..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{7 * 200}) scale(0.2)") do
-      F111Counter.new.build_counter(xml)
+      F4Counter.new.build_counter(xml)
     end
   end
 end
