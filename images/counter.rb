@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Base class for the wun
 class Counter
   def counter_background(xml)
@@ -6,10 +8,10 @@ class Counter
       y: '0',
       width: counter_width,
       height: counter_height,
-      fill: 'coral',
-      'fill-opacity': '0.3',
-      stroke: 'black',
-      'stroke-width': '1'
+      fill: fill,
+      'fill-opacity': fill_opacity,
+      stroke: stroke,
+      'stroke-width': stroke_width
     )
   end
 
@@ -31,6 +33,22 @@ class Counter
               'text-align': 'center',
               'font-family': 'sans-serif',
               'font-size': font_size)
+  end
+
+  def fill
+    'coral'
+  end
+
+  def fill_opacity
+    '0.3'
+  end
+
+  def stroke
+    'black'
+  end
+
+  def stroke_width
+    '1'
   end
 
   def counter_width
