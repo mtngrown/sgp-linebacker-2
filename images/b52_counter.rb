@@ -16,24 +16,11 @@ class B52Counter < Counter
              style: 'fill:#302f2e;fill-opacity:1;stroke:#00d300;stroke-opacity:1')
   end
 
-  def b52_bounding_box(xml)
-    xml.rect(
-      x: '236',
-      y: '0',
-      width: '728',
-      height: '628',
-      fill: 'palegreen',
-      'fill-opacity': '0.3',
-      stroke: 'black',
-      'stroke-width': '1'
-    )
-  end
-
   def build_counter(xml)
     counter_background(xml)
     xml.g(transform: "translate(#{offset_x},#{offset_y})") do
       b52_outline(xml)
-      b52_bounding_box(xml)
+      bounding_box(xml)
     end
     top_left_value(xml, '?')
     top_right_value(xml, '?')

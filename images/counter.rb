@@ -26,6 +26,19 @@ class Counter
     (1024 - 628) / 2
   end
 
+  def bounding_box(xml)
+    xml.rect(
+      x: '236',
+      y: '0',
+      width: '728',
+      height: '628',
+      fill: fill, # 'palegreen',
+      'fill-opacity': '0.3',
+      stroke: 'black',
+      'stroke-width': '0' # '1'
+    )
+  end
+
   def top_left_value(xml, value)
     xml.text_(value,
               x: '200',
@@ -47,7 +60,7 @@ class Counter
   end
 
   def fill
-    'white' # 'coral'
+    '#A0A6E7' # 'white' # 'coral'
   end
 
   def fill_opacity
