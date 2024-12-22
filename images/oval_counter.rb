@@ -28,8 +28,9 @@ class OvalCounter < Counter
   end
 
   def oval_outline(xml)
-    xml.circle(cx: 450, cy: 100, r: 200)
-    xml.circle(cx: 750, cy: 100, r: 200)
+    xml.circle(cx: 600, cy: 100, r: 200)
+    # xml.circle(cx: 450, cy: 100, r: 200)
+    # xml.circle(cx: 750, cy: 100, r: 200)
   end
 
   def build_counter(xml, value = nil)

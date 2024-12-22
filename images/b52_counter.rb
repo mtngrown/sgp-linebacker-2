@@ -22,8 +22,8 @@ class B52Counter < Counter
       b52_outline(xml)
       bounding_box(xml)
     end
-    top_left_value(xml, '?')
-    top_right_value(xml, '?')
+    top_left_value(xml, '3')
+    top_right_value(xml, 'B')
   end
 
   def to_svg

@@ -22,8 +22,8 @@ class F4Counter < Counter
     xml.g(transform: 'translate(300,180) scale(2.0)') do
       f4_outline(xml)
     end
-    top_left_value(xml, '?')
-    top_right_value(xml, '?')
+    top_left_value(xml, '8')
+    top_right_value(xml, 'E')
   end
 
   def to_svg
