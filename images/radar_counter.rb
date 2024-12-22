@@ -4,7 +4,7 @@
 require 'nokogiri'
 require_relative 'counter'
 # The top 2 and half rows of the US counter sheet.
-class OvalCounter < Counter
+class RadarCounter < Counter
   # No idea why -100 is the correct (or close enoug) offset.
   # It needs to be calculated based on the counter width.
   def offset_x
@@ -59,4 +59,4 @@ class OvalCounter < Counter
   end
 end
 
-File.write('oval-counter.svg', OvalCounter.new.to_svg)
+File.write('radar-counter.svg', RadarCounter.new.to_svg)

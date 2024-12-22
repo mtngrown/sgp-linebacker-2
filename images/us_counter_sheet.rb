@@ -6,7 +6,7 @@ require 'nokogiri'
 require_relative 'b52_counter'
 require_relative 'f4_counter'
 require_relative 'f111_counter'
-require_relative 'oval_counter'
+require_relative 'radar_counter'
 
 # 8 rows, 10 columns.
 
@@ -21,7 +21,7 @@ end
 def row_1(xml)
   (1..10).each_with_index do |column, index|
     xml.g(transform: "translate(#{(column - 1) * 200},#{0 * 200}) scale(0.2)") do
-      OvalCounter.new.build_counter(xml, index + 1)
+      RadarCounter.new.build_counter(xml, index + 1)
     end
   end
 end
@@ -29,7 +29,7 @@ end
 def row_2(xml)
   (1..10).each_with_index do |column, index|
     xml.g(transform: "translate(#{(column - 1) * 200},#{1 * 200}) scale(0.2)") do
-      OvalCounter.new.build_counter(xml, index + 11)
+      RadarCounter.new.build_counter(xml, index + 11)
     end
   end
 end
@@ -37,7 +37,7 @@ end
 def row_3(xml)
   (1..3).each_with_index do |column, index|
     xml.g(transform: "translate(#{(column - 1) * 200},#{2 * 200}) scale(0.2)") do
-      OvalCounter.new.build_counter(xml, index + 21)
+      RadarCounter.new.build_counter(xml, index + 21)
     end
   end
   (4..10).each do |column|
