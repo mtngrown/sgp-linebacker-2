@@ -22,13 +22,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.91316806"
-     inkscape:cx="124.84011"
-     inkscape:cy="521.80975"
+     inkscape:zoom="5.1656586"
+     inkscape:cx="338.67898"
+     inkscape:cy="61.657191"
      inkscape:window-width="1840"
      inkscape:window-height="1192"
-     inkscape:window-x="355"
-     inkscape:window-y="108"
+     inkscape:window-x="216"
+     inkscape:window-y="80"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg974" />
   <g
@@ -4189,4 +4189,8 @@
        d="m 698.5,729.5 c 14.667,0.667 14.667,1.333 0,2 0,-0.667 0,-1.333 0,-2 z"
        id="path974" />
   </g>
+  <path
+     style="fill:none;stroke:#00e58b;stroke-width:2.9;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:17.9906;paint-order:markers stroke fill"
+     d="m 317.4813,10.647239 2.51662,32.522474 16.45482,60.398877 5.614,0.58076 3.48455,0.77435 2.32303,8.71137 1.16152,11.228 2.51662,40.45951"
+     id="path1" />
 </svg>
