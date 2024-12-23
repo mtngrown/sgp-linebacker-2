@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 require 'nokogiri'
+require_relative 'plus_counter'
 
 def placeholder(xml)
   xml.rect(x: '0', y: '0', width: '1024', height: '1024', fill: 'none', stroke: 'black', 'stroke-width': '2')
@@ -56,9 +57,14 @@ def row_6(xml)
 end
 
 def row_7(xml)
-  (1..10).each do |column|
+  (1..3).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{6 * 200}) scale(0.2)") do
       placeholder(xml)
+    end
+  end
+  (4..10).each do |column|
+    xml.g(transform: "translate(#{(column - 1) * 200},#{6 * 200}) scale(0.2)") do
+      PlusCounter.new.build_counter(xml)
     end
   end
 end
