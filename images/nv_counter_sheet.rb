@@ -3,15 +3,19 @@
 
 require 'nokogiri'
 require_relative 'plus_counter'
+require_relative 'radar_counter'
+def background_color
+  'rgb(213,131,190)'
+end
 
 def placeholder(xml)
   xml.rect(x: '0', y: '0', width: '1024', height: '1024', fill: 'none', stroke: 'black', 'stroke-width': '2')
 end
 
 def row_1(xml)
-  (1..10).each do |column|
+  (1..10).each_with_index do |column, index|
     xml.g(transform: "translate(#{(column - 1) * 200},#{0 * 200}) scale(0.2)") do
-      placeholder(xml)
+      RadarCounter.new(background_color).build_counter(xml, index + 1)
     end
   end
 end
@@ -63,7 +67,7 @@ def row_7(xml)
     end
   end
   (4..10).each do |column|
-    fill = 'yellow'
+    fill = background_color
     xml.g(transform: "translate(#{(column - 1) * 200},#{6 * 200}) scale(0.2)") do
       PlusCounter.new(fill).build_counter(xml)
     end

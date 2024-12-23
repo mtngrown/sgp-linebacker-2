@@ -10,7 +10,7 @@ class PlusCounter < Counter
 
   def build_counter(xml)
     counter_background(xml)
-    xml.text_('+', x: '512', y: '712', 'font-size': '500', 'text-anchor': 'middle', 'text-align': 'center')
+    xml.text_('+', x: '512', y: '695', 'font-size': '500', 'text-anchor': 'middle', 'text-align': 'center')
   end
 
   def to_svg
