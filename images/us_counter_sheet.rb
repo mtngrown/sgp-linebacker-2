@@ -21,7 +21,7 @@ end
 def row_1(xml)
   (1..10).each_with_index do |column, index|
     xml.g(transform: "translate(#{(column - 1) * 200},#{0 * 200}) scale(0.2)") do
-      RadarCounter.new.build_counter(xml, index + 1)
+      RadarCounter.new('#A0A6E7').build_counter(xml, index + 1)
     end
   end
 end
@@ -29,7 +29,7 @@ end
 def row_2(xml)
   (1..10).each_with_index do |column, index|
     xml.g(transform: "translate(#{(column - 1) * 200},#{1 * 200}) scale(0.2)") do
-      RadarCounter.new.build_counter(xml, index + 11)
+      RadarCounter.new('#A0A6E7').build_counter(xml, index + 11)
     end
   end
 end
@@ -37,12 +37,12 @@ end
 def row_3(xml)
   (1..3).each_with_index do |column, index|
     xml.g(transform: "translate(#{(column - 1) * 200},#{2 * 200}) scale(0.2)") do
-      RadarCounter.new.build_counter(xml, index + 21)
+      RadarCounter.new('#A0A6E7').build_counter(xml, index + 21)
     end
   end
   (4..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{2 * 200}) scale(0.2)") do
-      B52Counter.new.build_counter(xml)
+      B52Counter.new('#A0A6E7').build_counter(xml)
     end
   end
 end
@@ -50,7 +50,7 @@ end
 def row_4(xml)
   (1..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{3 * 200}) scale(0.2)") do
-      B52Counter.new.build_counter(xml)
+      B52Counter.new('#A0A6E7').build_counter(xml)
     end
   end
 end
@@ -58,12 +58,12 @@ end
 def row_5(xml)
   (1..7).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{4 * 200}) scale(0.2)") do
-      B52Counter.new.build_counter(xml)
+      B52Counter.new('#A0A6E7').build_counter(xml)
     end
   end
   (8..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{4 * 200}) scale(0.2)") do
-      F111Counter.new.build_counter(xml)
+      F111Counter.new('#A0A6E7').build_counter(xml)
     end
   end
 end
@@ -71,12 +71,12 @@ end
 def row_6(xml)
   (1..7).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{5 * 200}) scale(0.2)") do
-      F111Counter.new.build_counter(xml)
+      F111Counter.new('#A0A6E7').build_counter(xml)
     end
   end
   (8..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{5 * 200}) scale(0.2)") do
-      F4Counter.new.build_counter(xml)
+      F4Counter.new('#A0A6E7').build_counter(xml)
     end
   end
 end
@@ -84,7 +84,7 @@ end
 def row_7(xml)
   (1..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{6 * 200}) scale(0.2)") do
-      F4Counter.new.build_counter(xml)
+      F4Counter.new('#A0A6E7').build_counter(xml)
     end
   end
 end
@@ -92,7 +92,7 @@ end
 def row_8(xml)
   (1..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{7 * 200}) scale(0.2)") do
-      F4Counter.new.build_counter(xml)
+      F4Counter.new('#A0A6E7').build_counter(xml)
     end
   end
 end

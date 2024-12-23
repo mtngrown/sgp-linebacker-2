@@ -63,8 +63,9 @@ def row_7(xml)
     end
   end
   (4..10).each do |column|
+    fill = 'yellow'
     xml.g(transform: "translate(#{(column - 1) * 200},#{6 * 200}) scale(0.2)") do
-      PlusCounter.new.build_counter(xml)
+      PlusCounter.new(fill).build_counter(xml)
     end
   end
 end

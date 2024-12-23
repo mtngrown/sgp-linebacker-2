@@ -2,13 +2,18 @@
 
 # Base class for the wun
 class Counter
+  # TODO: change this to an options hash.
+  def initialize(fill = nil)
+    @fill = fill
+  end
+
   def counter_background(xml)
     xml.rect(
       x: '0',
       y: '0',
       width: counter_width,
       height: counter_height,
-      fill: fill,
+      fill: @fill,
       'fill-opacity': fill_opacity,
       stroke: stroke,
       'stroke-width': stroke_width
@@ -32,7 +37,7 @@ class Counter
       y: '0',
       width: '728',
       height: '628',
-      fill: fill, # 'palegreen',
+      fill: @fill, # 'palegreen',
       'fill-opacity': '0.3',
       stroke: 'black',
       'stroke-width': '0' # '1'
@@ -59,9 +64,9 @@ class Counter
               'font-size': font_size)
   end
 
-  def fill
-    '#A0A6E7' # 'white' # 'coral'
-  end
+  # def fill
+  #   @fill ||= 'white' # '#A0A6E7' # 'coral'
+  # end
 
   def fill_opacity
     '1' # '0.3'
