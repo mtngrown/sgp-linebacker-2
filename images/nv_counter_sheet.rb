@@ -5,6 +5,7 @@ require 'nokogiri'
 require_relative 'plus_counter'
 require_relative 'radar_counter'
 require_relative 'mig21_counter'
+require_relative 'hit_counter'
 
 def background_color
   'rgb(213,131,190)'
@@ -41,7 +42,7 @@ end
 def row_4(xml)
   (1..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{3 * 200}) scale(0.2)") do
-      placeholder(xml)
+      HitCounter.new(background_color).build_counter(xml)
     end
   end
 end
