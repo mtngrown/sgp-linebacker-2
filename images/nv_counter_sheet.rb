@@ -4,6 +4,8 @@
 require 'nokogiri'
 require_relative 'plus_counter'
 require_relative 'radar_counter'
+require_relative 'mig21_counter'
+
 def background_color
   'rgb(213,131,190)'
 end
@@ -23,7 +25,7 @@ end
 def row_2(xml)
   (1..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{1 * 200}) scale(0.2)") do
-      placeholder(xml)
+      Mig21Counter.new(background_color).build_counter(xml)
     end
   end
 end
@@ -31,8 +33,8 @@ end
 def row_3(xml)
   (1..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{2 * 200}) scale(0.2)") do
-      placeholder(xml)
-    end
+    Mig21Counter.new(background_color).build_counter(xml)
+  end
   end
 end
 
