@@ -3,10 +3,4 @@
   <rect x="0" y="0" width="1024" height="1024" fill="yellow" fill-opacity="1" stroke="black" stroke-width="1"/>
   <text x="512" y="495" font-size="400" text-anchor="middle" text-align="center">SAM</text>
   <text x="512" y="895" font-size="400" text-anchor="middle" text-align="center">0</text>
-  <rect x="0" y="0" width="1024" height="1024" fill="yellow" fill-opacity="1" stroke="black" stroke-width="1"/>
-  <text x="512" y="495" font-size="400" text-anchor="middle" text-align="center">SAM</text>
-  <text x="512" y="895" font-size="400" text-anchor="middle" text-align="center">00</text>
-  <rect x="0" y="0" width="1024" height="1024" fill="yellow" fill-opacity="1" stroke="black" stroke-width="1"/>
-  <text x="512" y="495" font-size="400" text-anchor="middle" text-align="center">SAM</text>
-  <text x="512" y="895" font-size="400" text-anchor="middle" text-align="center">000</text>
 </svg>

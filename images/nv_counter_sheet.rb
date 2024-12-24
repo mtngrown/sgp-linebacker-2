@@ -6,7 +6,7 @@ require_relative 'plus_counter'
 require_relative 'radar_counter'
 require_relative 'mig21_counter'
 require_relative 'hit_counter'
-
+require_relative 'sam_counter'
 def background_color
   'rgb(213,131,190)'
 end
@@ -64,9 +64,10 @@ def row_6(xml)
 end
 
 def row_7(xml)
+  vals = ['0', '00', '000'] # vals.shift to get the first remaining value.
   (1..3).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{6 * 200}) scale(0.2)") do
-      placeholder(xml)
+      SamCounter.new(background_color).build_counter(xml, vals.shift)
     end
   end
   (4..10).each do |column|

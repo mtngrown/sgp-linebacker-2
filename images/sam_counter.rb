@@ -14,9 +14,7 @@ class SamCounter < Counter
   def to_svg
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: counter_width, height: counter_height) do
-        ['0', '00', '000'].each do |number|
-          build_counter(xml, number)
-        end
+        build_counter(xml, '0')
       end
     end
     builder.to_xml
