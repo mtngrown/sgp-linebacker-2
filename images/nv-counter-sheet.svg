@@ -380,18 +380,18 @@
     </g>
     <g transform="translate(1000,800) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" fill-opacity="1" stroke="black" stroke-width="1"/>
-      <text x="512" y="495" font-size="400" text-anchor="middle" text-align="center">SAM</text>
-      <text x="512" y="895" font-size="400" text-anchor="middle" text-align="center">0</text>
+      <text x="512" y="495" font-size="400" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">SAM</text>
+      <text x="512" y="895" font-size="400" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">0</text>
     </g>
     <g transform="translate(1200,800) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" fill-opacity="1" stroke="black" stroke-width="1"/>
-      <text x="512" y="495" font-size="400" text-anchor="middle" text-align="center">SAM</text>
-      <text x="512" y="895" font-size="400" text-anchor="middle" text-align="center">00</text>
+      <text x="512" y="495" font-size="400" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">SAM</text>
+      <text x="512" y="895" font-size="400" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">00</text>
     </g>
     <g transform="translate(1400,800) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" fill-opacity="1" stroke="black" stroke-width="1"/>
-      <text x="512" y="495" font-size="400" text-anchor="middle" text-align="center">SAM</text>
-      <text x="512" y="895" font-size="400" text-anchor="middle" text-align="center">000</text>
+      <text x="512" y="495" font-size="400" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">SAM</text>
+      <text x="512" y="895" font-size="400" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">000</text>
     </g>
     <g transform="translate(1600,800) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="none" stroke="black" stroke-width="2"/>
@@ -433,53 +433,53 @@
     </g>
     <g transform="translate(1600,1000) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" fill-opacity="1" stroke="black" stroke-width="1"/>
-      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center">GT</text>
+      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">GT</text>
     </g>
     <g transform="translate(1800,1000) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" fill-opacity="1" stroke="black" stroke-width="1"/>
-      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center" transform="rotate(45, 512, 695)">Date</text>
+      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center" transform="rotate(45, 512, 695)" color="rgb(100,100,100)" fill="rgb(100,100,100)">Date</text>
     </g>
     <g transform="translate(0,1200) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" fill-opacity="1" stroke="black" stroke-width="1"/>
-      <text x="512" y="495" font-size="400" text-anchor="middle" text-align="center">VP</text>
-      <text x="512" y="895" font-size="400" text-anchor="middle" text-align="center">0</text>
+      <text x="512" y="495" font-size="400" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">VP</text>
+      <text x="512" y="895" font-size="400" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">0</text>
     </g>
     <g transform="translate(200,1200) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" fill-opacity="1" stroke="black" stroke-width="1"/>
-      <text x="512" y="495" font-size="400" text-anchor="middle" text-align="center">VP</text>
-      <text x="512" y="895" font-size="400" text-anchor="middle" text-align="center">00</text>
+      <text x="512" y="495" font-size="400" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">VP</text>
+      <text x="512" y="895" font-size="400" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">00</text>
     </g>
     <g transform="translate(400,1200) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" fill-opacity="1" stroke="black" stroke-width="1"/>
-      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center">PM</text>
+      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">PM</text>
     </g>
     <g transform="translate(600,1200) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" fill-opacity="1" stroke="black" stroke-width="1"/>
-      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center">+</text>
+      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">+</text>
     </g>
     <g transform="translate(800,1200) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" fill-opacity="1" stroke="black" stroke-width="1"/>
-      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center">+</text>
+      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">+</text>
     </g>
     <g transform="translate(1000,1200) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" fill-opacity="1" stroke="black" stroke-width="1"/>
-      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center">+</text>
+      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">+</text>
     </g>
     <g transform="translate(1200,1200) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" fill-opacity="1" stroke="black" stroke-width="1"/>
-      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center">+</text>
+      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">+</text>
     </g>
     <g transform="translate(1400,1200) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" fill-opacity="1" stroke="black" stroke-width="1"/>
-      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center">+</text>
+      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">+</text>
     </g>
     <g transform="translate(1600,1200) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" fill-opacity="1" stroke="black" stroke-width="1"/>
-      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center">+</text>
+      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">+</text>
     </g>
     <g transform="translate(1800,1200) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" fill-opacity="1" stroke="black" stroke-width="1"/>
-      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center">+</text>
+      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">+</text>
     </g>
   </g>
 </svg>

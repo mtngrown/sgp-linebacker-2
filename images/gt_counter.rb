@@ -5,9 +5,11 @@ require_relative 'counter'
 
 # For whatever "GT" stands for.
 class GTCounter < Counter
+  def color = 'rgb(100,100,100)'
+
   def build_counter(xml)
     counter_background(xml)
-    xml.text_('GT', x: '512', y: '695', 'font-size': '500', 'text-anchor': 'middle', 'text-align': 'center')
+    xml.text_('GT', x: '512', y: '695', 'font-size': '500', 'text-anchor': 'middle', 'text-align': 'center', color: color, fill: color)
   end
 
   def to_svg

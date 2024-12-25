@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024">
   <rect x="0" y="0" width="1024" height="1024" fill="yellow" fill-opacity="1" stroke="black" stroke-width="1"/>
-  <text x="512" y="495" font-size="400" text-anchor="middle" text-align="center">VP</text>
-  <text x="512" y="895" font-size="400" text-anchor="middle" text-align="center">0</text>
+  <text x="512" y="495" font-size="400" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">VP</text>
+  <text x="512" y="895" font-size="400" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">0</text>
 </svg>

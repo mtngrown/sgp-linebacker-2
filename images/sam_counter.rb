@@ -5,10 +5,11 @@ require 'nokogiri'
 require_relative 'counter'
 
 class SamCounter < Counter
+  def color = 'rgb(100,100,100)'
   def build_counter(xml, number)
     counter_background(xml)
-    xml.text_('SAM', x: '512', y: '495', 'font-size': '400', 'text-anchor': 'middle', 'text-align': 'center')
-    xml.text_(number, x: '512', y: '895', 'font-size': '400', 'text-anchor': 'middle', 'text-align': 'center')
+    xml.text_('SAM', x: '512', y: '495', 'font-size': '400', 'text-anchor': 'middle', 'text-align': 'center', color: color, fill: color)
+    xml.text_(number, x: '512', y: '895', 'font-size': '400', 'text-anchor': 'middle', 'text-align': 'center', color: color, fill: color)
   end
 
   def to_svg
