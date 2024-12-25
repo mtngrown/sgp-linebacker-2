@@ -5,17 +5,6 @@ require 'nokogiri'
 require_relative 'counter'
 # The top 2 and half rows of the US counter sheet.
 class RadarCounter < Counter
-  # No idea why -100 is the correct (or close enoug) offset.
-  # It needs to be calculated based on the counter width.
-  def offset_x
-    -80
-  end
-
-  # This needs to be calculated based on the counter height
-  def offset_y
-    (1024 - 628) / 2
-  end
-
   def add_value(xml, value)
     value ||= '??'
     xml.text_(value,
