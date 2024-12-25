@@ -17,7 +17,7 @@ class AirfieldLegend
   xoffset = 0.6
 
   AIRFIELDS = [
-    { position: [xoffset, 7.3], label: 1, name: 'Dong ???' },
+    { position: [xoffset, 7.3], label: 1, name: 'Dong Hi' },
     { position: [xoffset, 7.8], label: 2, name: 'Sep' },
     { position: [xoffset, 8.3], label: 3, name: 'Bao Giang' },
     { position: [xoffset, 8.8], label: 4, name: 'Kim Anh' },
@@ -65,8 +65,6 @@ class SVGGenerator
     @canvas_width = canvas_width
     @canvas_height = canvas_height
     @zones = initialize_zones
-    # @stars = initialize_stars
-    @cities = initialize_cities
   end
 
   def bounding_box
@@ -111,32 +109,6 @@ class SVGGenerator
     ]
   end
 
-  # def initialize_stars
-  #   [
-  #     Star.new([0.5, 1.6], sr, label: '1', label_offset: ur),
-  #     Star.new([3.1, 1.6], sr, label: '2', label_offset: ur),
-  #     Star.new([3.5, 2.2], sr, label: '3', label_offset: ur),
-  #     Star.new([1.8, 3.7], sr, label: '4', label_offset: lr),
-  #     Star.new([3.9, 3.6], sr, label: '5', label_offset: ll),
-  #     Star.new([3.9, 5.2], sr, label: '6', label_offset: ll),
-  #     Star.new([5.3, 2.2], sr, label: '7', label_offset: lr),
-  #     Star.new([7.6, 6.0], sr, label: '8', label_offset: ur),
-  #     Star.new([7.4, 8.8], sr, label: '9', label_offset: ur),
-  #     Star.new([13.2, 12.2], sr, label: '10', label_offset: ur)
-  #   ]
-  # end
-
-  def initialize_cities
-    [
-      CityHeredoc.new([0.6, 2.4], 0.45, 'THAI NGUYEN', 'l'),
-      CityHeredoc.new([6.6, 1.1], 0.45, 'HAIPHONG', 'm'),
-      CityHeredoc.new([3.2, 4.1], 0.7, 'HANOI', 'm'),
-      CityHeredoc.new([6.5, 4.5], 0.45, '??? DINH', 'm'),
-      CityHeredoc.new([8.9, 8.6], 0.45, 'THAN HOA', 'l'),
-      CityHeredoc.new([12.2, 11.8], 0.45, 'VINH', 'm')
-    ]
-  end
-
   def generate_svg_original
     File.open('border_shape.svg', 'w') do |file|
       file.puts <<~SVG
@@ -147,7 +119,6 @@ class SVGGenerator
           <g transform="translate(1.0, 1.0)">
             <path d="M #{path_data} Z" fill="#{ZoneHeredoc::DEFAULT_FILL_COLOR}" stroke="#{ZoneHeredoc::DEFAULT_STROKE_COLOR}" stroke-width="#{ZoneHeredoc::DEFAULT_STROKE_WIDTH}cm" />
             #{zones.map(&:to_svg).join("\n")}
-            #{cities.map(&:to_svg).join("\n")}
           </g>
         </svg>
       SVG
