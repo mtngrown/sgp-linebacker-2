@@ -425,7 +425,8 @@
       <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center">HIT</text>
     </g>
     <g transform="translate(1600,1000) scale(0.2)">
-      <rect x="0" y="0" width="1024" height="1024" fill="none" stroke="black" stroke-width="2"/>
+      <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" fill-opacity="1" stroke="black" stroke-width="1"/>
+      <text x="512" y="695" font-size="500" text-anchor="middle" text-align="center">GT</text>
     </g>
     <g transform="translate(1800,1000) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="none" stroke="black" stroke-width="2"/>

@@ -10,6 +10,7 @@ require_relative 'sam_counter'
 require_relative 's_counter'
 require_relative 'vp_counter'
 require_relative 'pm_counter'
+require_relative 'gt_counter'
 
 # The hex value that most closely approximates the red color
 # of the flag of the Democratic Republic of Vietnam during
@@ -89,10 +90,15 @@ def row_6(xml)
       HitCounter.new(background_color).build_counter(xml)
     end
   end
-  (9..10).each do |column|
-    xml.g(transform: "translate(#{(column - 1) * 200},#{5 * 200}) scale(0.2)") do
-      placeholder(xml)
-    end
+  
+  column = 9
+  xml.g(transform: "translate(#{(column - 1) * 200},#{5 * 200}) scale(0.2)") do
+    GTCounter.new(background_color).build_counter(xml)
+  end
+
+  column = 10
+  xml.g(transform: "translate(#{(column - 1) * 200},#{5 * 200}) scale(0.2)") do
+    placeholder(xml)
   end
 end
 
@@ -107,7 +113,7 @@ def row_7(xml)
   column = 3
   xml.g(transform: "translate(#{(column - 1) * 200},#{6 * 200}) scale(0.2)") do
     PMCounter.new(background_color).build_counter(xml)
-end
+  end
 
   (4..10).each do |column|
     fill = background_color
