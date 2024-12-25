@@ -127,6 +127,17 @@ end
 def to_svg # rubocop:disable Metrics/MethodLength
   builder = Nokogiri::XML::Builder.new do |xml|
     xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: '2000', height: '1600') do
+      xml.defs do
+        xml.style(type: 'text/css') do
+          xml.cdata <<-STYLE
+            svg {
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 16px;
+            }
+          STYLE
+        end
+      end
+
       xml.g(transform: 'scale(0.5)') do
         row_1(xml)
         row_2(xml)
