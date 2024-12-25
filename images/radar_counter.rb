@@ -3,8 +3,16 @@
 
 require 'nokogiri'
 require_relative 'counter'
+
 # The top 2 and half rows of the US counter sheet.
+# Top row of NV counter sheet.
 class RadarCounter < Counter
+  def gray_index = 90
+
+  def fill_color
+    "rgb(#{gray_index},#{gray_index},#{gray_index})"
+  end
+
   def add_value(xml, value)
     value ||= '??'
     xml.text_(value,
@@ -17,7 +25,7 @@ class RadarCounter < Counter
   end
 
   def oval_outline(xml)
-    xml.circle(cx: 600, cy: 100, r: 200)
+    xml.circle(cx: 600, cy: 100, r: 200, fill: fill_color)
     # xml.circle(cx: 450, cy: 100, r: 200)
     # xml.circle(cx: 750, cy: 100, r: 200)
   end
