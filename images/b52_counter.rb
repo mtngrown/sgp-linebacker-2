@@ -16,20 +16,20 @@ class B52Counter < Counter
              style: 'fill:#302f2e;fill-opacity:1;stroke:#00d300;stroke-opacity:1')
   end
 
-  def build_counter(xml)
+  def build_counter(xml, number)
     counter_background(xml)
     xml.g(transform: "translate(#{offset_x},#{offset_y})") do
       b52_outline(xml)
       bounding_box(xml)
     end
-    top_left_value(xml, '3')
+    top_left_value(xml, number)
     top_right_value(xml, 'B')
   end
 
   def to_svg
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: counter_width, height: counter_height) do
-        build_counter(xml)
+        build_counter(xml, '9')
       end
     end
     builder.to_xml

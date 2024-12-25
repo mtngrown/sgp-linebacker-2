@@ -40,17 +40,27 @@ def row_3(xml)
       RadarCounter.new('#A0A6E7').build_counter(xml, index + 21)
     end
   end
-  (4..10).each do |column|
+  (4..8).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{2 * 200}) scale(0.2)") do
-      B52Counter.new('#A0A6E7').build_counter(xml)
+      B52Counter.new('#A0A6E7').build_counter(xml, '9')
+    end
+  end
+  (9..10).each do |column|
+    xml.g(transform: "translate(#{(column - 1) * 200},#{2 * 200}) scale(0.2)") do
+      B52Counter.new('#A0A6E7').build_counter(xml, '6')
     end
   end
 end
 
 def row_4(xml)
-  (1..10).each do |column|
+  (1..8).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{3 * 200}) scale(0.2)") do
-      B52Counter.new('#A0A6E7').build_counter(xml)
+      B52Counter.new('#A0A6E7').build_counter(xml, '6')
+    end
+  end
+  (9..10).each do |column|
+    xml.g(transform: "translate(#{(column - 1) * 200},#{3 * 200}) scale(0.2)") do
+      B52Counter.new('#A0A6E7').build_counter(xml, '3')
     end
   end
 end
@@ -58,7 +68,7 @@ end
 def row_5(xml)
   (1..7).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{4 * 200}) scale(0.2)") do
-      B52Counter.new('#A0A6E7').build_counter(xml)
+      B52Counter.new('#A0A6E7').build_counter(xml, '3')
     end
   end
   (8..10).each do |column|
