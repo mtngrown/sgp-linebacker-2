@@ -11,6 +11,7 @@ require_relative 's_counter'
 require_relative 'vp_counter'
 require_relative 'pm_counter'
 require_relative 'gt_counter'
+require_relative 'date_counter'
 
 # The hex value that most closely approximates the red color
 # of the flag of the Democratic Republic of Vietnam during
@@ -98,7 +99,7 @@ def row_6(xml)
 
   column = 10
   xml.g(transform: "translate(#{(column - 1) * 200},#{5 * 200}) scale(0.2)") do
-    placeholder(xml)
+    DateCounter.new(background_color).build_counter(xml)
   end
 end
 
