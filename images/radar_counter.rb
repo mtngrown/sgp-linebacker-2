@@ -18,6 +18,8 @@ class RadarCounter < Counter
     xml.text_(value,
               x: '612',
               y: '700',
+              'fill': fill_color,
+              'stroke': fill_color,
               'text-anchor': 'middle',
               'text-align': 'center',
               'font-family': 'sans-serif',
