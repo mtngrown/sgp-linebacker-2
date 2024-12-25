@@ -8,6 +8,8 @@ require_relative 'mig21_counter'
 require_relative 'hit_counter'
 require_relative 'sam_counter'
 require_relative 's_counter'
+require_relative 'vp_counter'
+
 # The hex value that most closely approximates the red color
 # of the flag of the Democratic Republic of Vietnam during
 # the Vietnam War era is #DA251D
@@ -94,11 +96,18 @@ def row_6(xml)
 end
 
 def row_7(xml)
-  (1..3).each do |column|
+  vps = ['0', '00']
+  (1..2).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{6 * 200}) scale(0.2)") do
-      placeholder(xml)
+      VPCounter.new(background_color).build_counter(xml, vps.shift)
     end
   end
+
+  column = 3
+  xml.g(transform: "translate(#{(column - 1) * 200},#{6 * 200}) scale(0.2)") do
+    placeholder(xml)
+end
+
   (4..10).each do |column|
     fill = background_color
     xml.g(transform: "translate(#{(column - 1) * 200},#{6 * 200}) scale(0.2)") do
