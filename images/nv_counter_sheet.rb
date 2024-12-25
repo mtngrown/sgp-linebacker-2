@@ -7,8 +7,16 @@ require_relative 'radar_counter'
 require_relative 'mig21_counter'
 require_relative 'hit_counter'
 require_relative 'sam_counter'
+require_relative 's_counter'
+# The hex value that most closely approximates the red color
+# of the flag of the Democratic Republic of Vietnam during
+# the Vietnam War era is #DA251D
+def nvflag_background_color
+  '#DA251D'
+end
+
 def background_color
-  'rgb(213,131,190)'
+  'rgb(253,191,191)'
 end
 
 def placeholder(xml)
@@ -40,15 +48,32 @@ def row_3(xml)
 end
 
 def row_4(xml)
-  (1..10).each do |column|
+  (1..8).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{3 * 200}) scale(0.2)") do
       HitCounter.new(background_color).build_counter(xml)
+    end
+  end
+  (9..10).each do |column|
+    xml.g(transform: "translate(#{(column - 1) * 200},#{3 * 200}) scale(0.2)") do
+      SCounter.new(background_color).build_counter(xml)
     end
   end
 end
 
 def row_5(xml)
-  (1..10).each do |column|
+  (1..5).each do |column|
+    xml.g(transform: "translate(#{(column - 1) * 200},#{4 * 200}) scale(0.2)") do
+      SCounter.new(background_color).build_counter(xml)
+    end
+  end
+
+  vals = ['0', '00', '000']
+  (6..8).each do |column|
+    xml.g(transform: "translate(#{(column - 1) * 200},#{4 * 200}) scale(0.2)") do
+      SamCounter.new(background_color).build_counter(xml, vals.shift)
+    end
+  end
+  (9..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{4 * 200}) scale(0.2)") do
       placeholder(xml)
     end
@@ -56,7 +81,12 @@ def row_5(xml)
 end
 
 def row_6(xml)
-  (1..10).each do |column|
+  (1..8).each do |column|
+    xml.g(transform: "translate(#{(column - 1) * 200},#{5 * 200}) scale(0.2)") do
+      HitCounter.new(background_color).build_counter(xml)
+    end
+  end
+  (9..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{5 * 200}) scale(0.2)") do
       placeholder(xml)
     end
@@ -64,10 +94,9 @@ def row_6(xml)
 end
 
 def row_7(xml)
-  vals = ['0', '00', '000'] # vals.shift to get the first remaining value.
   (1..3).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{6 * 200}) scale(0.2)") do
-      SamCounter.new(background_color).build_counter(xml, vals.shift)
+      placeholder(xml)
     end
   end
   (4..10).each do |column|
