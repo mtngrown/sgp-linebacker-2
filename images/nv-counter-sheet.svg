@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1600">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700">
   <defs>
     <style type="text/css"><![CDATA[            svg {
               font-family: Arial, Helvetica, sans-serif;
@@ -394,10 +394,10 @@
       <text x="512" y="895" font-size="400" text-anchor="middle" text-align="center" color="rgb(100,100,100)" fill="rgb(100,100,100)">000</text>
     </g>
     <g transform="translate(1600,800) scale(0.2)">
-      <rect x="0" y="0" width="1024" height="1024" fill="none" stroke="black" stroke-width="2"/>
+      <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" stroke="black" stroke-width="2"/>
     </g>
     <g transform="translate(1800,800) scale(0.2)">
-      <rect x="0" y="0" width="1024" height="1024" fill="none" stroke="black" stroke-width="2"/>
+      <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" stroke="black" stroke-width="2"/>
     </g>
     <g transform="translate(0,1000) scale(0.2)">
       <rect x="0" y="0" width="1024" height="1024" fill="rgb(253,191,191)" fill-opacity="1" stroke="black" stroke-width="1"/>

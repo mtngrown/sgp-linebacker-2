@@ -125,7 +125,7 @@ end
 
 def to_svg # rubocop:disable Metrics/MethodLength
   builder = Nokogiri::XML::Builder.new do |xml|
-    xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: '2000', height: '1600') do
+    xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: '1000', height: '800') do
       xml.g(transform: 'scale(0.5)') do
         row_1(xml)
         row_2(xml)

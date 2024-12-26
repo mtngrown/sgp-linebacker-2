@@ -25,7 +25,7 @@ def background_color
 end
 
 def placeholder(xml)
-  xml.rect(x: '0', y: '0', width: '1024', height: '1024', fill: 'none', stroke: 'black', 'stroke-width': '2')
+  xml.rect(x: '0', y: '0', width: '1024', height: '1024', fill: background_color, stroke: 'black', 'stroke-width': '2')
 end
 
 def row_1(xml)
@@ -126,7 +126,7 @@ end
 
 def to_svg # rubocop:disable Metrics/MethodLength
   builder = Nokogiri::XML::Builder.new do |xml|
-    xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: '2000', height: '1600') do
+    xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: '1000', height: '700') do
       xml.defs do
         xml.style(type: 'text/css') do
           xml.cdata <<-STYLE
