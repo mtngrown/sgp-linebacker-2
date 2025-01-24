@@ -6,18 +6,18 @@ require_relative 'counter'
 # For whatever "Date" stands for.
 class DateCounter < Counter
   def color = 'rgb(100,100,100)'
+
   def build_counter(xml)
     counter_background(xml)
     xml.text_('Date',
-      x: '512',
-      y: '695',
-      'font-size': '500',
-      'text-anchor': 'middle',
-      'text-align': 'center',
-      transform: 'rotate(45, 512, 695)',
-      color: color,
-      fill: color
-    )
+              x: '432',
+              y: '695',
+              'font-size': '380',
+              'text-anchor': 'middle',
+              'text-align': 'center',
+              transform: 'rotate(45, 512, 695)',
+              color: color,
+              fill: color)
   end
 
   def to_svg

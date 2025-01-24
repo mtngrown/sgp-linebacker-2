@@ -2,6 +2,8 @@
 
 # Base class for the wun
 class Counter
+  def gray_index = 90
+
   # TODO: change this to an options hash.
   def initialize(fill = nil)
     @fill = fill
@@ -44,10 +46,16 @@ class Counter
     )
   end
 
+  def fill_color
+    "rgb(#{gray_index},#{gray_index},#{gray_index})"
+  end
+
   def top_left_value(xml, value)
     xml.text_(value,
               x: '200',
               y: '300',
+              fill: fill_color,
+              stroke: fill_color,
               'text-anchor': 'middle',
               'text-align': 'center',
               'font-family': 'sans-serif',
@@ -58,6 +66,8 @@ class Counter
     xml.text_(value,
               x: '800',
               y: '300',
+              fill: fill_color,
+              stroke: fill_color,
               'text-anchor': 'middle',
               'text-align': 'center',
               'font-family': 'sans-serif',
