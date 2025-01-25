@@ -1,6 +1,6 @@
 # Makefile for converting SVG counter sheets to PDF using Inkscape
 
-SVG_FILES := new.svg
+SVG_FILES := map.svg
 PDF_FILES := $(SVG_FILES:.svg=.pdf)
 
 # Default target

@@ -143,11 +143,15 @@ class SVGGenerator
       end
     end
 
-    File.write('new.svg', builder.to_xml)
-    puts "SVG border file 'new.svg' created successfully!"
+    File.write(file_name, builder.to_xml)
+    puts "SVG border file '#{file_name}' created successfully!"
   end
 
   private
+
+  def file_name
+    'map.svg'
+  end
 
   # star radius
   def sr
