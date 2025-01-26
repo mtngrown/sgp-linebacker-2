@@ -1,16 +1,36 @@
 class UsHoldingArea
   BORDER_POINTS = [
-    [13.5, 0],
-    [16.0, 0],
-    [16.0, 7.5],
-    [13.5, 7.5]
+    [14.0, 0],
+    [18.0, 0],
+    [18.0, 7.5],
+    [14.0, 7.5]
   ].freeze
 
-  def initialize
-    @svg = Nokogiri::XML::Builder.new do |xml|
-      xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: '10cm', height: '10cm') do
-        xml.rect(width: '100%', height: '100%', fill: 'lightblue')
-      end
-    end
+  def initialize(xml)
+    @xml = xml
+  end
+
+  # Now we need to add the text "US HOLDING AREA"
+  def add_text
+    @xml.text_(
+      'US HOLDING AREA',
+      x: 14.5,
+      y: 2.75,
+      'font-size': 0.75,
+      fill: 'black',
+      'text-anchor': 'left',
+      'font-weight': 'bold',
+      'font-family': "'Courier New', Courier, monospace"
+    )
+  end
+
+  def add_to_svg
+    @xml.path(
+      d: "M #{BORDER_POINTS.map { |x, y| "#{x},#{y}" }.join(' L ')} Z",
+      fill: 'none',
+      stroke: 'black',
+      'stroke-width': '0.1'
+    )
+    add_text
   end
 end

@@ -11,7 +11,7 @@ require_relative 'star'
 require_relative 'city'
 require_relative 'city_heredoc'
 require_relative 'coastline'
-
+require_relative 'us_holding_area'
 # Legend is to the left of the map area.
 class AirfieldLegend
   xoffset = 0.6
@@ -139,6 +139,7 @@ class SVGGenerator
           Star.add_stars_to_svg(xml)
           City.add_all_to_svg(xml)
           AirfieldLegend.new(xml).to_svg
+          UsHoldingArea.new(xml).add_to_svg
         end
       end
     end
