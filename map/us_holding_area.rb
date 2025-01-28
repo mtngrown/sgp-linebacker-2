@@ -1,3 +1,5 @@
+
+
 class UsHoldingArea
   BORDER_POINTS = [
     [14.0, 0],
@@ -54,12 +56,48 @@ class UsHoldingArea
     )
   end
 
+  def add_arrow_south_china_sea
+    @xml.path(
+      d: "M 14.0, 4.0 L 12.0, 4.0",
+      fill: 'black',
+      stroke: 'black',
+      'stroke-width': '0.1',
+#      'marker-end': 'url(#arrowhead)'
+    )
+  end
+
+  def add_arrow_zone_6
+    @xml.path(
+      d: "M 14.0, 7.5 L 12.0, 8.5",
+      fill: 'black',
+      stroke: 'black',
+      'stroke-width': '0.1',
+#      'marker-end': 'url(#arrowhead)'
+    )
+  end
+
+  def add_arrow_zone_9
+    @xml.path(
+      d: "M 16.0, 7.5 L 16.0, 9.2",
+      fill: 'black',
+      stroke: 'black',
+      'stroke-width': '0.1',
+#      'marker-end': 'url(#arrowhead)'
+    )
+  end
+
+  def add_arrows
+    add_arrow_south_china_sea
+    add_arrow_zone_6
+    add_arrow_zone_9
+  end
+
   def add_text
     add_text_us
     add_text_holding
     add_text_area
+    add_arrows
   end
-
 
   def add_to_svg
     @xml.path(

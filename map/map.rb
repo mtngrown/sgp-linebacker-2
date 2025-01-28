@@ -12,6 +12,7 @@ require_relative 'city'
 require_relative 'city_heredoc'
 require_relative 'coastline'
 require_relative 'us_holding_area'
+require_relative 'arrowhead'
 # Legend is to the left of the map area.
 class AirfieldLegend
   xoffset = 0.6
@@ -132,6 +133,9 @@ class SVGGenerator
               viewBox: "0 0 #{canvas_width} #{canvas_height}") do
         xml.rect(width: '100%', height: '100%', fill: 'lightblue')
         xml.g(transform: 'translate(1.0, 1.0)') do
+          xml.defs do
+            Arrowhead.new(xml).build
+          end
           Border.new(xml).add_to_svg
           Zone.add_zones_to_svg(xml)
           Coastline.new(xml).add_line_path
