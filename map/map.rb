@@ -15,19 +15,21 @@ require_relative 'us_holding_area'
 require_relative 'arrowhead'
 # Legend is to the left of the map area.
 class AirfieldLegend
-  xoffset = 0.6
+  xoffset = 0.2
+  yoffset = 7.8
+  linespace = 0.5
 
   AIRFIELDS = [
-    { position: [xoffset, 7.3], label: 1, name: 'Dong Hi' },
-    { position: [xoffset, 7.8], label: 2, name: 'Sep' },
-    { position: [xoffset, 8.3], label: 3, name: 'Bao Giang' },
-    { position: [xoffset, 8.8], label: 4, name: 'Kim Anh' },
-    { position: [xoffset, 9.3], label: 5, name: 'Gia Lam' },
-    { position: [xoffset, 9.8], label: 6, name: 'Bac Mai' },
-    { position: [xoffset, 10.3], label: 7, name: 'Kien Anh' },
-    { position: [xoffset, 10.8], label: 8, name: 'Ninh Binh' },
-    { position: [xoffset, 11.3], label: 9, name: 'Yen Dai' },
-    { position: [xoffset, 11.8], label: 10, name: 'Thanh Hoa' }
+    { position: [xoffset, yoffset], label: 1, name: 'Dong Hi' },
+    { position: [xoffset, yoffset + linespace], label: 2, name: 'Sep' },
+    { position: [xoffset, yoffset + 2 * linespace], label: 3, name: 'Bao Giang' },
+    { position: [xoffset, yoffset + 3 * linespace], label: 4, name: 'Kim Anh' },
+    { position: [xoffset, yoffset + 4 * linespace], label: 5, name: 'Gia Lam' },
+    { position: [xoffset, yoffset + 5 * linespace], label: 6, name: 'Bac Mai' },
+    { position: [xoffset, yoffset + 6 * linespace], label: 7, name: 'Kien Anh' },
+    { position: [xoffset, yoffset + 7 * linespace], label: 8, name: 'Ninh Binh' },
+    { position: [xoffset, yoffset + 8 * linespace], label: 9, name: 'Yen Dai' },
+    { position: [xoffset, yoffset + 9 * linespace], label: 10, name: 'Thanh Hoa' }
   ].freeze
 
   attr_reader :xml

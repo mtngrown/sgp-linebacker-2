@@ -3,9 +3,11 @@
   <rect width="100%" height="100%" fill="lightblue"/>
   <g transform="translate(1.0, 1.0)">
     <defs>
-      <marker id="arrowhead" viewBox="0 0 80 80" refX="35" refY="25" style="stroke-width: 2px; stroke: black; fill: black" markerWidth="7" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
-        <path d="M 5,25 L 0,40 L 40,25 L 0,10 Z"/>
-      </marker>
+      <g transform="scale(0.25)">
+        <marker id="arrowhead" viewBox="0 0 80 80" refX="35" refY="25" style="stroke-width: 2px; stroke: black; fill: black" markerWidth="2" markerHeight="3" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+          <path d="M 5,25 L 0,40 L 40,25 L 0,10 Z"/>
+        </marker>
+      </g>
     </defs>
     <path d="M 0,0 L 11.7,0 L 11.7,9.5 L 18.1,9.5 L 18.1,12.6 L 4.3,12.6 L 4.3,6.7 L 0,6.7 Z" fill="none" stroke="black" stroke-width="0.1"/>
     <rect x="0" y="0" width="4.3" height="3.1" fill="#E0FFE0" stroke="black" stroke-width="0.002cm"/>
@@ -114,7 +116,7 @@
     <polygon points="1.8,3.5 1.85,3.63 1.99,3.64 1.89,3.73 1.92,3.86 1.8,3.79 1.68,3.86 1.71,3.73 1.61,3.64 1.75,3.63" fill="gold" stroke="green" stroke-width="0.02"/>
     <text x="2.08" y="4.0" font-size="0.3" fill="black" text-anchor="middle">4</text>
     <polygon points="3.9,3.4 3.95,3.53 4.09,3.54 3.99,3.63 4.02,3.76 3.9,3.69 3.78,3.76 3.81,3.63 3.71,3.54 3.85,3.53" fill="gold" stroke="green" stroke-width="0.02"/>
-    <text x="3.65" y="3.9" font-size="0.3" fill="black" text-anchor="middle">5</text>
+    <text x="3.65" y="3.48" font-size="0.3" fill="black" text-anchor="middle">5</text>
     <polygon points="3.9,5.0 3.95,5.13 4.09,5.14 3.99,5.23 4.02,5.36 3.9,5.29 3.78,5.36 3.81,5.23 3.71,5.14 3.85,5.13" fill="gold" stroke="green" stroke-width="0.02"/>
     <text x="3.65" y="5.5" font-size="0.3" fill="black" text-anchor="middle">6</text>
     <polygon points="5.3,2.0 5.35,2.13 5.49,2.14 5.39,2.23 5.42,2.36 5.3,2.29 5.18,2.36 5.21,2.23 5.11,2.14 5.25,2.13" fill="gold" stroke="green" stroke-width="0.02"/>
@@ -137,22 +139,22 @@
     <text x="8.675" y="9.325" text-anchor="start" font-family="sans-serif" font-size="0.25" fill="black">THAN HOA</text>
     <polygon points="11.975,11.575000000000001 12.424999999999999,11.575000000000001 12.424999999999999,12.025 11.975,12.025" fill="lightblue" stroke="blue" stroke-width="0.02"/>
     <text x="12.2" y="12.375" text-anchor="middle" font-family="sans-serif" font-size="0.25" fill="black">VINH</text>
-    <text x="0.6" y="7.3" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">1. Dong Hi</text>
-    <text x="0.6" y="7.8" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">2. Sep</text>
-    <text x="0.6" y="8.3" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">3. Bao Giang</text>
-    <text x="0.6" y="8.8" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">4. Kim Anh</text>
-    <text x="0.6" y="9.3" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">5. Gia Lam</text>
-    <text x="0.6" y="9.8" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">6. Bac Mai</text>
-    <text x="0.6" y="10.3" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">7. Kien Anh</text>
-    <text x="0.6" y="10.8" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">8. Ninh Binh</text>
-    <text x="0.6" y="11.3" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">9. Yen Dai</text>
-    <text x="0.6" y="11.8" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">10. Thanh Hoa</text>
+    <text x="0.2" y="7.8" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">1. Dong Hi</text>
+    <text x="0.2" y="8.3" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">2. Sep</text>
+    <text x="0.2" y="8.8" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">3. Bao Giang</text>
+    <text x="0.2" y="9.3" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">4. Kim Anh</text>
+    <text x="0.2" y="9.8" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">5. Gia Lam</text>
+    <text x="0.2" y="10.3" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">6. Bac Mai</text>
+    <text x="0.2" y="10.8" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">7. Kien Anh</text>
+    <text x="0.2" y="11.3" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">8. Ninh Binh</text>
+    <text x="0.2" y="11.8" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">9. Yen Dai</text>
+    <text x="0.2" y="12.3" font-size="0.4" fill="black" font-weight="bold" font-family="'Courier New', Courier, monospace">10. Thanh Hoa</text>
     <path d="M 14.0,0 L 18.0,0 L 18.0,7.5 L 14.0,7.5 Z" fill="none" stroke="black" stroke-width="0.1"/>
-    <text x="14.5" y="2.75" font-size="0.75" fill="black" text-anchor="left" font-weight="bold" font-family="'Courier New', Courier, monospace">US</text>
-    <text x="14.5" y="3.5" font-size="0.75" fill="black" text-anchor="left" font-weight="bold" font-family="'Courier New', Courier, monospace">HOLDING</text>
-    <text x="14.5" y="4.25" font-size="0.75" fill="black" text-anchor="left" font-weight="bold" font-family="'Courier New', Courier, monospace">AREA</text>
-    <path d="M 14.0, 4.0 L 12.0, 4.0" fill="black" stroke="black" stroke-width="0.1"/>
-    <path d="M 14.0, 7.5 L 12.0, 8.5" fill="black" stroke="black" stroke-width="0.1"/>
-    <path d="M 16.0, 7.5 L 16.0, 9.2" fill="black" stroke="black" stroke-width="0.1"/>
+    <text x="14.5" y="1.0" font-size="0.75" fill="black" text-anchor="left" font-weight="bold" font-family="'Courier New', Courier, monospace">US</text>
+    <text x="14.5" y="1.75" font-size="0.75" fill="black" text-anchor="left" font-weight="bold" font-family="'Courier New', Courier, monospace">HOLDING</text>
+    <text x="14.5" y="2.5" font-size="0.75" fill="black" text-anchor="left" font-weight="bold" font-family="'Courier New', Courier, monospace">AREA</text>
+    <path d="M 14.0, 4.0 L 12.0, 4.0" fill="black" stroke="black" stroke-width="0.2" marker-end="url(#arrowhead)"/>
+    <path d="M 14.0, 7.5 L 12.0, 8.5" fill="black" stroke="black" stroke-width="0.2" marker-end="url(#arrowhead)"/>
+    <path d="M 16.0, 7.5 L 16.0, 9.2" fill="black" stroke="black" stroke-width="0.2" marker-end="url(#arrowhead)"/>
   </g>
 </svg>

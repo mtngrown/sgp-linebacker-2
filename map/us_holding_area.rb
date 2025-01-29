@@ -16,12 +16,16 @@ class UsHoldingArea
     0.75
   end
 
+  def initial_text_position_y
+    1.0
+  end
+
   # Now we need to add the text "US HOLDING AREA"
   def add_text_us
     @xml.text_(
       'US',
       x: 14.5,
-      y: 2.75,
+      y: initial_text_position_y,
       'font-size': 0.75,
       fill: 'black',
       'text-anchor': 'left',
@@ -34,7 +38,7 @@ class UsHoldingArea
     @xml.text_(
       'HOLDING',
       x: 14.5,
-      y: 2.75 + linespace,
+      y: initial_text_position_y + linespace,
       'font-size': 0.75,
       fill: 'black',
       'text-anchor': 'left',
@@ -47,7 +51,7 @@ class UsHoldingArea
     @xml.text_(
       'AREA',
       x: 14.5,
-      y: 2.75 + 2 * linespace,
+      y: initial_text_position_y + 2 * linespace,
       'font-size': 0.75,
       fill: 'black',
       'text-anchor': 'left',
@@ -56,13 +60,17 @@ class UsHoldingArea
     )
   end
 
+  def arrow_stroke_width
+    0.2
+  end
+
   def add_arrow_south_china_sea
     @xml.path(
       d: "M 14.0, 4.0 L 12.0, 4.0",
       fill: 'black',
       stroke: 'black',
-      'stroke-width': '0.1',
-#      'marker-end': 'url(#arrowhead)'
+      'stroke-width': arrow_stroke_width,
+     'marker-end': 'url(#arrowhead)'
     )
   end
 
@@ -71,8 +79,8 @@ class UsHoldingArea
       d: "M 14.0, 7.5 L 12.0, 8.5",
       fill: 'black',
       stroke: 'black',
-      'stroke-width': '0.1',
-#      'marker-end': 'url(#arrowhead)'
+      'stroke-width': arrow_stroke_width,
+     'marker-end': 'url(#arrowhead)'
     )
   end
 
@@ -81,8 +89,8 @@ class UsHoldingArea
       d: "M 16.0, 7.5 L 16.0, 9.2",
       fill: 'black',
       stroke: 'black',
-      'stroke-width': '0.1',
-#      'marker-end': 'url(#arrowhead)'
+      'stroke-width': arrow_stroke_width,
+     'marker-end': 'url(#arrowhead)'
     )
   end
 

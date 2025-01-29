@@ -13,7 +13,7 @@ class Star
     { center: [3.1, 1.6], label: '2', label_offset: :ur },
     { center: [3.5, 2.2], label: '3', label_offset: :ur },
     { center: [1.8, 3.7], label: '4', label_offset: :lr },
-    { center: [3.9, 3.6], label: '5', label_offset: :ll },
+    { center: [3.9, 3.6], label: '5', label_offset: :ul },
     { center: [3.9, 5.2], label: '6', label_offset: :ll },
     { center: [5.3, 2.2], label: '7', label_offset: :lr },
     { center: [7.6, 6.0], label: '8', label_offset: :ur },
@@ -93,6 +93,10 @@ class Star
 
   def self.ur
     [0.2, -0.15] # Upper right
+  end
+
+  def self.ul
+    [-0.25, -0.12] # Upper left
   end
 
   def self.lr

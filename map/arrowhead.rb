@@ -10,7 +10,7 @@ class Arrowhead
     @xml = xml
   end
 
-  def marker
+  def marker_original
     {
       id: 'arrowhead',
       viewBox: '0 0 80 80',
@@ -24,13 +24,31 @@ class Arrowhead
     }
   end
 
+  def marker
+    {
+      id: 'arrowhead',
+      viewBox: '0 0 80 80',
+      refX: '35',
+      refY: '25',
+      style: 'stroke-width: 2px; stroke: black; fill: black',
+      markerWidth: '2',
+      markerHeight: '3',
+      markerUnits: 'userSpaceOnUse',
+      orient: 'auto-start-reverse'
+    }
+  end
+
+
+
   def outline
     'M 5,25 L 0,40 L 40,25 L 0,10 Z'
   end
 
   def build
-    xml.marker(marker) do
-      xml.path(d: outline)
+    xml.g(transform: 'scale(0.25)') do
+      xml.marker(marker) do
+        xml.path(d: outline)
+      end
     end
   end
 
