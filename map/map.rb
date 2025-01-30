@@ -85,6 +85,63 @@ class SVGGenerator
     "<rect x='#{x_min}' y='#{y_min}' width='#{width}' height='#{height}' fill='lightblue' stroke='blue' stroke-width='0.1' />"
   end
 
+  def x_position
+    9.7
+  end
+
+  def font_size
+    '0.5'
+  end
+
+  def line_spacing
+    0.6
+  end
+
+  def south_text(xml)
+    xml.text_(
+      'South',
+      x: x_position,
+      y: 1.0,
+      'font-size': font_size,
+      fill: 'black',
+      'font-weight': "bold",
+      'font-family': "'Courier New', Courier, monospace",
+      'text-anchor': 'left'
+    )
+  end
+
+  def china_text(xml)
+    xml.text_(
+      'China',
+      x: x_position,
+      y: 1.0 + line_spacing,
+      'font-size': font_size,
+      fill: 'black',
+      'font-weight': "bold",
+      'font-family': "'Courier New', Courier, monospace",
+      'text-anchor': 'left'
+    )
+  end
+
+  def sea_text(xml)
+    xml.text_(
+      'Sea',
+      x: x_position,
+      y: 1.0 + 2 * line_spacing,
+      'font-size': font_size,
+      fill: 'black',
+      'font-weight': "bold",
+      'font-family': "'Courier New', Courier, monospace",
+      'text-anchor': 'left'
+    )
+  end
+
+  def south_china_sea_text(xml)
+    south_text(xml)
+    china_text(xml)
+    sea_text(xml)
+  end
+
   def canvas_rect
     "<rect width='100%' height='100%' fill='lightgreen' />"
   end
@@ -146,6 +203,7 @@ class SVGGenerator
           City.add_all_to_svg(xml)
           AirfieldLegend.new(xml).to_svg
           UsHoldingArea.new(xml).add_to_svg
+          south_china_sea_text(xml)
         end
       end
     end
