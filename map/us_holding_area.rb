@@ -13,11 +13,15 @@ class UsHoldingArea
   end
 
   def linespace
-    0.75
+    0.6
   end
 
   def initial_text_position_y
     1.0
+  end
+
+  def font_size
+    '0.6'
   end
 
   # Now we need to add the text "US HOLDING AREA"
@@ -26,7 +30,7 @@ class UsHoldingArea
       'US',
       x: 14.5,
       y: initial_text_position_y,
-      'font-size': 0.75,
+      'font-size': font_size,
       fill: 'black',
       'text-anchor': 'left',
       'font-weight': 'bold',
@@ -39,7 +43,7 @@ class UsHoldingArea
       'HOLDING',
       x: 14.5,
       y: initial_text_position_y + linespace,
-      'font-size': 0.75,
+      'font-size': font_size,
       fill: 'black',
       'text-anchor': 'left',
       'font-weight': 'bold',
@@ -52,7 +56,7 @@ class UsHoldingArea
       'AREA',
       x: 14.5,
       y: initial_text_position_y + 2 * linespace,
-      'font-size': 0.75,
+      'font-size': font_size,
       fill: 'black',
       'text-anchor': 'left',
       'font-weight': 'bold',

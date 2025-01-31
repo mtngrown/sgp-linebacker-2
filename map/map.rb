@@ -86,11 +86,11 @@ class SVGGenerator
   end
 
   def x_position
-    9.7
+    9.0
   end
 
   def font_size
-    '0.5'
+    '0.6'
   end
 
   def line_spacing
