@@ -15,7 +15,7 @@ class City
     { center: [3.2, 4.1], width: 0.7, name: 'HANOI', label_alignment: 'm' },
     { center: [6.5, 4.5], width: 0.45, name: 'NAM DINH', label_alignment: 'm' },
     { center: [8.9, 8.75], width: 0.45, name: 'THAN HOA', label_alignment: 'l' },
-    { center: [12.2, 11.8], width: 0.45, name: 'VINH', label_alignment: 'm' }
+    { center: [12.2, 12.2], width: 0.45, name: 'VINH', label_alignment: 'm' }
   ].freeze
 
   attr_reader :xml, :center, :width, :name, :label_alignment, :fill, :stroke, :stroke_width, :font_size, :label_color

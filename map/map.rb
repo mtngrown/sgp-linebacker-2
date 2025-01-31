@@ -15,8 +15,8 @@ require_relative 'us_holding_area'
 require_relative 'arrowhead'
 # Legend is to the left of the map area.
 class AirfieldLegend
-  xoffset = 0.2
-  yoffset = 7.8
+  xoffset = 0.1
+  yoffset = 8.3
   linespace = 0.5
 
   AIRFIELDS = [

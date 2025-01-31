@@ -10,6 +10,10 @@ class Zone
   DEFAULT_STROKE_WIDTH = 0.002
   DEFAULT_FONT_SIZE = 0.5
 
+  # The lower line value matches the map at 12.6.
+  # extended to better fit Vinh and its aasociated airfield.
+  LOWER_LINE = 13.0
+
   ZONES_DATA = [
     { ll: [0, 0], ur: [4.3, 3.1], label: 'Zone 1' },
     { ll: [4.3, 0], ur: [8.4, 3.1], label: 'Zone 2' },
@@ -18,9 +22,9 @@ class Zone
     { ll: [4.3, 3.1], ur: [8.4, 6.7], label: 'Zone 4' },
     { ll: [8.4, 6.7], ur: [11.7, 9.5], label: 'Zone 6' },
     { ll: [4.3, 6.7], ur: [8.4, 9.5], label: 'Zone 5' },
-    { ll: [11.7, 9.5], ur: [18.1, 12.6], label: 'Zone 9' },
-    { ll: [8.4, 9.5], ur: [11.7, 12.6], label: 'Zone 8' },
-    { ll: [4.3, 9.5], ur: [8.4, 12.6], label: 'Zone 7' }
+    { ll: [11.7, 9.5], ur: [18.1, LOWER_LINE], label: 'Zone 9' },
+    { ll: [8.4, 9.5], ur: [11.7, LOWER_LINE], label: 'Zone 8' },
+    { ll: [4.3, 9.5], ur: [8.4, LOWER_LINE], label: 'Zone 7' }
   ].freeze
 
   attr_reader :xml, :ll, :ur, :options
