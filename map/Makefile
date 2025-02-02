@@ -5,6 +5,7 @@
 SVG_FILES := map.svg
 PDF_FILES := $(SVG_FILES:.svg=.pdf) map_sheet.pdf
 TEX_FILES := map_sheet.tex
+BUILD_DIR := ../build
 
 # Default target
 all: $(PDF_FILES) $(TEX_FILES)
@@ -12,6 +13,7 @@ all: $(PDF_FILES) $(TEX_FILES)
 # Rule to convert SVG to PDF using Inkscape
 %.pdf: %.svg
 	inkscape $< --export-type=pdf --export-filename=$@
+	cp $@ $(BUILD_DIR)/
 
 # Rule to convert LaTeX to PDF using pdflatex
 %.pdf: %.tex
