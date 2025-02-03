@@ -1,0 +1,43 @@
+% pdflatex player_aid.tex
+% TODO: add this to the Makefile.
+\documentclass[parskip]{scrartcl}
+\usepackage{graphicx}
+% Consider making margins either 0 or 0.1in.
+\usepackage[paperheight=11in,paperwidth=8.5in,margin=0.5in]{geometry}
+
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{titlesec}
+\usepackage{diagbox,pict2e}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{lscape}
+
+\begin{document}
+
+% One way to do it is include the various pdf images.
+% This is going to require some work with respect to the
+% rules file, and how each of the respective tables are
+% constructed. I have accured some structural debt.
+% \includegraphics[width=\textwidth, trim=1cm 1cm 1cm 1cm, clip, page=1]{../rules/rules.pdf}
+
+\begin{center}
+  \input{bombing-table}
+\end{center}
+
+\begin{center}
+  \input{../rules/nv-air-status}
+\end{center}
+
+\noindent
+\begin{minipage}{0.48\linewidth}
+  \input{../rules/air-to-air-crt}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+  \input{../rules/flak-sam-crt}
+\end{minipage}
+
+\end{document}
