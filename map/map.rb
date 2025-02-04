@@ -22,14 +22,14 @@ class AirfieldLegend
   AIRFIELDS = [
     { position: [xoffset, yoffset], label: 1, name: 'Dong Hi' },
     { position: [xoffset, yoffset + linespace], label: 2, name: 'Sep' },
-    { position: [xoffset, yoffset + 2 * linespace], label: 3, name: 'Bao Giang' },
-    { position: [xoffset, yoffset + 3 * linespace], label: 4, name: 'Kim Anh' },
-    { position: [xoffset, yoffset + 4 * linespace], label: 5, name: 'Gia Lam' },
-    { position: [xoffset, yoffset + 5 * linespace], label: 6, name: 'Bac Mai' },
-    { position: [xoffset, yoffset + 6 * linespace], label: 7, name: 'Kien Anh' },
-    { position: [xoffset, yoffset + 7 * linespace], label: 8, name: 'Ninh Binh' },
-    { position: [xoffset, yoffset + 8 * linespace], label: 9, name: 'Yen Dai' },
-    { position: [xoffset, yoffset + 9 * linespace], label: 10, name: 'Thanh Hoa' }
+    { position: [xoffset, yoffset + (2 * linespace)], label: 3, name: 'Bao Giang' },
+    { position: [xoffset, yoffset + (3 * linespace)], label: 4, name: 'Kim Anh' },
+    { position: [xoffset, yoffset + (4 * linespace)], label: 5, name: 'Gia Lam' },
+    { position: [xoffset, yoffset + (5 * linespace)], label: 6, name: 'Bac Mai' },
+    { position: [xoffset, yoffset + (6 * linespace)], label: 7, name: 'Kien Anh' },
+    { position: [xoffset, yoffset + (7 * linespace)], label: 8, name: 'Ninh Binh' },
+    { position: [xoffset, yoffset + (8 * linespace)], label: 9, name: 'Yen Dai' },
+    { position: [xoffset, yoffset + (9 * linespace)], label: 10, name: 'Thanh Hoa' }
   ].freeze
 
   attr_reader :xml
@@ -44,7 +44,7 @@ class AirfieldLegend
                 x: af[:position][0],
                 y: af[:position][1], 'font-size': '0.4',
                 fill: 'black',
-                'font-weight': "bold",
+                'font-weight': 'bold',
                 'font-family': "'Courier New', Courier, monospace")
     end
   end
@@ -76,13 +76,21 @@ class SVGGenerator
     [[x_values.min, y_values.min], [x_values.max, y_values.max]]
   end
 
+  def bounding_box_fill_color
+    'none' # 'lightblue'
+  end
+
+  def bounding_box_stroke_color
+    'blue'
+  end
+
   def bounding_box_rect
     x_min, y_min = bounding_box[0]
     x_max, y_max = bounding_box[1]
     width = x_max - x_min
     height = y_max - y_min
 
-    "<rect x='#{x_min}' y='#{y_min}' width='#{width}' height='#{height}' fill='lightblue' stroke='blue' stroke-width='0.1' />"
+    "<rect x='#{x_min}' y='#{y_min}' width='#{width}' height='#{height}' fill='#{bounding_box_fill_color}' stroke='#{bounding_box_stroke_color}' stroke-width='0.1' />"
   end
 
   def x_position
@@ -104,7 +112,7 @@ class SVGGenerator
       y: 1.0,
       'font-size': font_size,
       fill: 'black',
-      'font-weight': "bold",
+      'font-weight': 'bold',
       'font-family': "'Courier New', Courier, monospace",
       'text-anchor': 'left'
     )
@@ -117,7 +125,7 @@ class SVGGenerator
       y: 1.0 + line_spacing,
       'font-size': font_size,
       fill: 'black',
-      'font-weight': "bold",
+      'font-weight': 'bold',
       'font-family': "'Courier New', Courier, monospace",
       'text-anchor': 'left'
     )
@@ -127,10 +135,10 @@ class SVGGenerator
     xml.text_(
       'Sea',
       x: x_position,
-      y: 1.0 + 2 * line_spacing,
+      y: 1.0 + (2 * line_spacing),
       'font-size': font_size,
       fill: 'black',
-      'font-weight': "bold",
+      'font-weight': 'bold',
       'font-family': "'Courier New', Courier, monospace",
       'text-anchor': 'left'
     )
@@ -142,12 +150,20 @@ class SVGGenerator
     sea_text(xml)
   end
 
+  def canvas_fill_color
+    'none' # 'lightgreen'
+  end
+
+  def viewport_fill_color
+    'lightcoral'
+  end
+
   def canvas_rect
-    "<rect width='100%' height='100%' fill='lightgreen' />"
+    "<rect width='100%' height='100%' fill='#{canvas_fill_color}' />"
   end
 
   def viewport_rect
-    "<rect x='0' y='0' width='#{canvas_width}' height='#{canvas_height}' fill='lightcoral' />"
+    "<rect x='0' y='0' width='#{canvas_width}' height='#{canvas_height}' fill='#{viewport_fill_color}' />"
   end
 
   def path_data
@@ -190,7 +206,7 @@ class SVGGenerator
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: "#{canvas_width}cm", height: "#{canvas_height}cm",
               viewBox: "0 0 #{canvas_width} #{canvas_height}") do
-        xml.rect(width: '100%', height: '100%', fill: 'lightblue')
+        xml.rect(width: '100%', height: '100%', fill: bounding_box_fill_color)
         xml.g(transform: 'translate(1.0, 1.0)') do
           xml.defs do
             Arrowhead.new(xml).build

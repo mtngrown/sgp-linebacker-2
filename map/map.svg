@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="20.0cm" height="16.0cm" viewBox="0 0 20.0 16.0">
-  <rect width="100%" height="100%" fill="lightblue"/>
+  <rect width="100%" height="100%" fill="none"/>
   <g transform="translate(1.0, 1.0)">
     <defs>
       <g transform="scale(0.25)">
