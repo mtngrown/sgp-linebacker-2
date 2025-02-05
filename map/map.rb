@@ -185,23 +185,6 @@ class SVGGenerator
     ]
   end
 
-  def generate_svg_original
-    File.open('border_shape.svg', 'w') do |file|
-      file.puts <<~SVG
-        <svg xmlns="http://www.w3.org/2000/svg" width="#{canvas_width}cm" height="#{canvas_height}cm" viewBox="0 0 #{canvas_width} #{canvas_height}">
-          #{canvas_rect}
-          #{viewport_rect}
-          #{bounding_box_rect}
-          <g transform="translate(1.0, 1.0)">
-            <path d="M #{path_data} Z" fill="#{ZoneHeredoc::DEFAULT_FILL_COLOR}" stroke="#{ZoneHeredoc::DEFAULT_STROKE_COLOR}" stroke-width="#{ZoneHeredoc::DEFAULT_STROKE_WIDTH}cm" />
-            #{zones.map(&:to_svg).join("\n")}
-          </g>
-        </svg>
-      SVG
-    end
-    puts "SVG file 'border_shape.svg' created successfully!"
-  end
-
   def generate_border_svg
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: "#{canvas_width}cm", height: "#{canvas_height}cm",
@@ -260,5 +243,4 @@ class SVGGenerator
   end
 end
 
-SVGGenerator.new.generate_svg_original
 SVGGenerator.new.generate_border_svg
