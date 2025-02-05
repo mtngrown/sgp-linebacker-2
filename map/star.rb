@@ -2,7 +2,7 @@
 
 class Star
   DEFAULT_INNER_RADIUS_RATIO = 0.45
-  DEFAULT_FILL = 'gold'
+  DEFAULT_FILL = 'black' # 'gold'
   DEFAULT_STROKE = 'green'
   DEFAULT_STROKE_WIDTH = 0.02
   DEFAULT_FONT_SIZE = 0.3
@@ -28,7 +28,7 @@ class Star
     @xml = xml
     @center = center
     @outer_radius = radius
-    @inner_radius = options[:inner_radius] || radius * DEFAULT_INNER_RADIUS_RATIO
+    @inner_radius = options[:inner_radius] || (radius * DEFAULT_INNER_RADIUS_RATIO)
     @label = options[:label]
     @label_offset = options[:label_offset] || [0, 0]
     @fill = options[:fill] || DEFAULT_FILL
@@ -83,8 +83,8 @@ class Star
 
     (0...10).each do |i|
       radius = i.even? ? outer_radius : inner_radius
-      x = cx + radius * Math.cos(i * angle - Math::PI / 2)
-      y = cy + radius * Math.sin(i * angle - Math::PI / 2)
+      x = cx + (radius * Math.cos((i * angle) - (Math::PI / 2)))
+      y = cy + (radius * Math.sin((i * angle) - (Math::PI / 2)))
       points << [x.round(2), y.round(2)]
     end
 

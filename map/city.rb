@@ -3,7 +3,7 @@
 require 'nokogiri'
 
 class City
-  DEFAULT_FILL = 'lightblue'
+  DEFAULT_FILL = 'black' # 'lightblue'
   DEFAULT_STROKE = 'blue'
   DEFAULT_STROKE_WIDTH = 0.02
   DEFAULT_FONT_SIZE = 0.25
@@ -82,22 +82,22 @@ class City
     when 'm'
       center[0]
     when 'l'
-      center[0] - width / 2
+      center[0] - (width / 2)
     else
       center[0]
     end
   end
 
   def label_y_offset
-    width / 2 + font_size + 0.1
+    (width / 2) + font_size + 0.1
   end
 
   def points
     [
-      [center[0] - width / 2, center[1] - width / 2],
-      [center[0] + width / 2, center[1] - width / 2],
-      [center[0] + width / 2, center[1] + width / 2],
-      [center[0] - width / 2, center[1] + width / 2]
+      [center[0] - (width / 2), center[1] - (width / 2)],
+      [center[0] + (width / 2), center[1] - (width / 2)],
+      [center[0] + (width / 2), center[1] + (width / 2)],
+      [center[0] - (width / 2), center[1] + (width / 2)]
     ].map { |x, y| "#{x},#{y}" }.join(' ')
   end
 end

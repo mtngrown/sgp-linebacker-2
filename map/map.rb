@@ -171,7 +171,7 @@ class SVGGenerator
           Border.new(xml).add_to_svg
           Zone.add_zones_to_svg(xml, fill: 'none')
           Coastline.new(xml).add_line_path
-          Coastline.new(xml).add_circles
+          # Coastline.new(xml).add_circles
           Star.add_stars_to_svg(xml)
           City.add_all_to_svg(xml)
           AirfieldLegend.new(xml).to_svg
