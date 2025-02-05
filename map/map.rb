@@ -50,24 +50,13 @@ class AirfieldLegend
   end
 end
 
+# SVGGenerator is the main class that generates the SVG map.
 class SVGGenerator
-  BORDER_POINTS = [
-    [0, 0],
-    [11.7, 0],
-    [11.7, 9.5],
-    [18.1, 9.5],
-    [18.1, 12.6],
-    [4.3, 12.6],
-    [4.3, 6.7],
-    [0, 6.7]
-  ].freeze
-
   attr_reader :canvas_width, :canvas_height, :zones, :stars, :cities
 
   def initialize(canvas_width = 20.0, canvas_height = 16.0)
     @canvas_width = canvas_width
     @canvas_height = canvas_height
-    @zones = initialize_zones
   end
 
   def bounding_box
@@ -170,21 +159,6 @@ class SVGGenerator
     BORDER_POINTS.map { |x, y| "#{x},#{y}" }.join(' L ')
   end
 
-  def initialize_zones
-    [
-      ZoneHeredoc.new([0, 0], [4.3, 3.1], label: 'Zone 1'),
-      ZoneHeredoc.new([4.3, 0], [8.4, 3.1], label: 'Zone 2'),
-      ZoneHeredoc.new([8.4, 0], [11.7, 6.7], label: ''),
-      ZoneHeredoc.new([0, 3.1], [4.3, 6.7], label: 'Zone 3'),
-      ZoneHeredoc.new([4.3, 3.1], [8.4, 6.7], label: 'Zone 4'),
-      ZoneHeredoc.new([8.4, 6.7], [11.7, 9.5], label: 'Zone 6'),
-      ZoneHeredoc.new([4.3, 6.7], [8.4, 9.5], label: 'Zone 5'),
-      ZoneHeredoc.new([11.7, 9.5], [18.1, 12.6], label: 'Zone 9'),
-      ZoneHeredoc.new([8.4, 9.5], [11.7, 12.6], label: 'Zone 8'),
-      ZoneHeredoc.new([4.3, 9.5], [8.4, 12.6], label: 'Zone 7')
-    ]
-  end
-
   def generate_border_svg
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: "#{canvas_width}cm", height: "#{canvas_height}cm",
@@ -195,7 +169,7 @@ class SVGGenerator
             Arrowhead.new(xml).build
           end
           Border.new(xml).add_to_svg
-          Zone.add_zones_to_svg(xml)
+          Zone.add_zones_to_svg(xml, fill: 'none')
           Coastline.new(xml).add_line_path
           Coastline.new(xml).add_circles
           Star.add_stars_to_svg(xml)

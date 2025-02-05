@@ -36,9 +36,11 @@ class Zone
     @options = options
   end
 
-  def self.add_zones_to_svg(xml)
+  def self.add_zones_to_svg(xml, options = {})
     ZONES_DATA.each do |zone_data|
-      zone = Zone.new(xml, zone_data[:ll], zone_data[:ur], label: zone_data[:label])
+      options[:label] = zone_data[:label]
+      options[:fill] = 'none'
+      zone = Zone.new(xml, zone_data[:ll], zone_data[:ur], options)
       zone.draw
     end
   end
@@ -91,7 +93,7 @@ class Zone
   end
 
   def center
-    [ll[0] + width / 2.0, ll[1] + height / 2.0]
+    [ll[0] + (width / 2.0), ll[1] + (height / 2.0)]
   end
 
   def light_gray_fill
