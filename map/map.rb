@@ -5,16 +5,17 @@ require 'debug'
 require 'nokogiri'
 
 require_relative 'border'
-require_relative 'zone_heredoc'
 require_relative 'zone'
 require_relative 'star'
 require_relative 'city'
-require_relative 'city_heredoc'
 require_relative 'coastline'
 require_relative 'us_holding_area'
 require_relative 'arrowhead'
+require_relative 'default_styling'
+
 # Legend is to the left of the map area.
 class AirfieldLegend
+  include DefaultStyling
   xoffset = 0.1
   yoffset = 8.3
   linespace = 0.5
@@ -43,7 +44,7 @@ class AirfieldLegend
       xml.text_("#{af[:label]}. #{af[:name]}",
                 x: af[:position][0],
                 y: af[:position][1], 'font-size': '0.4',
-                fill: 'black',
+                fill: text_color,
                 'font-weight': 'bold',
                 'font-family': "'Courier New', Courier, monospace")
     end
@@ -52,6 +53,8 @@ end
 
 # SVGGenerator is the main class that generates the SVG map.
 class SVGGenerator
+  include DefaultStyling
+
   attr_reader :canvas_width, :canvas_height, :zones, :stars, :cities
 
   def initialize(canvas_width = 20.0, canvas_height = 16.0)
@@ -100,7 +103,7 @@ class SVGGenerator
       x: x_position,
       y: 1.0,
       'font-size': font_size,
-      fill: 'black',
+      fill: text_color,
       'font-weight': 'bold',
       'font-family': "'Courier New', Courier, monospace",
       'text-anchor': 'left'
@@ -113,7 +116,7 @@ class SVGGenerator
       x: x_position,
       y: 1.0 + line_spacing,
       'font-size': font_size,
-      fill: 'black',
+      fill: text_color,
       'font-weight': 'bold',
       'font-family': "'Courier New', Courier, monospace",
       'text-anchor': 'left'
@@ -126,7 +129,7 @@ class SVGGenerator
       x: x_position,
       y: 1.0 + (2 * line_spacing),
       'font-size': font_size,
-      fill: 'black',
+      fill: text_color,
       'font-weight': 'bold',
       'font-family': "'Courier New', Courier, monospace",
       'text-anchor': 'left'

@@ -1,8 +1,12 @@
 # frozen_string_literal: true
 
 require 'nokogiri'
+require_relative 'default_styling'
 
+# Draw squares for cities, with labels.
 class City
+  include DefaultStyling
+
   DEFAULT_FILL = 'black' # 'lightblue'
   DEFAULT_STROKE = 'blue'
   DEFAULT_STROKE_WIDTH = 0.02
@@ -30,7 +34,7 @@ class City
     @stroke = options[:stroke] || DEFAULT_STROKE
     @stroke_width = options[:stroke_width] || DEFAULT_STROKE_WIDTH
     @font_size = options[:font_size] || DEFAULT_FONT_SIZE
-    @label_color = options[:label_color] || DEFAULT_LABEL_COLOR
+    @label_color = options[:label_color] || text_color
   end
 
   def add_to_svg
