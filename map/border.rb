@@ -1,10 +1,13 @@
 # frozen_string_literal: true
 
 # border.rb
+require_relative 'default_styling'
 
 # Only draw the border around the zones.
 # Should probably be renamed to ZoneBorder.
 class Border
+  include DefaultStyling
+
   LOWER_LINE = 13.0
   BORDER_POINTS = [
     [0, 0],
@@ -25,7 +28,7 @@ class Border
     @xml.path(
       d: "M #{BORDER_POINTS.map { |x, y| "#{x},#{y}" }.join(' L ')} Z",
       fill: 'none',
-      stroke: 'black',
+      stroke: stroke_color,
       'stroke-width': '0.1'
     )
   end

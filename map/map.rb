@@ -44,7 +44,8 @@ class AirfieldLegend
     AIRFIELDS.each do |af|
       xml.text_("#{af[:label]}. #{af[:name]}",
                 x: af[:position][0],
-                y: af[:position][1], 'font-size': '0.4',
+                y: af[:position][1],
+                'font-size': '0.4',
                 fill: text_color,
                 'font-weight': 'bold',
                 'font-family': "'Courier New', Courier, monospace")
@@ -167,8 +168,8 @@ class SVGGenerator
           Zone.add_zones_to_svg(xml, fill: 'none')
           Coastline.new(xml).add_line_path
           # Coastline.new(xml).add_circles
-          Star.add_stars_to_svg(xml)
-          City.add_all_to_svg(xml)
+          Star.add_stars_to_svg(xml, fill: 'gold')
+          City.add_all_to_svg(xml, fill: 'blue')
           AirfieldLegend.new(xml).to_svg
           UsHoldingArea.new(xml).add_to_svg
           south_china_sea_text(xml)

@@ -38,14 +38,13 @@ class Star
     @label_color = options[:label_color] || DEFAULT_LABEL_COLOR
   end
 
-  def self.add_stars_to_svg(xml)
+  def self.add_stars_to_svg(xml, options = {})
     STAR_DATA.each do |data|
       new(
         xml,
         data[:center],
         radius,
-        label: data[:label],
-        label_offset: send(data[:label_offset])
+        options.merge(label: data[:label], label_offset: send(data[:label_offset]))
       ).add_to_svg
     end
   end

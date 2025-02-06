@@ -5,6 +5,7 @@ require 'nokogiri'
 # The Zone class defines zones within an SVG, drawing a border
 # around each zone and labeling it.
 class Zone
+  include DefaultStyling
   DEFAULT_FILL_COLOR = '#E0FFE0'
   DEFAULT_STROKE_COLOR = 'black'
   DEFAULT_STROKE_WIDTH = 0.002
@@ -52,7 +53,7 @@ class Zone
       width: width,
       height: height,
       fill: fill,
-      stroke: stroke,
+      stroke: stroke_color,
       'stroke-width': "#{stroke_width}cm"
     )
     add_label if label

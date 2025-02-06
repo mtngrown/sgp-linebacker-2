@@ -42,14 +42,15 @@ class City
     add_label
   end
 
-  def self.add_all_to_svg(xml)
+  def self.add_all_to_svg(xml, options = {})
     CITY_DATA.each do |data|
       new(
         xml,
         data[:center],
         data[:width],
         data[:name],
-        data[:label_alignment]
+        data[:label_alignment],
+        options
       ).add_to_svg
     end
   end

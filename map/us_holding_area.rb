@@ -3,6 +3,7 @@ require_relative 'default_styling'
 # Draw the US holding area.
 class UsHoldingArea
   include DefaultStyling
+
   BORDER_POINTS = [
     [14.0, 0],
     [18.0, 0],
@@ -73,8 +74,8 @@ class UsHoldingArea
   def add_arrow_south_china_sea
     @xml.path(
       d: 'M 14.0, 4.0 L 12.0, 4.0',
-      fill: 'black',
-      stroke: 'black',
+      fill: fill_color,
+      stroke: stroke_color,
       'stroke-width': arrow_stroke_width,
       'marker-end': 'url(#arrowhead)'
     )
@@ -83,8 +84,8 @@ class UsHoldingArea
   def add_arrow_zone_6
     @xml.path(
       d: 'M 14.0, 7.5 L 12.0, 8.5',
-      fill: 'black',
-      stroke: 'black',
+      fill: fill_color,
+      stroke: stroke_color,
       'stroke-width': arrow_stroke_width,
       'marker-end': 'url(#arrowhead)'
     )
@@ -93,8 +94,8 @@ class UsHoldingArea
   def add_arrow_zone_9
     @xml.path(
       d: 'M 16.0, 7.5 L 16.0, 9.2',
-      fill: 'black',
-      stroke: 'black',
+      fill: fill_color,
+      stroke: stroke_color,
       'stroke-width': arrow_stroke_width,
       'marker-end': 'url(#arrowhead)'
     )

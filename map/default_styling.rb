@@ -4,4 +4,12 @@ module DefaultStyling
     # light gray
     'gray'
   end
+
+  def fill_color
+    'gray'
+  end
+
+  def stroke_color
+    'gray'
+  end
 end

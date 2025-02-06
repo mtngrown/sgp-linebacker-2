@@ -4,6 +4,8 @@
 # https://developer.mozilla.org/en-US/docs/Web/SVG/Element/marker
 # https://blog.shalvah.me/posts/learn-svg-by-drawing-an-arrow
 class Arrowhead
+  include DefaultStyling
+
   attr_reader :xml
 
   def initialize(xml)
@@ -16,7 +18,7 @@ class Arrowhead
       viewBox: '0 0 80 80',
       refX: '35',
       refY: '25',
-      style: 'stroke-width: 2px; stroke: black; fill: black',
+      style: "stroke-width: 2px; stroke: #{stroke_color}; fill: #{fill_color}",
       markerWidth: '7',
       markerHeight: '11',
       markerUnits: 'userSpaceOnUse',
@@ -30,15 +32,13 @@ class Arrowhead
       viewBox: '0 0 80 80',
       refX: '35',
       refY: '25',
-      style: 'stroke-width: 2px; stroke: black; fill: black',
+      style: "stroke-width: 2px; stroke: #{stroke_color}; fill: #{fill_color}",
       markerWidth: '2',
       markerHeight: '3',
       markerUnits: 'userSpaceOnUse',
       orient: 'auto-start-reverse'
     }
   end
-
-
 
   def outline
     'M 5,25 L 0,40 L 40,25 L 0,10 Z'
@@ -56,10 +56,10 @@ class Arrowhead
     filename = options[:outfile] || '/tmp/arrowhead.svg'
 
     File.write(filename,
-      Nokogiri::XML::Builder.new do |xml|
-        xml.svg do
-          Arrowhead.new(xml).build
-        end
-      end.to_xml)
+               Nokogiri::XML::Builder.new do |xml|
+                 xml.svg do
+                   Arrowhead.new(xml).build
+                 end
+               end.to_xml)
   end
 end
