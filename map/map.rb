@@ -14,6 +14,7 @@ require_relative 'arrowhead'
 require_relative 'default_styling'
 
 # Legend is to the left of the map area.
+# This should probably be moved to an airfield file.
 class AirfieldLegend
   include DefaultStyling
   xoffset = 0.1
@@ -74,15 +75,6 @@ class SVGGenerator
 
   def bounding_box_stroke_color
     'blue'
-  end
-
-  def bounding_box_rect
-    x_min, y_min = bounding_box[0]
-    x_max, y_max = bounding_box[1]
-    width = x_max - x_min
-    height = y_max - y_min
-
-    "<rect x='#{x_min}' y='#{y_min}' width='#{width}' height='#{height}' fill='#{bounding_box_fill_color}' stroke='#{bounding_box_stroke_color}' stroke-width='0.1' />"
   end
 
   def x_position
