@@ -3,12 +3,12 @@
 # The tex file is map_sheet.tex.
 
 SVG_FILES := map.svg
-PDF_FILES := $(SVG_FILES:.svg=.pdf) map_sheet.pdf
+PDF_FILES := $(SVG_FILES:.svg=.pdf) # map_sheet.pdf
 TEX_FILES := map_sheet.tex
 BUILD_DIR := ../build
 
 # Default target
-all: $(PDF_FILES) $(TEX_FILES)
+all: $(PDF_FILES) # $(TEX_FILES)
 
 # Rule to convert SVG to PDF using Inkscape
 %.pdf: %.svg

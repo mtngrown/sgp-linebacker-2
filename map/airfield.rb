@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Star
+class Airfield
   DEFAULT_INNER_RADIUS_RATIO = 0.45
   DEFAULT_FILL = 'black' # 'gold'
   DEFAULT_STROKE = 'green'
