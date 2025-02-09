@@ -73,7 +73,7 @@
     <text x="0.1" y="11.8" font-size="0.4" fill="gray" font-weight="bold" font-family="'Courier New', Courier, monospace">8. Ninh Binh</text>
     <text x="0.1" y="12.3" font-size="0.4" fill="gray" font-weight="bold" font-family="'Courier New', Courier, monospace">9. Yen Dai</text>
     <text x="0.1" y="12.8" font-size="0.4" fill="gray" font-weight="bold" font-family="'Courier New', Courier, monospace">10. Thanh Hoa</text>
-    <path d="M 14.0,0 L 18.0,0 L 18.0,7.5 L 14.0,7.5 Z" fill="none" stroke="black" stroke-width="0.1"/>
+    <path d="M 14.0,0 L 18.0,0 L 18.0,7.5 L 14.0,7.5 Z" fill="none" stroke="gray" stroke-width="0.1"/>
     <text x="14.5" y="1.0" font-size="0.6" fill="gray" text-anchor="left" font-weight="bold" font-family="'Courier New', Courier, monospace">US</text>
     <text x="14.5" y="1.6" font-size="0.6" fill="gray" text-anchor="left" font-weight="bold" font-family="'Courier New', Courier, monospace">HOLDING</text>
     <text x="14.5" y="2.2" font-size="0.6" fill="gray" text-anchor="left" font-weight="bold" font-family="'Courier New', Courier, monospace">AREA</text>

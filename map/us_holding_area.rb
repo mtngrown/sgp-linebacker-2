@@ -118,7 +118,7 @@ class UsHoldingArea
     @xml.path(
       d: "M #{BORDER_POINTS.map { |x, y| "#{x},#{y}" }.join(' L ')} Z",
       fill: 'none',
-      stroke: 'black',
+      stroke: stroke_color,
       'stroke-width': '0.1'
     )
     add_text
