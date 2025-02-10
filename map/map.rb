@@ -129,8 +129,8 @@ class SVGGenerator
           Zone.add_zones_to_svg(xml, fill: 'none')
           Coastline.new(xml).add_line_path
           # Coastline.new(xml).add_circles
-          Airfield.add_stars_to_svg(xml, fill: 'gold')
-          City.add_all_to_svg(xml, fill: 'blue')
+          Airfield.add_stars_to_svg(xml, fill: 'gray')
+          City.add_all_to_svg(xml, fill: 'gray')
           AirfieldLegend.new(xml).to_svg
           UsHoldingArea.new(xml).add_to_svg
           south_china_sea_text(xml)
