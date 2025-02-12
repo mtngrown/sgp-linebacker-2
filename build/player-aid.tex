@@ -1,0 +1,31 @@
+% Letter size paper
+\documentclass[letterpaper]{article}
+
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{titlesec}
+\usepackage{diagbox,pict2e}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{lscape}
+
+% suppress page numbers
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{minipage}{0.48\linewidth}
+  \input{../rules/air-to-air-crt}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+  \input{../rules/flak-sam-crt}
+\end{minipage}
+
+\vspace{1in}
+
+\input{../rules/bombing-table}
+
+\end{document}

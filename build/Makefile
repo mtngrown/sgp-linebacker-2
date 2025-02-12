@@ -1,7 +1,9 @@
 
 
-PDF_FILES := map_sheet.pdf
-TEX_FILES := map_sheet.tex
+PDF_FILES := map_sheet.pdf \
+             player-aid.pdf
+TEX_FILES := map_sheet.tex \
+             player-aid.tex
 
 # Default target
 all: $(PDF_FILES) $(TEX_FILES)
