@@ -7,6 +7,7 @@ TEX_FILES = $(wildcard *.tex)
 
 all: $(PDF_FILES)
 
+
 %.pdf: %.tex
 	pdflatex $<
 
