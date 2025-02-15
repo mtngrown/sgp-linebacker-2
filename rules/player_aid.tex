@@ -15,6 +15,8 @@
 \usepackage{multirow}
 \usepackage{lscape}
 
+\setlength{\arrayrulewidth}{1.5pt} % Default is 0.4pt
+
 \begin{document}
 
 % One way to do it is include the various pdf images.
@@ -23,13 +25,22 @@
 % constructed. I have accured some structural debt.
 % \includegraphics[width=\textwidth, trim=1cm 1cm 1cm 1cm, clip, page=1]{../rules/rules.pdf}
 
+\makeatletter
+\newcommand{\veryHuge}{\fontsize{50}{60}\selectfont} % 50pt text, 60pt line spacing
+\makeatother
+
+\begin{center}
+  \veryHuge \textbf{Player Aid}
+\end{center}
+
+
 \begin{center}
   \input{bombing-table}
 \end{center}
 
-\begin{center}
-  \input{../rules/nv-air-status}
-\end{center}
+% \begin{center}
+%   \input{../rules/nv-air-status}
+% \end{center}
 
 \noindent
 \begin{minipage}{0.48\linewidth}
