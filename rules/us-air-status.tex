@@ -20,12 +20,11 @@
     \def\boxwidth{1.5}
     \def\boxheight{1.2}
 
-    % First row (top two boxes)
-    \draw[thick] (3*\boxwidth, 0) rectangle (3*\boxwidth + \boxwidth, -\boxheight);
-    \node at (3*\boxwidth + 0.75, -0.6) {\ttfamily \textbf{17/12}};
-
-    \draw[thick] (4*\boxwidth, 0) rectangle (4*\boxwidth + \boxwidth, -\boxheight);
-    \node at (4*\boxwidth + 0.75, -0.6) {\ttfamily \textbf{18/12}};
+    \foreach \x [count=\i] in {17, 18} {
+        \pgfmathsetmacro\xpos{\i + 2}
+        \draw[thick] (\xpos*\boxwidth, 0) rectangle (\xpos*\boxwidth + \boxwidth, -\boxheight);
+        \node at (\xpos*\boxwidth + 0.75, -0.6) {\ttfamily \textbf{\x/12}};
+    }
 
     % Second row (middle row)
     \foreach \x [count=\i] in {19, 20, 21, 22, 23} {
