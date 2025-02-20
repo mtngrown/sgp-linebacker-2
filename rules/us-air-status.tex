@@ -4,8 +4,10 @@
 
 \begin{document}
 
-{\ttfamily \textbf{UNITED STATES}} \\
-{\ttfamily \textbf{AIR STATUS DISPLAY}}
+\begin{center}
+    {\ttfamily \textbf{UNITED STATES}} \\
+    {\ttfamily \textbf{AIR STATUS DISPLAY}}
+\end{center}
 
 \vspace{1em}
 
@@ -18,29 +20,27 @@
     \def\boxwidth{1.5}
     \def\boxheight{1.2}
 
-    % Define mission dates with correct layout
-    \def\dates{
-        {24/12, 25/12, 26/12, 27/12, 28/12},
-        {19/12, 20/12, 21/12, 22/12, 23/12},
-        {17/12, 18/12}
+    % First row (top two boxes)
+    \draw[thick] (3*\boxwidth, 0) rectangle (3*\boxwidth + \boxwidth, -\boxheight);
+    \node at (3*\boxwidth + 0.75, -0.6) {\ttfamily \textbf{17/12}};
+
+    \draw[thick] (4*\boxwidth, 0) rectangle (4*\boxwidth + \boxwidth, -\boxheight);
+    \node at (4*\boxwidth + 0.75, -0.6) {\ttfamily \textbf{18/12}};
+
+    % Second row (middle row)
+    \foreach \x [count=\i] in {19, 20, 21, 22, 23} {
+        \pgfmathsetmacro\xpos{\i - 1}
+        \draw[thick] (\xpos*\boxwidth, -\boxheight) rectangle (\xpos*\boxwidth + \boxwidth, -2*\boxheight);
+        \node at (\xpos*\boxwidth + 0.75, -1.6) {\ttfamily \textbf{\x/12}};
     }
 
-    % Draw the grid with offset for the bottom row
-    \foreach \row [count=\y from 0] in \dates {
-        \foreach \date [count=\x] in \row {
-            \pgfmathsetmacro\xpos{\x - 1}  % Adjust horizontal position
-            \pgfmathsetmacro\ypos{2 - \y}  % Adjust vertical position
-            
-            % Offset bottom row (first row in data)
-            \ifnum\y=2
-                \pgfmathsetmacro\xpos{\xpos + 1.5}  % Shift right for alignment
-            \fi
-
-            \draw[thick] (\xpos*\boxwidth, -\ypos*\boxheight) 
-                rectangle (\xpos*\boxwidth + \boxwidth, -\ypos*\boxheight - \boxheight);
-            \node at (\xpos*\boxwidth + 0.75, -\ypos*\boxheight - 0.6) {\ttfamily \textbf{\date}};
-        }
+    % Third row (bottom row)
+    \foreach \x [count=\i] in {24, 25, 26, 27, 28} {
+        \pgfmathsetmacro\xpos{\i - 1}
+        \draw[thick] (\xpos*\boxwidth, -2*\boxheight) rectangle (\xpos*\boxwidth + \boxwidth, -3*\boxheight);
+        \node at (\xpos*\boxwidth + 0.75, -2.6) {\ttfamily \textbf{\x/12}};
     }
+
 \end{tikzpicture}
 \end{adjustbox}
 
