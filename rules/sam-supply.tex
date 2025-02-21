@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{adjustbox}
+
+\begin{document}
+
+\begin{adjustbox}{center}
+\begin{tikzpicture}
+    % Define box properties
+    \def\boxwidth{1.8}
+    \def\boxheight{1.8}
+    \def\boxthickness{1.5pt} % Adjustable line thickness
+
+    % Define SAM Supply numbers (1 to 0)
+    \def\samsupply{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
+
+    % Title at the top
+    \node[anchor=south] at (0.9, 0.5) {\sffamily \bfseries SAM SUPPLY};
+
+    % Draw boxes and numbers
+    \foreach \x [count=\i] in \samsupply {
+        \pgfmathsetmacro\ypos{-(\i-1) * \boxheight} % Calculate vertical position
+        \draw[line width=\boxthickness] (0, \ypos) rectangle (\boxwidth, \ypos - \boxheight);
+        \node at (0.9, \ypos - 0.9) {\sffamily \bfseries \Huge \x}; % Centered inside box
+    }
+
+\end{tikzpicture}
+\end{adjustbox}
+
+\end{document}
+
