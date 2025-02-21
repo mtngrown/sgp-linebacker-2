@@ -7,7 +7,8 @@ PDF_FILES = player_aid.pdf \
 						nv-air-status.pdf \
 						mission-display.pdf \
 						us-air-status.pdf \
-						hh-bombing-missions.pdf
+						hh-bombing-missions.pdf \
+            victory-points.pdf
 TEX_FILES = $(wildcard *.tex)
 
 all: $(PDF_FILES)
