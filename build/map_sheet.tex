@@ -1,9 +1,9 @@
 % pdflatex map_sheet.tex
 % TODO: add this to the Makefile.
 \documentclass[parskip]{scrartcl}
-\usepackage{graphicx}
+\usepackage{graphicx,overpic}
 % Consider making margins either 0 or 0.1in.
-\usepackage[paperheight=17in,paperwidth=11in,margin=0.5in]{geometry}
+\usepackage[paperheight=17in,paperwidth=11in,margin=0.25in]{geometry}
 
 \usepackage{geometry}
 \usepackage{multicol}
@@ -19,26 +19,20 @@
 \begin{document}
 
 \begin{center}
-  \includegraphics[width=10in]{map.pdf}
+  \begin{overpic}[width=10.5in, grid=false]{map.pdf}
+
+    % Victory Points Track (PDF from ../rules/)
+    \put(20, 85){\includegraphics[width=5in]{../rules/victory-points.pdf}}
+
+    % SAM Supply (PDF from ../rules/)
+    \put(5, -50){\includegraphics[width=3.5in]{../rules/sam-supply.pdf}}
+
+    \put(80, -50){\includegraphics[width=3.5in]{../rules/game-turn.pdf}}
+
+    % Any additional elements can be positioned here as needed
+
+  \end{overpic}
 \end{center}
 
-% One way to do it is include the various pdf images.
-% This is going to require some work with respect to the
-% rules file, and how each of the respective tables are
-% constructed. I have accured some structural debt.
-% \includegraphics[width=\textwidth, trim=1cm 1cm 1cm 1cm, clip, page=1]{../rules/rules.pdf}
-
-\begin{center}
-  \input{../rules/nv-air-status}
-\end{center}
-
-\noindent
-\begin{minipage}{0.48\linewidth}
-  \input{../rules/air-to-air-crt}
-\end{minipage}
-\hfill
-\begin{minipage}{0.48\linewidth}
-  \input{../rules/flak-sam-crt}
-\end{minipage}
 
 \end{document}
