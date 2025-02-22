@@ -14,6 +14,8 @@
 \usepackage{tabularx}
 \usepackage{multirow}
 \usepackage{lscape}
+\usepackage{tikz}
+\usepackage{adjustbox}
 
 
 \begin{document}
@@ -24,10 +26,9 @@
     % Victory Points Track (PDF from ../rules/)
     \put(20, 85){\includegraphics[width=5in]{../rules/victory-points.pdf}}
 
-    % SAM Supply (PDF from ../rules/)
-    \put(5, -50){\includegraphics[width=3.5in]{../rules/sam-supply.pdf}}
-
-    \put(80, -50){\includegraphics[width=3.5in]{../rules/game-turn.pdf}}
+    \put(5, -65){\input{../rules/sam-supply.tikz}}
+    \put(90, -55){\input{../rules/game-turn.tikz}}
+    \put(10, -75){\input{../rules/victory-points.tikz}}
 
     % Any additional elements can be positioned here as needed
 
