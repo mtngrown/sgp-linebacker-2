@@ -13,20 +13,25 @@
 \usepackage{multirow}
 \usepackage{lscape}
 
+
+\newcommand{\lw}{0.5mm}
+\renewcommand{\arrayrulewidth}{\lw}
+
 \begin{document}
-
-
 
 \begin{center}
 %%% Diagonal cell
-\newcommand{\dgc}{\diagbox{\phantom{a}}{\phantom{a}}}
+\newcommand{\dgc}{\diagbox[linewidth=\lw]{\phantom{a}}{\phantom{a}}}
+% \newcommand{\bslashbox}[2]{\backslashbox[linewidth=\lw]{\shortstack{#1}}{#2}}
+\newcommand{\bslashbox}{\backslashbox{\tabular{@{}l@{}}Turn\\Around\endtabular}{Landing}}
 
 {\ttfamily
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}\hline
 \makecell{Airfield\\Alert} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
 \makecell{Take\\Off} &  &  &  &  &  &  &  &  &  &  \\ \hline
 \makecell{May\\Attack} &  &  &  &  &  &  &  &  &  &  \\ \hline
-\backslashbox{\tabular{@{}l@{}}Turn\\Around\endtabular}{Landing} & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc \\ \hline
+% \backslashbox{\tabular{@{}l@{}}Turn\\Around\endtabular}{Landing} & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc \\ \hline
+\bslashbox & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc \\ \hline
 \end{tabular}
 }
 \end{center}
