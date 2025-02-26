@@ -11,11 +11,19 @@ PDF_FILES = player_aid.pdf \
             victory-points.pdf \
             sam-supply.pdf \
             game-turn.pdf
+PDF_FILES += $(wildcard *.tikz)
+
 TEX_FILES = $(wildcard *.tex)
+# Add all the *.tikz files to the dependencies
+TIKZ_FILES = $(wildcard *.tikz)
 
 all: $(PDF_FILES)
 
+# Rule to build PDF from TEX, including potential TIKZ dependency
+%.pdf: %.tex %.tikz
+	pdflatex $<
 
+# Rule to handle TEX files without TIKZ dependencies
 %.pdf: %.tex
 	pdflatex $<
 
