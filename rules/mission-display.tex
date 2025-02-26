@@ -8,27 +8,7 @@
 \textbf{\ttfamily Mission Display:}
 
 \begin{adjustbox}{center}
-\begin{tikzpicture}
-    % Define box size
-    \def\boxwidth{1.5}
-    \def\boxheight{1.2}
-    \def\spacing{0.5} % Space between text and boxes
-
-
-    % Categories
-    \node[anchor=west] at (0.0, 0.4) {\ttfamily \textbf{Hanoi-Haiphong Bombing Missions}};
-    \node[anchor=west] at (0.0, -1.6) {\ttfamily \textbf{Other Town Bombing Missions}};
-    \node[anchor=west] at (0.0, -3.4) {\ttfamily \textbf{Airfield Strafing Missions}};
-    \node[anchor=west] at (0.0, -5.2) {\ttfamily \textbf{Air Superiority Missions}};
-
-    % Draw the boxes for each category
-    \foreach \y in {0, -1.8, -3.6, -5.4} {
-        \foreach \x in {0,1,2,3,4} {
-            \draw[thick] (\x*\boxwidth, \y) rectangle (\x*\boxwidth + \boxwidth, \y-\boxheight);
-            \node at (\x*\boxwidth + 0.75, \y-0.6) {\ttfamily \textbf{\the\numexpr\x+1}};
-        }
-    }
-\end{tikzpicture}
+    \input{mission-display.tikz}
 \end{adjustbox}
 
 \end{document}

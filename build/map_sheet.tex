@@ -28,7 +28,10 @@
     % Victory Points Track (PDF from ../rules/)
     % \put(-20, 85){\includegraphics[width=5in]{../rules/victory-points.pdf}}
 
-    \put(50, -60){\input{../rules/us-air-status.tikz}}
+    % US side
+    \put(50, -60){\rotatebox{90}{\input{../rules/us-air-status.tikz}}}
+    \put(50, -30){\rotatebox{90}{\input{../rules/mission-display.tikz}}}
+
 
     \put(5, -65){\input{../rules/sam-supply.tikz}}
     \put(90, -55){\input{../rules/game-turn.tikz}}
