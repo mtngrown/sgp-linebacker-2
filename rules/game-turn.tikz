@@ -1,12 +1,6 @@
 \begin{tikzpicture}
-
-  % Define the gray color matching SVG default gray
-  \definecolor{svggray}{RGB}{128,128,128}
-  
-  % Apply to everything
-  \tikzset{every picture/.style={color=red}}
-
-  \tikzset{every node/.style={text=blue}, every path/.style={draw=red}}
+    \definecolor{svggray}{RGB}{128,128,128}
+    \tikzset{every node/.style={text=svggray}, every path/.style={draw=svggray}}
 
 
     % Define box properties

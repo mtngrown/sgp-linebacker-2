@@ -1,5 +1,6 @@
 \begin{tikzpicture}[scale=1.2]
-    \tikzset{every node/.style={text=blue}, every path/.style={draw=red}}
+    \definecolor{svggray}{RGB}{128,128,128}
+    \tikzset{every node/.style={text=svggray}, every path/.style={draw=svggray}}
 
     % Define box size
     \def\boxwidth{1.0}
