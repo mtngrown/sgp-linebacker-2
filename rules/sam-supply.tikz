@@ -1,4 +1,7 @@
 \begin{tikzpicture}
+    \definecolor{svggray}{RGB}{128,128,128}
+    \tikzset{every node/.style={text=svggray}, every path/.style={draw=svggray}}
+
     % Define box properties
     \def\boxwidth{1.8}
     \def\boxheight{1.8}
