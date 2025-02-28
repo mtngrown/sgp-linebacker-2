@@ -12,9 +12,13 @@
 \usepackage{tabularx}
 \usepackage{multirow}
 \usepackage{lscape}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
 
 \newcommand{\lw}{0.5mm}
 \renewcommand{\arrayrulewidth}{\lw}
+
+\definecolor{svggray}{rgb}{0.5,0.5,0.5} % Equivalent to 128,128,128
 
 \begin{document}
 
@@ -22,8 +26,9 @@
 %%% Diagonal cell
 \newcommand{\dgc}{\diagbox[linewidth=\lw]{\phantom{a}}{\phantom{a}}}
 \newcommand{\bslashbox}{\diagbox[linewidth=\lw]{\makecell[c]{Turn\\Around}}{Landing}}
+\arrayrulecolor{svggray}
 
-
+{\color{svggray}
 {\ttfamily
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}\hline
 \makecell{Airfield\\Alert} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
@@ -32,6 +37,7 @@
 % \backslashbox{\tabular{@{}l@{}}Turn\\Around\endtabular}{Landing} & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc \\ \hline
 \bslashbox & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc & \dgc \\ \hline
 \end{tabular}
+}
 }
 \end{center}
 
