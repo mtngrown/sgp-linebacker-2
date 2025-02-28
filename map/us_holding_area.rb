@@ -83,7 +83,7 @@ class UsHoldingArea
 
   def add_arrow_zone_6
     @xml.path(
-      d: 'M 14.0, 7.5 L 12.0, 8.5',
+      d: 'M 14.1, 7.45 L 12.0, 8.5',
       fill: fill_color,
       stroke: stroke_color,
       'stroke-width': arrow_stroke_width,
@@ -108,19 +108,19 @@ class UsHoldingArea
   end
 
   def add_text
+    add_arrows
     add_text_us
     add_text_holding
     add_text_area
-    add_arrows
   end
 
   def add_to_svg
+    add_text
     @xml.path(
       d: "M #{BORDER_POINTS.map { |x, y| "#{x},#{y}" }.join(' L ')} Z",
-      fill: 'none',
+      fill: 'white',
       stroke: stroke_color,
       'stroke-width': '0.1'
     )
-    add_text
   end
 end
