@@ -108,19 +108,23 @@ class UsHoldingArea
   end
 
   def add_text
-    add_arrows
     add_text_us
     add_text_holding
     add_text_area
   end
 
-  def add_to_svg
-    add_text
+  def add_border
     @xml.path(
       d: "M #{BORDER_POINTS.map { |x, y| "#{x},#{y}" }.join(' L ')} Z",
       fill: 'white',
       stroke: stroke_color,
       'stroke-width': '0.1'
     )
+  end
+
+  def add_to_svg
+    add_arrows
+    add_border
+    add_text
   end
 end
