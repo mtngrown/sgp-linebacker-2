@@ -1,6 +1,9 @@
 \begin{tikzpicture}
     \newcommand{\lw}{0.5mm}
     \tikzset{lwstyle/.style={line width=\lw}}
+    \definecolor{svggray}{RGB}{128,128,128}
+    \tikzset{every node/.style={text=svggray}, every path/.style={draw=svggray}}
+
 
     \node[anchor=west, align=left] at (-0.1, 0.7) {%
         \ttfamily\textbf{UNITED STATES} \\

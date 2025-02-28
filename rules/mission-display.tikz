@@ -5,12 +5,12 @@
     \def\spacing{0.5} % Space between text and boxes
     \newcommand{\lw}{0.5mm}
     \tikzset{lwstyle/.style={line width=\lw}}
+    \definecolor{svggray}{RGB}{128,128,128}
+    \tikzset{every node/.style={text=svggray}, every path/.style={draw=svggray}}
 
     \node[anchor=west, align=left] at (0.0, 0.9) {%
         \ttfamily\textbf{MISSION DISPLAY}
     };
-
-
 
     % Categories
     \node[anchor=west] at (0.0, 0.4) {\ttfamily \textbf{Hanoi-Haiphong Bombing Missions}};
