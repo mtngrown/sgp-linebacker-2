@@ -16,7 +16,7 @@ class Arrowhead
     {
       id: 'arrowhead',
       viewBox: '0 0 80 80',
-      refX: '35',
+      refX: '45',
       refY: '25',
       style: "stroke-width: 2px; stroke: #{stroke_color}; fill: #{fill_color}",
       markerWidth: '7',
@@ -30,7 +30,7 @@ class Arrowhead
     {
       id: 'arrowhead',
       viewBox: '0 0 80 80',
-      refX: '35',
+      refX: '20',
       refY: '25',
       style: "stroke-width: 2px; stroke: #{stroke_color}; fill: #{fill_color}",
       markerWidth: '2',
@@ -55,11 +55,13 @@ class Arrowhead
   def self.write(options = {})
     filename = options[:outfile] || '/tmp/arrowhead.svg'
 
-    File.write(filename,
-               Nokogiri::XML::Builder.new do |xml|
-                 xml.svg do
-                   Arrowhead.new(xml).build
-                 end
-               end.to_xml)
+    File.write(
+      filename,
+      Nokogiri::XML::Builder.new do |xml|
+        xml.svg do
+          Arrowhead.new(xml).build
+        end
+      end.to_xml
+    )
   end
 end

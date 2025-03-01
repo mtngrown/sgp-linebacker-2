@@ -73,7 +73,7 @@ class UsHoldingArea
 
   def add_arrow_south_china_sea
     @xml.path(
-      d: 'M 14.0, 4.0 L 12.0, 4.0',
+      d: 'M 14.0, 4.0 L 12.4, 4.0',
       fill: fill_color,
       stroke: stroke_color,
       'stroke-width': arrow_stroke_width,
@@ -83,7 +83,7 @@ class UsHoldingArea
 
   def add_arrow_zone_6
     @xml.path(
-      d: 'M 14.1, 7.45 L 12.0, 8.5',
+      d: 'M 14.1, 7.45 L 12.3, 8.5',
       fill: fill_color,
       stroke: stroke_color,
       'stroke-width': arrow_stroke_width,
@@ -93,7 +93,7 @@ class UsHoldingArea
 
   def add_arrow_zone_9
     @xml.path(
-      d: 'M 16.0, 7.5 L 16.0, 9.2',
+      d: 'M 16.0, 7.5 L 16.0, 8.8',
       fill: fill_color,
       stroke: stroke_color,
       'stroke-width': arrow_stroke_width,
