@@ -4,6 +4,11 @@
 require 'nokogiri'
 require_relative 'counter'
 
+# Use NV value
+def background_color
+  'rgb(253,191,191)'
+end
+
 # The top 2 and half rows of the US counter sheet.
 # Top row of NV counter sheet.
 class RadarCounter < Counter
@@ -18,8 +23,8 @@ class RadarCounter < Counter
     xml.text_(value,
               x: '612',
               y: '700',
-              'fill': fill_color,
-              'stroke': fill_color,
+              fill: fill_color,
+              stroke: fill_color,
               'text-anchor': 'middle',
               'text-align': 'center',
               'font-family': 'sans-serif',
@@ -43,7 +48,7 @@ class RadarCounter < Counter
   def to_svg
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: counter_width, height: counter_height) do
-        build_counter(xml)
+        build_counter(xml, 2)
       end
     end
     builder.to_xml
@@ -58,4 +63,4 @@ class RadarCounter < Counter
   end
 end
 
-File.write('radar-counter.svg', RadarCounter.new.to_svg)
+File.write('radar-counter.svg', RadarCounter.new(background_color).to_svg)
