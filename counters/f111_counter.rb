@@ -38,4 +38,4 @@ class F111Counter < Counter
   end
 end
 
-File.write('f111-counter.svg', F111Counter.new.to_svg)
+File.write('f111-counter.svg', F111Counter.new('#A0A6E7').to_svg)

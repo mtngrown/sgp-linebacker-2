@@ -17,8 +17,8 @@ class HitCounter < Counter
       'font-size': '500',
       'text-anchor': 'middle',
       'text-align': 'center',
-      'fill': color,
-       color: color
+      fill: color,
+      color: color
     )
   end
 

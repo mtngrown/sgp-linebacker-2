@@ -3,15 +3,14 @@
 
 require 'nokogiri'
 require_relative 'counter'
-
-# Use NV value
-def background_color
-  'rgb(253,191,191)'
-end
+require_relative 'background_fill'
+require_relative 'nv_background'
 
 # The top 2 and half rows of the US counter sheet.
 # Top row of NV counter sheet.
 class RadarCounter < Counter
+  include NvBackground
+
   def gray_index = 90
 
   def fill_color
@@ -63,4 +62,4 @@ class RadarCounter < Counter
   end
 end
 
-File.write('radar-counter.svg', RadarCounter.new(background_color).to_svg)
+File.write('radar-counter.svg', RadarCounter.new.to_svg)

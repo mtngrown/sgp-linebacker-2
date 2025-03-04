@@ -36,4 +36,4 @@ class B52Counter < Counter
   end
 end
 
-File.write('b52-counter.svg', B52Counter.new.to_svg)
+File.write('b52-counter.svg', B52Counter.new('#A0A6E7').to_svg)

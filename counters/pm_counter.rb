@@ -7,9 +7,10 @@ require_relative 'counter'
 class PMCounter < Counter
   def color = 'rgb(100,100,100)'
 
-  def build_counter(xml)  
+  def build_counter(xml)
     counter_background(xml)
-    xml.text_('PM', x: '512', y: '695', 'font-size': '500', 'text-anchor': 'middle', 'text-align': 'center', color: color, fill: color)
+    xml.text_('PM', x: '512', y: '695', 'font-size': '500', 'text-anchor': 'middle', 'text-align': 'center',
+                    color: color, fill: color)
   end
 
   def to_svg

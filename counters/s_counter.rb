@@ -16,7 +16,7 @@ class SCounter < Counter
       'font-size': '500',
       'text-anchor': 'middle',
       'text-align': 'center',
-      'fill': color,
+      fill: color,
       color: color
     )
   end

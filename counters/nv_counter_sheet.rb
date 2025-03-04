@@ -47,8 +47,8 @@ end
 def row_3(xml)
   (1..10).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{2 * 200}) scale(0.2)") do
-    Mig21Counter.new(background_color).build_counter(xml)
-  end
+      Mig21Counter.new(background_color).build_counter(xml)
+    end
   end
 end
 
@@ -72,7 +72,7 @@ def row_5(xml)
     end
   end
 
-  vals = ['0', '00', '000']
+  vals = %w[0 00 000]
   (6..8).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{4 * 200}) scale(0.2)") do
       SamCounter.new(background_color).build_counter(xml, vals.shift)
@@ -91,7 +91,7 @@ def row_6(xml)
       HitCounter.new(background_color).build_counter(xml)
     end
   end
-  
+
   column = 9
   xml.g(transform: "translate(#{(column - 1) * 200},#{5 * 200}) scale(0.2)") do
     GTCounter.new(background_color).build_counter(xml)
@@ -104,7 +104,7 @@ def row_6(xml)
 end
 
 def row_7(xml)
-  vps = ['0', '00']
+  vps = %w[0 00]
   (1..2).each do |column|
     xml.g(transform: "translate(#{(column - 1) * 200},#{6 * 200}) scale(0.2)") do
       VPCounter.new(background_color).build_counter(xml, vps.shift)

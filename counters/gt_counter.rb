@@ -9,7 +9,8 @@ class GTCounter < Counter
 
   def build_counter(xml)
     counter_background(xml)
-    xml.text_('GT', x: '512', y: '695', 'font-size': '500', 'text-anchor': 'middle', 'text-align': 'center', color: color, fill: color)
+    xml.text_('GT', x: '512', y: '695', 'font-size': '500', 'text-anchor': 'middle', 'text-align': 'center',
+                    color: color, fill: color)
   end
 
   def to_svg

@@ -1,11 +1,16 @@
 # frozen_string_literal: true
 
-# Base class for the wun
+require 'nokogiri'
+
+# Base class for the win
 class Counter
   def gray_index = 90
 
   # TODO: change this to an options hash.
-  def initialize(fill = nil)
+  # `color` is the background color which is currently
+  # currently defined in a module. This smells like an
+  # anti-pattern, but I'm rolling with it for now.
+  def initialize(fill = color)
     @fill = fill
   end
 

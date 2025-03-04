@@ -2,10 +2,13 @@
 # frozen_string_literal: true
 
 require_relative 'counter'
+require_relative 'nv_background'
 
 # For whatever "Date" stands for.
 class DateCounter < Counter
-  def color = 'rgb(100,100,100)'
+  include NvBackground
+
+  def text_color = 'rgb(100,100,100)'
 
   def build_counter(xml)
     counter_background(xml)
@@ -16,8 +19,8 @@ class DateCounter < Counter
               'text-anchor': 'middle',
               'text-align': 'center',
               transform: 'rotate(45, 512, 695)',
-              color: color,
-              fill: color)
+              color: text_color,
+              fill: text_color)
   end
 
   def to_svg
@@ -30,4 +33,4 @@ class DateCounter < Counter
   end
 end
 
-File.write('date-counter.svg', DateCounter.new('yellow').to_svg)
+File.write('date-counter.svg', DateCounter.new.to_svg)
