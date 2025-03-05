@@ -17,6 +17,9 @@ TEX_FILES = $(wildcard *.tex)
 # Add all the *.tikz files to the dependencies
 TIKZ_FILES = $(wildcard *.tikz)
 
+# Ensure page-9.tex is treated as a dependency but not compiled separately
+rules.pdf: rules.tex page-9.tex
+
 all: $(PDF_FILES)
 
 # Rule to build PDF from TEX, including potential TIKZ dependency
