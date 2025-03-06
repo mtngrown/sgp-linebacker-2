@@ -3,10 +3,13 @@
 
 require 'nokogiri'
 require_relative 'counter'
+require_relative 'nv_background'
 
 # A counter with the word "HIT" in the center.
 class HitCounter < Counter
-  def color = 'rgb(100,100,100)'
+  include NvBackground
+
+  def fill_color = 'rgb(100,100,100)'
 
   def build_counter(xml)
     counter_background(xml)
@@ -17,8 +20,8 @@ class HitCounter < Counter
       'font-size': '500',
       'text-anchor': 'middle',
       'text-align': 'center',
-      fill: color,
-      color: color
+      fill: fill_color,
+      color: fill_color
     )
   end
 
@@ -32,4 +35,4 @@ class HitCounter < Counter
   end
 end
 
-File.write('hit-counter.svg', HitCounter.new('yellow').to_svg)
+File.write('hit-counter.svg', HitCounter.new.to_svg)
