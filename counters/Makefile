@@ -6,7 +6,8 @@ SVG_FILES := us-counter-sheet.svg \
 						 plus-counter.svg \
 						 f4-counter.svg \
              f111-counter.svg \
-             mig21-counter.svg
+             mig21-counter.svg \
+             radar-counter.svg
 
 
 PDF_FILES := $(SVG_FILES:.svg=.pdf)
