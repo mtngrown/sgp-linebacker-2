@@ -3,7 +3,9 @@
 SVG_FILES := us-counter-sheet.svg \
              nv-counter-sheet.svg \
              b52-counter.svg \
-						 plus-counter.svg
+						 plus-counter.svg \
+						 f4-counter.svg \
+             f111-counter.svg
 
 
 PDF_FILES := $(SVG_FILES:.svg=.pdf)
