@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 # frozen_string_literal: true
 
 require_relative 'counter'
@@ -26,4 +27,8 @@ class PlusCounter < Counter
   end
 end
 
-File.write('plus-counter.svg', PlusCounter.new('yellow').to_svg)
+def background_color
+  'rgb(253,191,191)'
+end
+
+File.write('plus-counter.svg', PlusCounter.new(background_color).to_svg)
