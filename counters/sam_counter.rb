@@ -3,16 +3,18 @@
 
 require 'nokogiri'
 require_relative 'counter'
-
+require_relative 'nv_background'
 class SamCounter < Counter
-  def color = 'rgb(100,100,100)'
+  include NvBackground
+
+  def fill_color = 'rgb(100,100,100)'
 
   def build_counter(xml, number)
     counter_background(xml)
     xml.text_('SAM', x: '512', y: '495', 'font-size': '400', 'text-anchor': 'middle', 'text-align': 'center',
-                     color: color, fill: color)
+                     color: fill_color, fill: fill_color)
     xml.text_(number, x: '512', y: '895', 'font-size': '400', 'text-anchor': 'middle', 'text-align': 'center',
-                      color: color, fill: color)
+                      color: fill_color, fill: fill_color)
   end
 
   def to_svg
@@ -25,4 +27,4 @@ class SamCounter < Counter
   end
 end
 
-File.write('sam-counter.svg', SamCounter.new('yellow').to_svg)
+File.write('sam-counter.svg', SamCounter.new.to_svg)
