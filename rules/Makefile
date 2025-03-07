@@ -24,11 +24,11 @@ all: $(PDF_FILES)
 
 # Rule to build PDF from TEX, including potential TIKZ dependency
 %.pdf: %.tex %.tikz
-	pdflatex $<
+	xelatex $<
 
 # Rule to handle TEX files without TIKZ dependencies
 %.pdf: %.tex
-	pdflatex $<
+	xelatex $<
 
 clean:
 	rm -f $(PDF_FILES) *.aux *.log *.out
