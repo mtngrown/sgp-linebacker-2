@@ -18,7 +18,7 @@ TEX_FILES = $(wildcard *.tex)
 TIKZ_FILES = $(wildcard *.tikz)
 
 # Ensure page-9.tex is treated as a dependency but not compiled separately
-rules.pdf: rules.tex page-9.tex
+rules.pdf: rules.tex page-9.tex page-10.tex page-11.tex
 
 all: $(PDF_FILES)
 
