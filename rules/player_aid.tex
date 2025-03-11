@@ -14,6 +14,9 @@
 \usepackage{tabularx}
 \usepackage{multirow}
 \usepackage{lscape}
+\usepackage[absolute,overlay]{textpos}
+
+
 
 \setlength{\arrayrulewidth}{1.5pt} % Default is 0.4pt
 
@@ -32,6 +35,25 @@
 \begin{center}
   \veryHuge \textbf{SGP Linebacker 2 Player Aid}
 \end{center}
+
+\begin{textblock}{8}(7.1,3.2) % Adjust width and position (x,y)
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}{l c}
+    \hline
+    \textbf{Event} & \textbf{Victory Points} \\
+    \hline
+    Downed B-52 & 10 VP \\
+    Downed F-111 or ECM & 2 VP \\
+    Downed F-4 or NV fighter & 1 VP \\
+    Destroyed airfield & 5 VP \\
+    U.S. Political Morale (PM) hits 0 & 20 VP to NV player \\
+    First bombing of Hanoi & 10 VP to NV player \\
+    First bombing of Haiphong & 5 VP to NV player \\
+    Other VPs & As per Bombing Tables \\
+    \hline
+  \end{tabular}
+\end{textblock}
+
 
 \input{sequence-of-play}
 \begin{center}
