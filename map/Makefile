@@ -2,6 +2,8 @@
 # then embedding the PDF in a LaTeX document using pdflatex.
 # The tex file is map_sheet.tex.
 
+# Create a map https://boardgamegeek.com/thread/3476392/article/45788050#45788050
+
 SVG_FILES := map.svg \
              us-pilot-morale.svg
 PDF_FILES := $(SVG_FILES:.svg=.pdf) # map_sheet.pdf

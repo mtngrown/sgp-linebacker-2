@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# Create a second copy of the map with a Redmond Simonsen style
+# https://boardgamegeek.com/thread/3476392/article/45788050#45788050
+
 require 'debug'
 require 'nokogiri'
 

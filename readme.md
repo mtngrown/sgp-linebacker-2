@@ -16,3 +16,5 @@ left is the "remaining 90%."
   extensive list of subtasks, too many to list here.
 - Create layouts for PDF and printing. Again, will
   have many subtasks.
+- Create a second copy of the map using Redmond
+Simonsen techniques: https://boardgamegeek.com/thread/3476392/article/45788050#45788050
