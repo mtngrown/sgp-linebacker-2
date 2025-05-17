@@ -13,13 +13,18 @@ SVG_FILES := us-counter-sheet.svg \
 
 
 PDF_FILES := $(SVG_FILES:.svg=.pdf)
+PNG_FILES := $(SVG_FILES:.svg=.png)
 
 # Default target
-all: $(PDF_FILES)
+all: $(PDF_FILES) $(PNG_FILES)
 
 # Rule to convert SVG to PDF using Inkscape
 %.pdf: %.svg
 	inkscape $< --export-type=pdf --export-filename=$@
+
+# Rule to convert SVG to PDF using Inkscape
+%.png: %.svg
+	inkscape $< --export-type=png --export-filename=$@
 
 # Clean up generated PDF files
 clean:
